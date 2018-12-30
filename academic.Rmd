@@ -1,0 +1,68 @@
+---
+title: "Academic"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+[Academic CV](pdfs/2018-12-16-cv-academic-Rohan_Alexander.pdf)
+
+### Education
+
+#### Australian National University
+
+* Ph.D. Economics (2015--*current*)  
+My research focuses on Australian political and economic history, such as exploring: the impact of various events on discussion in state and federal parliaments; who voted for Federation; and which politicians get an incumbency effect. My panel is [John Tang](https://sites.google.com/site/jptang/) (primary supervisor), [Martine Mariotti](https://www.cbe.anu.edu.au/about/staff-directory/?profile=Martine-Mariotti) (chair), [Zach Ward](https://sites.google.com/site/zachaward/) and [Tim Hatton](https://sites.google.com/site/timhattonwebsite/).
+* M.Economics (2012)
+
+#### University of Queensland
+
+* B.Economics (Hons) (2004-2008)  
+I wrote an honours thesis in game theory supervised by [Rabee Tourky](http://tourky.org/) and was a research assistant to: [Flavio Menezes](https://economics.uq.edu.au/profile/2324/flavio-menezes) on a project about ACCC decisions; and [Liam Wagner](http://www.liamwagner.com/) on a project about energy prices.
+
+### Published papers
+* Rohan Alexander and Zach Ward, 2018, '[Age at Arrival and Assimilation During the Age of Mass Migration](https://www.cambridge.org/core/journals/journal-of-economic-history/article/age-at-arrival-and-assimilation-during-the-age-of-mass-migration/85FDB674232C30BDD889711D343F22FE)', *The Journal of Economic History*, 78(3), 904-937.  
+[Working paper version](pdfs/2018_02_21-Age_at_arrival.pdf).
+
+### Working papers
+* [Monica Alexander](monicaalexander.com) and Rohan Alexander, 'The Effect of Elections and Prime Ministers on Discussion in the Australian Federal Parliament (1901—2018)'.  
+[Current draft (PDF)](pdfs/2018-12-16-events.pdf).  
+[Data](https://github.com/RohanAlexander/hansardr) (just a GitHub link to some CSVs - R Package coming soon - email me if you're interested).
+* Rohan Alexander and Tim Hatton, 'The Making of a Nation: Who Voted for Australian Federation?'.
+
+### Work in progress
+* Rohan Alexander and Patrick Leslie, 'The Effect of State on Senators’ Speeches in the Australian Federal Parliament (1901–2018)'
+
+### Presentations
+*  The Effect of Elections and Prime Ministers on Discussion in the Australian Federal Parliament (1901—2018)  
+	- (Upcoming) 18-20 April 2019, Western Political Science Association, 2019 Annual Meeting, San Diego.
+	- (Upcoming) 4-7 April 2019, Midwest Political Science Assosiation, 2019 Annual Meeting, Chicago.
+	- (Upcoming) 11 January 2019, Annual Conference of the Political Methodology Specialist Group, Warwick.
+	- 11 December 2018, Max Planck Institute for Demographic Research, Rostock. [Slides (PDF)](pdfs/2018-12-12-slides-rostock.pdf)
+	- 22 November 2018, University of Toronto, Political Behaviour Group, Toronto. [Slides (PDF)](pdfs/2018-11-22-slides-UofT.pdf)
+	- 25 October 2018, Australian National University, Research School of Economics, Canberra. [Slides (PDF)](pdfs/2018-10-25-slides-RSE.pdf)
+	- 25 October 2018, Parliamentary Library, Parliament of Australia, Canberra. [Slides (PDF)](pdfs/2018-10-25-slides-parlimentarylibrary.pdf)
+	- [24 October 2018](http://politicsir.cass.anu.edu.au/events/nobody-expects-spanish-inquisition-effect-events-australian-parliamentary-discussion), Australian National University, School of Politics and International Relations, Canberra. [Slides (PDF)](pdfs/2018-10-24-slides-SPIR.pdf). 
+* Exploring Australia's Hansard (1901--2017)
+	- (Poster) 7-9 September, 2018 Economic History Association Meeting, Montreal.
+* A Surnames-Based Analysis of Tasmanian Social Mobility (1803--2015)
+	- 20 May 2016, UC Berkeley, Economic History Lunch, Berkeley.
+	- 2 May 2016, Australian National University, Research School of Economics, Canberra.
+
+
+
+### Teaching Experience
+#### Australian National University
+* Tutor, Macroeconomics 3, Semester 2, 2017, [evaluations](pdfs/2018-02-05-Sem_2_2017-ECON3102_-_Macroeconomics_3.pdf) 
+* Tutor, Microeconomics 3, Semester 1, 2017, [evaluations](pdfs/2018-02-05-Sem_1_2017-ECON3101_-_Microeconomics_3.pdf) 
+* Tutor, Behavioural Economics, Semester 2, 2015, [evaluations](pdfs/2018-02-05-Sem_2_2015-ECON2013_Behavioural_Economics.pdf) 
+* Tutor, Business Economics, Semester 1, 2015, [evaluations](pdfs/2018-02-05-Sem_1_2015-ECON8069_Business_Economics.pdf) 
+* Tutor, Microeconomics 1, Semester 1, 2013, [evaluations](pdfs/2018-02-05-Sem_1_2013-ECON1101_Microeconomics_1.pdf) 
+* Tutor, Foundations of Economic and Financial Models, Semester 2, 2012
+
+#### University of Queensland
+* Tutor, Microeconomic Policy, Semester 2, 2008
+* Tutor, Microeconomic Theory, Semester 1, 2008
+* Tutor, Introductory Microeconomics, Semester 2, 2007
+* Tutor, Introductory Microeconomics, Semester 1, 2007

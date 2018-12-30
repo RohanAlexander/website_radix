@@ -1,0 +1,32 @@
+name: "Rohan Alexander"
+base_url: https://rohanalexander.com/
+title: "Rohan Alexander"
+favicon: images/favicon-coffee.ico
+twitter:
+  site: "@RohanAlexander"
+description: |
+  Welcome to Rohan Alexander's website
+output_dir: "_site"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Academic"
+      href: academic.html
+    - text: "Blog"
+      href: blog.html
+    - text: "Bookshelf"
+      href: bookshelf.html
+    - text: "Professional"
+      href: professional.html
+    - text: "Projects"
+      href: projects.html
+    - icon: fab fa-twitter
+      href: https://twitter.com/RohanAlexander
+    - icon: fab fa-github
+      href: https://github.com/RohanAlexander
+    - icon: far fa-envelope
+      href: mailto:rohan.alexander@anu.edu.au
+output: 
+  radix::radix_article:
+    css: styles.css

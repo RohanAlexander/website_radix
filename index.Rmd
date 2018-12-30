@@ -1,0 +1,22 @@
+---
+title: "Home"
+site: radix::radix_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Radix at:
+# https://rstudio.github.io/radix/website.html
+
+```
+
+Hi, I'm Rohan Alexander.
+
+I'm a PhD student at the  Australian National University in Canberra where I explore Australian economic and political history using quantitative methods. 
+
+I work on a casual basis as a consultant at Grosvenor Public Sector Advisory on public-sector procurement data. On the side I work on Petit Poll and No Pour Choices.
+
+```{r, out.width = "200px"}
+# knitr::include_graphics("images/portrait.jpg")
+```

@@ -1,0 +1,28 @@
+---
+title: "Projects"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+### Petit Poll
+May 2016 -- *Current*
+
+This is a joint project with [Monica Alexander](https://www.monicaalexander.com/). Petit Poll combines non-representative polling data with a hierarchical Bayesian model to cheaply deliver meaningful Australian political polling. I am responsible for survey design and analysis, as well as marketing and communication. 
+
+We polled the 2016 Australian Federal election and got a (statistically) reasonable result. In terms of seats we were five off. Four of those were just a result of our small sample size: there were the three that turned unexpectedly in Tasmania; and the one in South Australia that went to the Nick Xenophon team. If we had more data from those areas then the model would have had a better chance, but when there's not much data the prior has a big impact. 
+
+
+<!---
+### Smashin' Avos
+July 2018 -- *Current*
+
+Encourages savings.
+-->
+
+### No Pour Choices
+July 2018 -- *Current*
+
+This is a a joint project with Adam Jansen and Ben Readshaw. No Pour Choices is an app that helps organise your wine collection. I am responsible for all aspects of iOS development.
