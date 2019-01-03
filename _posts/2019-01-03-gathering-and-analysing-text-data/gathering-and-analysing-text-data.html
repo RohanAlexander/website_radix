@@ -25,8 +25,8 @@
   
   
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2018-12-21"/>
-  <meta property="article:created" itemprop="dateCreated" content="2018-12-21"/>
+  <meta property="article:published" itemprop="datePublished" content="2019-01-03"/>
+  <meta property="article:created" itemprop="dateCreated" content="2019-01-03"/>
   <meta name="article:author" content="Rohan Alexander"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -44,12 +44,12 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Gathering and analysing text data"]},{"type":"character","attributes":{},"value":["Text modelling is an exciting area of research. But many guides assume that you already have a nice dataset. Similarly, web scraping is an exciting way to get information, but not many explanations go on to explain what you could do with it. This post attempts to go from scraping text from a website through to modelling the topics. It's not meant to be an exhaustive post, but should hopefully provide enough that you can get started with your own project and know where to go for more information.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Rohan Alexander"]}]}]},{"type":"character","attributes":{},"value":["2018-12-21"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","draft"]}},"value":[{"type":"character","attributes":{},"value":["Gathering and analysing text data"]},{"type":"character","attributes":{},"value":["Text modelling is an exciting area of research. But many guides assume that you already have a nice dataset. Similarly, web scraping is an exciting way to get information, but not many explanations go on to explain what you could do with it. This post attempts to go from scraping text from a website through to modelling the topics. It's not meant to be an exhaustive post, but should hopefully provide enough that you can get started with your own project and know where to go for more information.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Rohan Alexander"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["01-03-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"logical","attributes":{},"value":[true]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["addresses.csv","gathering-and-analysing-text-data_files/figure-html5/diagnosticmeasuregraphs-1.png","gathering-and-analysing-text-data_files/figure-html5/exlusitivty-1.png"]}
+  {"type":"character","attributes":{},"value":["addresses.csv","gathering-and-analysing-text-data_files/bowser-1.9.3/bowser.min.js","gathering-and-analysing-text-data_files/distill-2.2.21/template.v2.js","gathering-and-analysing-text-data_files/figure-html5/diagnosticmeasuregraphs-1.png","gathering-and-analysing-text-data_files/figure-html5/exlusitivty-1.png","gathering-and-analysing-text-data_files/jquery-1.11.3/jquery.min.js","gathering-and-analysing-text-data_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -942,7 +942,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Gathering and analysing text data","description":"Text modelling is an exciting area of research. But many guides assume that you already have a nice dataset. Similarly, web scraping is an exciting way to get information, but not many explanations go on to explain what you could do with it. This post attempts to go from scraping text from a website through to modelling the topics. It's not meant to be an exhaustive post, but should hopefully provide enough that you can get started with your own project and know where to go for more information.","authors":[{"author":"Rohan Alexander","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2018-12-21T00:00:00.000-05:00","citationText":"Alexander, 2018"}
+{"title":"Gathering and analysing text data","description":"Text modelling is an exciting area of research. But many guides assume that you already have a nice dataset. Similarly, web scraping is an exciting way to get information, but not many explanations go on to explain what you could do with it. This post attempts to go from scraping text from a website through to modelling the topics. It's not meant to be an exhaustive post, but should hopefully provide enough that you can get started with your own project and know where to go for more information.","authors":[{"author":"Rohan Alexander","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2019-01-03T00:00:00.000-05:00","citationText":"Alexander, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -957,12 +957,21 @@
 </div>
 
 <div class="d-byline">
-  Rohan Alexander  
+  Rohan Alexander true 
   
-<br/>2018-12-21
+<br/>01-03-2019
 </div>
 
 <div class="d-article">
+<h3 class="d-toc-header">Table of Contents</h3>
+<nav class="d-toc" id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#gathering-data">Gathering data</a></li>
+<li><a href="#analysing-data">Analysing data</a></li>
+</ul>
+</nav>
+<hr class="d-toc-separator"/>
 <h1 id="introduction">Introduction</h1>
 <p>Text modelling is an exciting area of research. But many guides assume that you already have a nice dataset. Similarly, web scraping is an exciting way to get information, but not many explanations go on to explain what you could do with it. This post attempts to go from scraping text from a website through to modelling the topics. It’s not meant to be an exhaustive post, but should hopefully provide enough that you can get started with your own project and know where to go for more information.</p>
 <p>The example that I’m going to use is getting data from the minutes of the RBA board meeting.</p>

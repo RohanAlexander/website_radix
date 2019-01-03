@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Hi, I'm Rohan Alexander.
 
-I'm a PhD student at the  Australian National University in Canberra where I explore Australian economic and political history using quantitative methods. 
+I'm a PhD student at the Australian National University in Canberra where I explore Australian economic and political history using quantitative methods. 
 
 I work on a casual basis as a consultant at Grosvenor Public Sector Advisory on public-sector procurement data. On the side I work on Petit Poll and No Pour Choices.
 
