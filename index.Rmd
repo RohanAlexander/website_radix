@@ -11,12 +11,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-Hi, I'm Rohan Alexander.
+Hi, I’m Rohan Alexander.
 
-I'm a PhD student at the Australian National University in Canberra where I explore Australian economic and political history using quantitative methods. 
+I’m a PhD student at the Australian National University in Canberra where I explore Australian economic and political history using quantitative methods. For instance, in a recent paper with Monica Alexander we summarise the topics of the Australian Hansard from Federation through to 2018 and then use a statistical model to look at when the mix of topics changes. You can see more about my academic interests [here](https://rohanalexander.com/academic.html).
 
-I work on a casual basis as a consultant at Grosvenor Public Sector Advisory on public-sector procurement data. On the side I work on Petit Poll and No Pour Choices.
+I work on a casual basis as a consultant at Grosvenor Public Sector Advisory on public-sector procurement data. I've previously worked at the Reserve Bank of Australia, the Centre for International Economics, and at GoCampaign, which was a business that I started with some friends. You can see more about my professional experience [here](https://rohanalexander.com/professional.html).
 
-```{r, out.width = "200px"}
-# knitr::include_graphics("images/portrait.jpg")
-```
+At the moment my side-projects are Petit Poll and No Pour Choices. Petit Poll combines non-representative polling data that we gather ourselves with a hierarchical Bayesian model to cheaply deliver meaningful Australian political polling. No Pour Choices is an iOS app for organising a wine collection.
+
+Finally, I probably spend too much money on books, and certainly too much time at libraries. You can see some of the books that I recommend [here](https://rohanalexander.com/bookshelf.html). If you have any book recommendations of your own, I've love to hear them.
