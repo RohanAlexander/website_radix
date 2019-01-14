@@ -6,7 +6,7 @@ title: "Academic"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-[Academic CV](pdfs/2018-12-16-cv-academic-Rohan_Alexander.pdf)
+[Academic CV](pdfs/2019-01-14-cv-academic-Rohan_Alexander.pdf)
 
 ### Education
 
@@ -27,7 +27,7 @@ I wrote an honours thesis in game theory supervised by [Rabee Tourky](http://tou
 
 ### Working papers
 * [Monica Alexander](monicaalexander.com) and Rohan Alexander, 'The Effect of Elections and Prime Ministers on Discussion in the Australian Federal Parliament (1901—2018)'.  
-[Current draft (PDF)](pdfs/2018-12-16-events.pdf).  
+[Current draft (PDF)](pdfs/2019-01-14-effect_of_events_draft.pdf).  
 [Data](https://github.com/RohanAlexander/hansardr) (just a GitHub link to some CSVs - R Package coming soon - email me if you're interested).
 * Rohan Alexander and Tim Hatton, 'The Making of a Nation: Who Voted for Australian Federation?'.
 
