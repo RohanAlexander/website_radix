@@ -6,7 +6,7 @@ title: "Academic"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-[Academic CV](pdfs/2019-01-14-cv-academic-Rohan_Alexander.pdf)
+[Academic CV](pdfs/2019-02-05-cv-academic-Rohan_Alexander.pdf)
 
 ### Education
 
@@ -35,6 +35,8 @@ I wrote an honours thesis in game theory supervised by [Rabee Tourky](http://tou
 * Rohan Alexander and Patrick Leslie, 'The Effect of State on Senators’ Speeches in the Australian Federal Parliament (1901–2018)'
 
 ### Presentations
+*  The Effect of State on Senators’ Speeches in the Australian Federal Parliament (1901-2018)  
+	- (Upcoming) 20-22 June 2019, European Political Science Association, Annual Conference, Belfast.
 *  The Effect of Elections and Prime Ministers on Discussion in the Australian Federal Parliament (1901—2018)  
 	- (Upcoming) 18-20 April 2019, Western Political Science Association, 2019 Annual Meeting, San Diego.
 	- (Upcoming) 4-7 April 2019, Midwest Political Science Assosiation, 2019 Annual Meeting, Chicago.
