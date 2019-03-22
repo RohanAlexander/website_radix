@@ -6,7 +6,7 @@ title: "Academic"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-[Academic CV](pdfs/2019-03-08-cv-academic-Rohan_Alexander.pdf)
+[Academic CV](pdfs/2019-03-22-cv-academic-Rohan_Alexander.pdf)
 
 ### Education
 
@@ -43,7 +43,7 @@ I wrote an honours thesis in game theory supervised by [Rabee Tourky](http://tou
 *  The Effect of Elections and Prime Ministers on Discussion in the Australian Federal Parliament (1901—2018)  
 	- (Upcoming) 4–6 June 2019, Canadian Political Science Association, Annual Conference, Vancouver.
 	- (Upcoming) 18-20 April 2019, Western Political Science Association, Annual Meeting, San Diego.
-	- (Upcoming) 4-7 April 2019, Midwest Political Science Assosiation, Annual Meeting, Chicago.
+	- (Upcoming) 4-7 April 2019, Midwest Political Science Association, Annual Meeting, Chicago.
 	- 11 January 2019, Annual Conference of the Political Methodology Specialist Group, Warwick. [Slides](pdfs/2019-01-11-slides-warwick.pdf).
 	- 11 December 2018, Max Planck Institute for Demographic Research, Rostock. [Slides](pdfs/2018-12-12-slides-rostock.pdf).
 	- 22 November 2018, University of Toronto, Political Behaviour Group, Toronto. [Slides](pdfs/2018-11-22-slides-UofT.pdf).
