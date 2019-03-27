@@ -15,6 +15,8 @@ preview: images/StLouis_Greitens_1.jpg
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+**(Comment 27 March 2019. This has aged horribly! Not only was it written with a presumption that Clinton was going to win, but even though Greitens won he flamed out within 18 months having been accused of some very odd behaviour. Nonetheless, the visit to Missouri was fun, and I enjoyed putting this piece together.)**
+
 Eric Greitens may be the Republican Übermensch. Rhodes Scholar, Navy SEAL officer, husband and father. He's now the Republican candidate in the Missouri gubernatorial election. And one suspects that being a governor could just be a step for Greitens. While 2016 will always be the year that US politics descended to the gutter, it could also be the year that the next Republican president begins his political career.
 
 ```{r}
