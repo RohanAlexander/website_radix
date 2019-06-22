@@ -39,8 +39,9 @@ I wrote an honours thesis in game theory supervised by [Rabee Tourky](http://tou
 ### Presentations
 *  The Effect of State on Senators’ Speeches in the Australian Federal Parliament (1901-2018)  
 	- (Upcoming) 4–7 September 2019, European Consortium for Political Research, General Conference, Wroclaw.
-	- (Upcoming) 20-22 June 2019, European Political Science Association, Annual Conference, Belfast.
-	- 18 June 2019, Quantitative Text Analysis, Dublin.
+	- 22 June 2019, European Political Science Association, Annual Conference, Belfast.
+	[Slides](pdfs/2019-06-22-slides-Belfast-EPSA.pdf).
+	- 18 June 2019, Quantitative Text Analysis Workshop, Dublin.
 	[Slides](pdfs/2019-06-18-slides-QTADublin.pdf).
 *  The Effect of Elections and Prime Ministers on Discussion in the Australian Federal Parliament (1901—2018)  
 [Slides](pdfs/2019-01-11-slides-warwick.pdf).
