@@ -6,7 +6,7 @@ title: "Bookshelf"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Inspired by Patrick Collison's [version](https://patrickcollison.com/bookshelf), this is an incomplete (so far) and unordered list of the books that I own. I've been a bit more liberal than Patrick and included books that I've read and would like to own (designated by "-"). If you have recommendations, then please [get in touch](mailto:rohan.alexander@anu.edu.au). I usually only buy books that I like, but bolded books are ones I especially like.
+Inspired by Patrick Collison's [version](https://patrickcollison.com/bookshelf), this is an incomplete (so far) and unordered list of the books that I own. I've been a bit more liberal than Patrick and included books that I've read and would like to own (designated by "-"). If you have recommendations, then please [get in touch](mailto:rohan.alexander@utoronto.ca). I usually only buy books that I like, but bolded books are ones I especially like.
 
 * -"A Little Life", Hanya Yanighara. Recommended by Lauren.
 * "The Andromeda Strain", Michael Crichton.

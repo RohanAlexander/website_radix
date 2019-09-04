@@ -6,14 +6,14 @@ title: "Professional"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-[Professional CV](pdfs/2019-03-22-cv-professional-RohanAlexander.pdf)  
+[Professional CV](pdfs/2019-09-04-canada_cv-professional-RohanAlexander.pdf)
 
 
 ### Grosvenor Public Sector Advisory
 
 **Consultant**,   April 2017 -- February 2019
 
-I consult at Grosvenor on a casual basis to complete a specific project for the European Commission relating to public procurement. This has involved: identifying data sources; preparing for and supporting data acquisition; conducting data quality confirmation; helping with survey design and validation; and some minor managerial responsibilities.
+I consulted at Grosvenor on a casual basis to complete a specific project for the European Commission relating to public procurement. This involved: identifying data sources; preparing for and supporting data acquisition; conducting data quality confirmation; helping with survey design and validation; and some minor managerial responsibilities.
 
 
 ### The Centre for International Economics

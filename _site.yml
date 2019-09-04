@@ -17,6 +17,8 @@ navbar:
       href: blog.html
     - text: "Bookshelf"
       href: bookshelf.html
+    - text: "Datasets"
+      href: datasets.html
     - text: "Professional"
       href: professional.html
     - text: "Projects"
@@ -26,7 +28,7 @@ navbar:
     - icon: fab fa-github
       href: https://github.com/RohanAlexander
     - icon: far fa-envelope
-      href: mailto:rohan.alexander@anu.edu.au
+      href: mailto:rohan.alexander@utoronto.ca
 output: 
   radix::radix_article:
     css: styles.css
