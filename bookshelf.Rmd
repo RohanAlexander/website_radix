@@ -8,6 +8,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Inspired by Patrick Collison's [version](https://patrickcollison.com/bookshelf), this is an incomplete (so far) and unordered list of the books that I own. I've been a bit more liberal than Patrick and included books that I've read and would like to own (designated by "-"). If you have recommendations, then please [get in touch](mailto:rohan.alexander@utoronto.ca). I usually only buy books that I like, but bolded books are ones I especially like.
 
+Best books I read in 2018: "Bad Blood" John Carreyrou; "Devil's Bargain" Joshua Green & "Chasing Hillary" Amy Chozick; "Hard Landing" Thomas Petzinger; "Open" Andre Agassi; "Some Trick" Helen DeWitt; "The Dream Machine" M Mitchell Waldrop; and "The Pixar Touch" David A Price.
+
 * -"A Little Life", Hanya Yanighara. Recommended by Lauren.
 * "The Andromeda Strain", Michael Crichton.
 * "Is There Life After Housework", Don Aslett. Got given this at the Museum of Clean in Pocatello, Idaho. The museum was surprisingly good!

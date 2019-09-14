@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://rohanalexander.com/academic.html</loc>
-    <lastmod>2019-09-04T10:48:34+02:00</lastmod>
+    <lastmod>2019-09-04T04:48:34-04:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/blog.html</loc>
-    <lastmod>2018-12-29T14:06:14+01:00</lastmod>
+    <lastmod>2018-12-29T08:06:14-05:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/bookshelf.html</loc>
-    <lastmod>2019-09-04T11:08:14+02:00</lastmod>
+    <lastmod>2019-09-12T14:08:21-04:00</lastmod>
+  </url>
+  <url>
+    <loc>https://rohanalexander.com/brownbag.html</loc>
+    <lastmod>2019-09-14T11:44:22-04:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/datasets.html</loc>
-    <lastmod>2019-09-04T11:09:36+02:00</lastmod>
+    <lastmod>2019-09-05T11:07:31-04:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/</loc>
-    <lastmod>2019-09-04T11:12:45+02:00</lastmod>
+    <lastmod>2019-09-12T13:36:33-04:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/professional.html</loc>
-    <lastmod>2019-09-04T10:49:16+02:00</lastmod>
+    <lastmod>2019-09-04T04:49:16-04:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/projects.html</loc>
-    <lastmod>2018-12-30T01:12:41+01:00</lastmod>
-  </url>
-  <url>
-    <loc>https://rohanalexander.com/posts/2018-12-21gathering-and-analysing-text-data/</loc>
-    <lastmod>2018-12-29T21:08:18-05:00</lastmod>
+    <lastmod>2018-12-29T19:12:41-05:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2018-08-13-cleaning-hansard/</loc>
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2016-10-15-greitens-reports-for-duty/</loc>
-    <lastmod>2018-12-29T14:56:06-05:00</lastmod>
+    <lastmod>2019-06-22T07:22:29-04:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2016-09-08-professional-amateurs/</loc>

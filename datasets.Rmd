@@ -23,7 +23,4 @@ The datasets are:
 
 ![Scheme](images/schema.png)
 
-The datasets are up-to-date as of 1 September 2019 (i.e. they include the deaths of Tim Fisher and Elaine Darling).
-
-
-You can install this package from GitHub, and more information is available [there](https://github.com/RohanAlexander/AustralianPoliticians)
+The datasets are up-to-date as of 1 September 2019 (i.e. they include the deaths of Tim Fisher and Elaine Darling). You can install the pacakge from GitHub, and more information is available [there](https://github.com/RohanAlexander/AustralianPoliticians).

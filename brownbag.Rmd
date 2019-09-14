@@ -1,0 +1,41 @@
+---
+title: "Data cleaning brown bag"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+*An hour-long discussion about cleaning, preparing, and maintaining data in academia and industry. All welcome! If you would like to receive emails about the series please [get in touch](mailto:rohan.alexander@utoronto.ca).*
+
+**Overview**
+
+[Prof Kelly Lyons](http://individual.utoronto.ca/klyons/) and I organise a multidisciplinary brown bag that focuses on data cleaning. In any data science project a lot of time is spent on data cleaning, preparation, and maintenance, but these steps are rarely discussed or written down. This means that there is a lot of reinvention and it can be difficult to know what best practice is. This brown bag series is a chance to discuss what we do in these stages.
+
+We meet for an hour every two weeks and each meeting generally has one speaker from academia and another from industry. Usually each speaks for 15 to 25 minutes and then we have a bit of time for questions.
+
+All are welcome - you don't need to be affiliated with the university. 
+
+**Schedule**  
+ 
+* *26 September 2019*  
+    [Prof Periklis Andritsos](http://www.cs.toronto.edu/~periklis/) (ODAIA & U of T, iSchool)  
+    [Dr Ehsan Noei](http://noei.net/) (U of T, iSchool)
+* *10 October 2019*  
+    [Hareem Naveed](https://ca.linkedin.com/in/hareemnaveed) (Munich Re)  
+    [Prof Ludovic Rheault](https://ludovicrheault.weebly.com/) (U of T, Political Science)
+* *24 October 2019*  
+    [Sharla Gelfand](https://sharla.party/) (College of Nurses of Ontario)  
+    [Dr Hassan Teimoori](https://ca.linkedin.com/in/hassan-teimoori) (Deloitte, Omnia AI)  
+* *7 November 2019*  
+    [Dr Maria D'Angelo](https://ca.linkedin.com/in/mariacdangelo) (Delphia)  
+* *21 November 2019*  
+    [Prof Michelle Alexopoulos](http://homes.chass.utoronto.ca/~malex/) (U of T, Economics)  
+    [Paraskevi Massara](https://ca.linkedin.com/in/paraskevi-massara-597326a0) (U of T, Medicine)  
+
+**Location**  
+We meet at noon, in Room 417, 140 St George St, Toronto (space graciously provided by [KMDI and Semaphore Lab](http://kmdi.utoronto.ca/tag/semaphore/).)
+
+If you would like to receive an occasional email about the series please [get in touch](mailto:rohan.alexander@utoronto.ca). 
+
+![Data cleaning brown bag flyer](pdfs/2019-09-14-DataCleaningBrownBag.png)

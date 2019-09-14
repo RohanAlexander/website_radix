@@ -17,6 +17,8 @@ navbar:
       href: blog.html
     - text: "Bookshelf"
       href: bookshelf.html
+    - text: "Brown bag"
+      href: brownbag.html
     - text: "Datasets"
       href: datasets.html
     - text: "Professional"
