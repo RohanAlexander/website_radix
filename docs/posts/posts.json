@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2018-12-21gathering-and-analysing-text-data/",
+    "title": "Gathering and analysing text data",
+    "description": "Text modelling is an exciting area of research. But many guides assume that you already have a nice dataset. Similarly, web scraping is an exciting way to get information, but not many explanations go on to explain what you could do with it. This post attempts to go from scraping text from a website through to modelling the topics. It's not meant to be an exhaustive post, but should hopefully provide enough that you can get started with your own project and know where to go for more information.",
+    "author": [
+      {
+        "name": "Rohan Alexander",
+        "url": {}
+      }
+    ],
+    "date": "2018-12-21",
+    "categories": [],
+    "preview": "posts/2018-12-21gathering-and-analysing-text-data/gathering-and-analysing-text-data_files/figure-html5/diagnosticmeasuregraphs-1.png",
+    "last_modified": "2018-12-29T21:08:18-05:00",
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
     "path": "posts/2018-08-13-cleaning-hansard/",
     "title": "Cleaning Hansard: The pay's not great but the work is hard",
     "description": "A short description of the post.",
@@ -125,7 +142,7 @@
     "date": "2016-10-15",
     "categories": [],
     "preview": "posts/2016-10-15-greitens-reports-for-duty/images/StLouis_Greitens_1.jpg",
-    "last_modified": "2019-06-22T07:22:29-04:00"
+    "last_modified": "2018-12-29T14:56:06-05:00"
   },
   {
     "path": "posts/2016-09-08-professional-amateurs/",

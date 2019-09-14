@@ -10,11 +10,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **Overview**
 
-[Prof Kelly Lyons](http://individual.utoronto.ca/klyons/) and I organise a multidisciplinary brown bag that focuses on data cleaning. In any data science project a lot of time is spent on data cleaning, preparation, and maintenance, but these steps are rarely discussed or written down. This means that there is a lot of reinvention and it can be difficult to know what best practice is. This brown bag series is a chance to discuss what we do in these stages.
+In any data science project a lot of time is spent on data cleaning, preparation, and maintenance, but these steps are rarely talked about, let alone written down. This means that there is a lot of reinvention and it can be difficult to know what best practice is. To help address this [Prof Kelly Lyons](http://individual.utoronto.ca/klyons/) and I run a multidisciplinary brown bag that focuses on data cleaning. The series is a chance to share what we do in these crucial, yet little discussed, stages.
 
-We meet for an hour every two weeks and each meeting generally has one speaker from academia and another from industry. Usually each speaks for 15 to 25 minutes and then we have a bit of time for questions.
+We meet for an hour every two weeks and each meeting generally has one speaker from academia and another from industry. Usually each speaks for 15 to 25 minutes and we then have a bit of time for questions.
 
-All are welcome - you don't need to be affiliated with the university. 
+Anyone is welcome to attend - you don't need to be affiliated with the university. 
 
 **Schedule**  
  
@@ -34,7 +34,7 @@ All are welcome - you don't need to be affiliated with the university.
     [Paraskevi Massara](https://ca.linkedin.com/in/paraskevi-massara-597326a0) (U of T, Medicine)  
 
 **Location**  
-We meet at noon, in Room 417, 140 St George St, Toronto (space graciously provided by [KMDI and Semaphore Lab](http://kmdi.utoronto.ca/tag/semaphore/).)
+We meet at noon, in Room 417, 140 St George St, Toronto (space graciously provided by [KMDI and Semaphore Lab](http://kmdi.utoronto.ca/tag/semaphore/)).
 
 If you would like to receive an occasional email about the series please [get in touch](mailto:rohan.alexander@utoronto.ca). 
 
