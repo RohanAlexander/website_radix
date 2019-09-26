@@ -6,7 +6,7 @@ title: "Academic"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-[Academic CV](pdfs/2019-09-04-cv-academic-Rohan_Alexander.pdf)
+[Academic CV](pdfs/cv-academic-Rohan_Alexander.pdf)
 
 ### Education
 
