@@ -27,7 +27,7 @@ Anyone is welcome to attend - you don't need to be affiliated with the universit
     [Dr Lauren Kennedy](https://au.linkedin.com/in/lauren-kennedy-783864bb) (Columbia University)  
     Special hands-on data wrangling meeting - bring your laptop!
 * *Noon, Thursday, 24 October 2019*  
-    [Sharla Gelfand](https://sharla.party/) (College of Nurses of Ontario)  
+    [Sharla Gelfand](https://sharla.party/) (Freelance R and Shiny developer)  
 * *Noon, Thursday, 7 November 2019*  
     [Dr Maria D'Angelo](https://ca.linkedin.com/in/mariacdangelo) (Delphia)  
     [Hareem Naveed](https://ca.linkedin.com/in/hareemnaveed) (Munich Re)    

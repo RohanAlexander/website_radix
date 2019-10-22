@@ -29,34 +29,37 @@ I wrote an honours thesis in game theory supervised by [Rabee Tourky](http://tou
 [Working paper version](pdfs/2018_02_21-Age_at_arrival.pdf).
 
 ### Working papers
-* [Monica Alexander](monicaalexander.com) and Rohan Alexander, 'The Effect of Elections and Prime Ministers on Discussion in the Australian Federal Parliament (1901—2018)'.  
-[Current draft (PDF)](pdfs/2019-01-14-effect_of_events_draft.pdf).  
-[Data](https://github.com/RohanAlexander/hansardr) (just a GitHub link to some CSVs - R Package coming soon - email me if you're interested).
+* [Monica Alexander](monicaalexander.com) and Rohan Alexander, '[The Effect of Elections and Prime Ministers on Discussion in the Australian Federal Parliament (1901—2018)](pdfs/AlexanderAlexander-EffectofElectionsandPrimeMinisters.pdf)'.  
 * Rohan Alexander and Tim Hatton, 'The Making of a Nation: Who Voted for Australian Federation?'.
-
-### Work in progress
 * Rohan Alexander and Patrick Leslie, 'The Effect of State on Senators’ Speeches in the Australian Federal Parliament (1901–2018)'
+* Rohan Alexander, Patrick Dumond, Lauren Kennedy, and Patrick Leslie, ‘Forecasting Parliamentary Elections’.
 
 ### Presentations
-*  The Effect of State on Senators’ Speeches in the Australian Federal Parliament (1901-2018)  
-	- 4 September 2019, European Consortium for Political Research, General Conference, Wroclaw.
-	[Slides](pdfs/2019-09-04-slides-Wroclow.pdf)  
-	- 22 June 2019, European Political Science Association, Annual Conference, Belfast.
-	[Slides](pdfs/2019-06-22-slides-Belfast-EPSA.pdf).
-	- 18 June 2019, Quantitative Text Analysis Workshop, Dublin.
-	[Slides](pdfs/2019-06-18-slides-QTADublin.pdf).
+* Prominence in Parliament and the Incumbency Advantage in Australia (1901–2019)  
+ *Upcoming* 9/10 December 2019, Australian Society for Quantitative Political Science Conference, Melbourne.
+* The Making of a Nation: Who Voted for Australian Federation?  
+ *Upcoming* 20 November 2019, POP Politics Workshop, Canberra.
+* Forecasting Parliamentary Elections  
+ *Upcoming* 2 December 2019, Australian National University, Cake for Comments, Canberra.  
+ *Upcoming* 1 December 2019, Monash University, Department of Econometrics & Business Statistics, Melbourne.  
+ 17 October 2018, University of Toronto, Political Behaviour Group, Toronto.
+* A Word-Count Based Classifier of Politicians in the Australian Federal Parliament (1901--2018)  
+ *Upcoming* 21 November 2019, SoDa Labs, Monash University, Melbourne.  
+ [4 September 2019](pdfs/2019-09-04-slides-Wroclow.pdf), European Consortium for Political Research, General Conference, Wroclaw.  
+ [22 June 2019](pdfs/2019-06-22-slides-Belfast-EPSA.pdf), European Political Science Association, Annual Conference, Belfast.  
+ [18 June 2019](pdfs/2019-06-18-slides-QTADublin.pdf), Quantitative Text Analysis Workshop, Dublin.
 *  The Effect of Elections and Prime Ministers on Discussion in the Australian Federal Parliament (1901—2018)  
-[Slides](pdfs/2019-01-11-slides-warwick.pdf).
-	- 11 December 2018, Max Planck Institute for Demographic Research, Rostock. [Slides](pdfs/2018-12-12-slides-rostock.pdf).
-	- 22 November 2018, University of Toronto, Political Behaviour Group, Toronto. [Slides](pdfs/2018-11-22-slides-UofT.pdf).
-	- 25 October 2018, Australian National University, Research School of Economics, Canberra. [Slides](pdfs/2018-10-25-slides-RSE.pdf).
-	- 25 October 2018, Parliamentary Library, Parliament of Australia, Canberra. [Slides](pdfs/2018-10-25-slides-parlimentarylibrary.pdf).
-	- [24 October 2018](http://politicsir.cass.anu.edu.au/events/nobody-expects-spanish-inquisition-effect-events-australian-parliamentary-discussion), Australian National University, School of Politics and International Relations, Canberra. [Slides](pdfs/2018-10-24-slides-SPIR.pdf). 
-* Exploring Australia's Hansard (1901--2017)
-	- (Poster) 7-9 September, 2018 Economic History Association Meeting, Montreal.
-* A Surnames-Based Analysis of Tasmanian Social Mobility (1803--2015)
-	- 20 May 2016, UC Berkeley, Economic History Lunch, Berkeley.
-	- 2 May 2016, Australian National University, Research School of Economics, Canberra.
+ [11 January 2019](pdfs/2019-01-11-slides-warwick.pdf), Political Methodology Specialist Group, Annual Conference, Warwick.  
+ [11 December 2018](pdfs/2018-12-12-slides-rostock.pdf), Max Planck Institute for Demographic Research, Rostock.  
+ [22 November 2018](pdfs/2018-11-22-slides-UofT.pdf), University of Toronto, Political Behaviour Group, Toronto.  
+ [25 October 2018](pdfs/2018-10-25-slides-RSE.pdf), Australian National University, Research School of Economics, Canberra..  
+ [25 October 2018](pdfs/2018-10-25-slides-parlimentarylibrary.pdf), Parliamentary Library, Parliament of Australia, Canberra.  
+ [24 October 2018](pdfs/2018-10-24-slides-SPIR.pdf), Australian National University, School of Politics and International Relations, Canberra. 
+* Exploring Australia's Hansard (1901--2017)  
+ (Poster) 7-9 September, 2018 Economic History Association Meeting, Montreal.
+* A Surnames-Based Analysis of Tasmanian Social Mobility (1803--2015)  
+ 20 May 2016, UC Berkeley, Economic History Lunch, Berkeley.  
+ 2 May 2016, Australian National University, Research School of Economics, Canberra.
 
 
 
