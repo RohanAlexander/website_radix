@@ -1,7 +1,7 @@
 ---
 title: "Getting started with MRP"
 description: |
-  Multi-level regression with post-stratification (MRP) is a popular way to adjust non-representative samples to better analyse opinion and other survey responses. This post documents a hands-on workshop that will de-mystify MRP and give participants the ability and confidence to: 1) critically read papers that use it; and 2) apply it in their own work. Examples of how to implement MRP will be illustrated in R using the brms package. No experience with R is required but workshop participants should bring a laptop that is: a) connected to the internet; b) has R and R Studio installed, along with the tidyverse and brms packages.
+  Multi-level regression with post-stratification (MRP) is a popular way to adjust non-representative samples to better analyse opinion and other survey responses. I recently ran a hands-on workshop at the ANU, aimed at interested, but not experienced, social scientists to help de-mystify MRP. The workshop aimed to give participants the ability and confidence to: 1) critically read papers that use it; and 2) apply it in their own work. Examples of how to implement MRP were illustrated in R using the brms package. The following post gives the outline of the workshop and the material and coding exercises covered.
 author:
   - name: Rohan Alexander
     url: {}
@@ -9,6 +9,8 @@ date: 2019-12-03
 output:
   radix::radix_article:
     self_contained: false
+    toc: true
+    toc_depth: 2
 ---
 
 
@@ -93,18 +95,18 @@ Pr\left(Y_i = \mbox{Obama} | Y_i\in\{\mbox{Obama, Romney}\}\right) = \mbox{logit
 $$
 They run this in R using glmer() from lme4.
 
-Having a trained model that considers the effect of these various independent variables on support for the candidates, they now postratify, where each of these "cell-level estimates are weighted by the proportion of the electorate in each cell and aggregated to the appropriate level (i.e., state or national)." 
+Having a trained model that considers the effect of these various independent variables on support for the candidates, they now post-stratify, where each of these "cell-level estimates are weighted by the proportion of the electorate in each cell and aggregated to the appropriate level (i.e., state or national)." 
 
 This means that they need cross-tabulated population data. In general, the census would have worked, or one of the other large surveys available in the US, but the difficulty is that the variables need to be available on a cross-tab basis. As such, they use exit polls (not an option for Australia in general).
 
 They make state-specific estimates by post-stratifying to the features of each state.
-![State estimates from the XBox paper.](inputs/figures/states.png)
+![State estimates from the Xbox paper.](inputs/figures/states.png)
 
 Similarly, they can examine demographic-differences.
-![Demographic differences from the XBox paper.](inputs/figures/demographics.png)
+![Demographic differences from the Xbox paper.](inputs/figures/demographics.png)
 
 Finally, they convert their estimates into electoral college estimates.
-![Electoral College estimates from the XBox paper.](inputs/figures/electoral_college.png)
+![Electoral College estimates from the Xbox paper.](inputs/figures/electoral_college.png)
 
 
 
@@ -132,7 +134,7 @@ library(skimr) # Helps summarise the data
 library(tidyverse) # Helps make programming with R easier
 ```
 
-Then load some sample polling data to analyse. I have generated this data so that we have some idea of what to expect from the model. We'll just use two variables here: gender, which is either females or males (I understand and agree that gender is non-binary, but this is what is available from the ABS); and age_group, which is one of four groups: ages 18 to 29, ages 30 to 44, ages 45 to 59, ages 60 plus.
+Then load some sample polling data to analyse. I have generated this fictitious data so that we have some idea of what to expect from the model. The dependent variable is supports_ALP, which is a binary variable - either 0 or 1. We'll just use two independent variables here: gender, which is either Female or Male (as that is what is available from the ABS); and age_group, which is one of four groups: ages 18 to 29, ages 30 to 44, ages 45 to 59, ages 60 plus.
 
 ```{r initial_model_simulate_data, message=FALSE,}
 example_poll <- read_csv("outputs/data/example_poll.csv") # Here we read in a 
@@ -175,7 +177,13 @@ model <- lm(supports_ALP ~ gender + age_group,
 broom::tidy(model) 
 ```
 
+
+
 Essentially we've got our inputs back. We just used regular OLS even though our dependent variable is a binary. (It's usually fine to start with an OLS model and then iterate toward an approach that may be more appropriate such as logistic regression or whatever, but where the results are a little more difficult to interpret.) If you wanted to do that then the place to start would be glmer() from the R package lme4, and we'll see that in the next section.
+
+<aside>
+[Monica](https://www.monicaalexander.com/) is horrified by the use of OLS here, and wants it on the record that she regrets not making not doing this part of our marriage vows.
+</aside>
 
 Now we'd like to see if we can use what we found in the poll to get an estimate for each state based on their demographic features.
 
@@ -202,7 +210,7 @@ census_data %>%
   summarise(alp_predict = sum(alp_predict_prop))
 ```
 
-We now have post-stratified estimates for each division. Our model has a fair few weaknesses. For instnace small cell counts are going to be problematic. And our approach ignores uncertainty, but now that we have something working we can complicate it.
+We now have post-stratified estimates for each division. Our model has a fair few weaknesses. For instance small cell counts are going to be problematic. And our approach ignores uncertainty, but now that we have something working we can complicate it.
 
 
 
@@ -263,7 +271,7 @@ model <- read_rds("outputs/model/brms_model.rds")
 summary(model)
 ```
 
-We've moved to the bernoulli distribution, so we have to do a bit more work to understand our results, but we are broadly getting back what we'd expect.
+We've moved to the Bernoulli distribution, so we have to do a bit more work to understand our results, but we are broadly getting back what we'd expect.
 
 As before, we'd like an estimate for each state based on their demographic features and start by reading in the data.
 
@@ -290,7 +298,7 @@ post_stratified_estimates <-
 post_stratified_estimates
 ```
 
-We now have post-stratified estimates for each division. Our new Bayesian approach will enable us to deal with small cell counts by borrowing information from other cells. And our model now has a measure of uncertainty as well. We could complicate this in a variety of ways including adding more coefficients (but remember that we'd need to get new cell counts), or adding some layers.
+We now have post-stratified estimates for each division. Our new Bayesian approach will enable us to think more deeply about uncertainty. We could complicate this in a variety of ways including adding more coefficients (but remember that we'd need to get new cell counts), or adding some layers.
 
 
 # Participants pair-code extended example
@@ -307,7 +315,7 @@ As a reminder, our workflow is:
 
 
 # Live coding
-I will now briefly demonstate some other aspects that may be useful to improve three aspects of our MRP workflow: 
+I will now briefly demonstrate some other aspects that may be useful to improve three aspects of our MRP workflow: 
 
 1) (Workflow step 2) adding some more complexity to our model; and
 2) (Workflow step 3) gathering and preparing some data from the ABS that we could use to post-stratify on.
@@ -317,25 +325,62 @@ We will also add a fifth stage to our workflow: Communicating our results.
 
 
 ## Adding layers
-We may like to try to add some layers to our model. For instance, if we liked for there to be a different intercept for each state.
+We may like to try to add some layers to our model. For instance, we may like a different intercept for each state.
 
-```{r brms_model_analyse_extended, eval=FALSE}
-model <- brm(supports_ALP ~ gender + age_group + (1|state), 
-             data = example_poll, 
-             family = bernoulli()
-             )
-summary(model)
+```{r brms_model_analyse_extended}
+model_states <- brm(supports_ALP ~ gender + age_group + (1|state), 
+                    data = example_poll, 
+                    family = bernoulli(),
+                    file = "outputs/model/brms_model_states",
+                    control = list(adapt_delta = 0.90)
+                    )
+summary(model_states)
+broom::tidy(model_states, par_type = "varying")
+broom::tidy(model_states, par_type = "non-varying", robust = TRUE)
+
 ```
 
+One interesting aspect is that our multi-level approach will allow us to deal with small cell counts by borrowing information from other cells. 
+
+```{r brms_model_analyse_extended_state_counts}
+example_poll %>% 
+  count(state)
+```
+
+At the moment we have 50 respondents in the Northern Territory, 105 in Tasmania, and 107 in the ACT. Even if we were to remove most of the, say, 18 to 29 year old, male respondents from Tasmania our model would still provide estimates. It does this by pooling, in which the effect of these young, male, Tasmanians is partially determined by other cells that do have respondents. 
+
+
+
 ## Gathering data
-Getting data tends to be the most troublesome aspect. I've found that the census is fairly useful although it can require some tradeoffs. I've found the best way to get the sub-cell counts is to use ABS Tablebuilder, which you can get access to if you're associated with the ANU.
+Getting data tends to be the most troublesome aspect. I've found that the census is fairly useful although it can require some trade-offs (e.g. if you are doing political work then it's not exactly the same as the electoral roll even if you restrict it to Australian citizens aged at least 18). Nonetheless, I've found the best way to get the sub-cell counts is to use ABS TableBuilder. There are two versions - 'basic' which is free, and 'pro', which is normally $2,510 per year, but which you can get access to if you're associated with an Australian university. 
 
-![alt text](inputs/figures/tablebuilder.png)
+![TableBuilder front page.](inputs/figures/tablebuilder.png)
 
-Helpfully you can create custom groupings for geography and other aspects.
+Once you create an account then you can access census data for 2006, 2011, and 2016. (The ABS have relatively recently done some linking between censuses so there is actually some linked data, which is exciting).
 
-## Making graphs
-It's interesting to see how the model is affecting the results. We can make a graph that does this.
+![TableBuilder after logging in.](inputs/figures/census_select_type.png)
+
+The website is a bit cumbersome, but considering what they provide it is worth sticking with it. I usually use 'Counting Persons, Place of Usual Residence', but sometimes 'Counting Persons, Place of Enumeration' is also handy.
+
+![TableBuilder selecting which census.](inputs/figures/census_type.png)
+
+We want to create a new table, and we do this by specifying the columns and rows.
+
+![TableBuilder selecting columns.](inputs/figures/census_cols.png)
+
+Once you have the set-up that you want then you can retrieve the data. 
+
+![TableBuilder selecting rows.](inputs/figures/census_rows.png)
+
+You can download the data in various Excel, CSV, and other formats. If your dataset is large then you may need to submit for it to be built, which can take a day or two. Finally, if your sub-cell counts are especially small, then they will be blown around by the randomness that the ABS adds.
+
+![TableBuilder downloading data and creating custom groups.](inputs/figures/census_download.png)
+
+Helpfully you can create custom groupings for geography, say to load specific electorates, and other aspects, such as age-groups. To get started with this, select 'Custom data'.
+
+
+## Communication
+There are many interesting aspects that we may like to communicate to others. For instance, we may like to show how the model is affecting the results. We can make a graph that compares the raw estimate with the model estimate.
 
 ```{r}
 post_stratified_estimates %>% 
@@ -357,26 +402,65 @@ post_stratified_estimates %>%
   theme(legend.title = element_blank())
 ```
 
+Similarly, we may like to plot the distribution of the coefficients.
 
+<aside>
+You can work out which coefficients to be pass to gather_draws by using tidybayes::get_variables(model).
+(In this example I passed 'b_.', but the ones of interest to you may be different.)
+</aside>
+
+
+```{r}
+model %>%
+  gather_draws(`b_.*`, regex=TRUE) %>%
+  ungroup() %>%
+  mutate(coefficient = stringr::str_replace_all(.variable, c("b_" = ""))) %>%
+  mutate(coefficient = forcats::fct_recode(coefficient,
+                                           Intercept = "Intercept",
+                                           `Is male` = "genderMale",
+                                           `Age 30-44` = "age_groupages30to44",
+                                           `Age 45-59` = "age_groupages45to59",
+                                           `Age 60+` = "age_groupages60plus"
+                                           )) %>% 
+
+# both %>% 
+  ggplot(aes(y=fct_rev(coefficient), x = .value)) + 
+  ggridges::geom_density_ridges2(aes(height = ..density..),
+                                 rel_min_height = 0.01, 
+                                 stat = "density",
+                                 scale=1.5) +
+  xlab("Distribution of estimate") +
+  ylab("Coefficient") +
+  scale_fill_brewer(name = "Dataset: ", palette = "Set1") +
+  theme_minimal() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank()) +
+  theme(legend.position = "bottom")
+
+
+```
 
 
 # Concluding remarks
 
-In general, MRP is a good way to accomplish specific aims, but it's not without tradeoffs. If you have a good quality survey, then it may be a way to speak to disaggregated aspects of it. Or if you are concerned about uncertainty then it is a good way to think about that. If you have a biased survey then it's a great place to start, but it's not a panacea.
+In general, MRP is a good way to accomplish specific aims, but it's not without trade-offs. If you have a good quality survey, then it may be a way to speak to disaggregated aspects of it. Or if you are concerned about uncertainty then it is a good way to think about that. If you have a biased survey then it's a great place to start, but it's not a panacea.
 
 There's not a lot of work that's been done using Australian data, so there's plenty of scope for exciting work. I look forward to seeing what you do with it!
 
 
 
-# Possible next steps
+# Next steps
 
-1. (Not politics) https://www.monicaalexander.com/posts/2019-08-07-mrp/.
-2. (Not politics) https://mc-stan.org/rstanarm/articles/mrp.html
-3. (Not politics) Kennedy, L., Gelman, A., (2019), 'Know your population and know your model: Using model-based regression and poststratification to generalize findings beyond the observed sample'
-4. (Politics) Kastellec, J. P., Lax, J. R., and Phillips, J., 2016, 'Estimating State Public Opinion With Multi-Level Regression and Poststratification using R'.
-5. (Politics) Hanretty, C., ,2019, 'An introduction to multilevel regression and post-stratification for estimating constituency opinion'.
-6. (Not politics) Downes, M., Gurrin, L.C., English, D.R., Pirkis, J., Currier, D., Spittal, M.J. and Carlin, J.B., 2018. Multilevel Regression and Poststratification: A Modeling Approach to Estimating Population Quantities From Highly Selected Survey Samples. American Journal of Epidemiology, 187(8), pp.1780-1790.
-7. (Politics) Jackman, S., Ratcliff, S., and Mansillo, L. (2019). Small area estimates of public opinion: Model-assisted post-stratification of data from voter advice applications. Working paper presented at 2019 Annual Asian Political Methodology Meeting
+There are a lot of resources out there that would make great next steps. I recommend having a look at the following resources to see which speaks best to your interests and background.
+
+1. Alexander, Monica, 2019, 'Analyzing name changes after marriage using a non-representative survey', available at: https://www.monicaalexander.com/posts/2019-08-07-mrp/.
+2. Kennedy, Lauren, and Jonah Gabry, 2019, 'MRP with rstanarm', available at: https://mc-stan.org/rstanarm/articles/mrp.html.
+3. Kennedy, Lauren, and Andrew Gelman, 2019, 'Know your population and know your model: Using model-based regression and poststratification to generalize findings beyond the observed sample', available at: https://arxiv.org/abs/1906.11323.
+4. Kastellec, Jonathan, Jeffrey Lax, and Justin Phillips, 2016, 'Estimating State Public Opinion With Multi-Level Regression and Poststratification using R', available at: https://scholar.princeton.edu/sites/default/files/jkastellec/files/mrp_primer.pdf. 
+5. Hanretty, Chris, 2019, 'An introduction to multilevel regression and post-stratification for estimating constituency opinion', available at:  https://journals.sagepub.com/doi/abs/10.1177/1478929919864773.
+6. Downes, Marnie, Lyle Gurrin, Dallas English, Jane Pirkis, Dianne Currier, Matthew Spittal, and John Carlin, 2018, 'Multilevel Regression and Poststratification: A Modeling Approach to Estimating Population Quantities From Highly Selected Survey Samples', available at: https://www.ncbi.nlm.nih.gov/pubmed/29635276.
+7. Jackman, Simon, Shaun Ratcliff, and Luke Mansillo, 2019, 'Small area estimates of public opinion: Model-assisted post-stratification of data from voter advice applications', available at: https://www.cambridge.org/core/membership/services/aop-file-manager/file/5c2f6ebb7cf9ee1118d11c0a/APMM-2019-Simon-Jackman.pdf
+8. (Self-promotion alert) Alexander, Rohan, Patrick Dumont, and Patrick Leslie, 2019, 'Forecasting Multi-District Election', available at: https://github.com/RohanAlexander/ForecastingMultiDistrictElections.
 
 If you don't have survey data, then there is some individual-level data available on the Australian Data Archive: https://ada.edu.au. You will need to request access to the datasets, but they are very keen for people to use their data and will help you through the process if needed. 
 

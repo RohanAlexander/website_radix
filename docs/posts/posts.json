@@ -2,7 +2,7 @@
   {
     "path": "posts/2019-12-04-getting_started_with_mrp/",
     "title": "Getting started with MRP",
-    "description": "Multi-level regression with post-stratification (MRP) is a popular way to adjust non-representative samples to better analyse opinion and other survey responses. This post documents a hands-on workshop that will de-mystify MRP and give participants the ability and confidence to: 1) critically read papers that use it; and 2) apply it in their own work. Examples of how to implement MRP will be illustrated in R using the brms package. No experience with R is required but workshop participants should bring a laptop that is: a) connected to the internet; b) has R and R Studio installed, along with the tidyverse and brms packages.",
+    "description": "Multi-level regression with post-stratification (MRP) is a popular way to adjust non-representative samples to better analyse opinion and other survey responses. I recently ran a hands-on workshop at the ANU, aimed at interested, but not experienced, social scientists to help de-mystify MRP. The workshop aimed to give participants the ability and confidence to: 1) critically read papers that use it; and 2) apply it in their own work. Examples of how to implement MRP were illustrated in R using the brms package. The following post gives the outline of the workshop and the material and coding exercises covered.",
     "author": [
       {
         "name": "Rohan Alexander",
@@ -12,7 +12,7 @@
     "date": "2019-12-03",
     "categories": [],
     "preview": "posts/2019-12-04-getting_started_with_mrp/getting-started-with-mrp_files/figure-html5/unnamed-chunk-1-1.png",
-    "last_modified": "2019-12-04T11:22:37+10:00",
+    "last_modified": "2019-12-04T16:37:38+10:00",
     "preview_width": 1248,
     "preview_height": 768
   },
