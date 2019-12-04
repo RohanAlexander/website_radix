@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://rohanalexander.com/academic.html</loc>
-    <lastmod>2019-11-20T10:10:22+11:00</lastmod>
+    <lastmod>2019-11-20T09:10:22+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/blog.html</loc>
-    <lastmod>2018-12-30T00:06:14+11:00</lastmod>
+    <lastmod>2018-12-29T23:06:14+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/bookshelf.html</loc>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://rohanalexander.com/brownbag.html</loc>
-    <lastmod>2019-10-22T04:09:33+11:00</lastmod>
+    <lastmod>2019-10-22T03:09:33+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/datasets.html</loc>
@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://rohanalexander.com/</loc>
-    <lastmod>2019-10-25T01:30:33+11:00</lastmod>
+    <lastmod>2019-10-25T00:30:33+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/professional.html</loc>
@@ -30,35 +30,43 @@
   </url>
   <url>
     <loc>https://rohanalexander.com/projects.html</loc>
-    <lastmod>2018-12-30T11:12:41+11:00</lastmod>
+    <lastmod>2018-12-30T10:12:41+10:00</lastmod>
+  </url>
+  <url>
+    <loc>https://rohanalexander.com/posts/2019-12-04-getting_started_with_mrp/</loc>
+    <lastmod>2019-12-04T11:22:37+10:00</lastmod>
+  </url>
+  <url>
+    <loc>https://rohanalexander.com/posts/2019-01-03-gathering-and-analysing-text-data/</loc>
+    <lastmod>2019-12-04T08:47:41+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2018-08-13-cleaning-hansard/</loc>
-    <lastmod>2018-12-30T02:58:28+11:00</lastmod>
+    <lastmod>2019-12-04T11:05:42+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2018-07-28-the-sql-is-never-as-good-as-the-original/</loc>
-    <lastmod>2018-12-30T12:53:36+11:00</lastmod>
+    <lastmod>2018-12-30T11:53:36+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2018-06-29-getting_started_with_topic_modelling-theory/</loc>
-    <lastmod>2018-12-30T12:50:10+11:00</lastmod>
+    <lastmod>2018-12-30T11:50:10+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2017-09-14-getting-started-with-latex/</loc>
-    <lastmod>2018-12-30T12:43:31+11:00</lastmod>
+    <lastmod>2018-12-30T11:43:31+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2017-08-11-reproducing-a-grattan-map/</loc>
-    <lastmod>2018-12-30T12:35:13+11:00</lastmod>
+    <lastmod>2018-12-30T11:35:13+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2017-07-21-getting-started-with-blogdown/</loc>
-    <lastmod>2018-12-30T12:28:23+11:00</lastmod>
+    <lastmod>2018-12-30T11:28:23+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2017-07-18-mapping-the-2016-australian-election-polling-place-results/</loc>
-    <lastmod>2018-12-30T12:28:00+11:00</lastmod>
+    <lastmod>2018-12-30T11:28:00+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2016-10-15-greitens-reports-for-duty/</loc>
@@ -66,50 +74,50 @@
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2016-09-08-professional-amateurs/</loc>
-    <lastmod>2018-12-30T06:33:09+11:00</lastmod>
+    <lastmod>2018-12-30T05:33:09+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2016-07-17-trump-revisited/</loc>
-    <lastmod>2018-12-30T07:09:25+11:00</lastmod>
+    <lastmod>2018-12-30T06:09:25+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2016-02-03-broader-thinking-needed-on-the-australian-budget/</loc>
-    <lastmod>2018-12-30T07:15:13+11:00</lastmod>
+    <lastmod>2018-12-30T06:15:13+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2016-01-14-notes-and-photos-from-iowa/</loc>
-    <lastmod>2018-12-30T07:23:44+11:00</lastmod>
+    <lastmod>2018-12-30T06:23:44+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2015-08-31-prepare-for-future-economic-crises-now/</loc>
-    <lastmod>2018-12-30T07:19:27+11:00</lastmod>
+    <lastmod>2018-12-30T06:19:27+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2014-12-24-in-appreciation-of-ronald-coase/</loc>
-    <lastmod>2018-12-30T08:04:56+11:00</lastmod>
+    <lastmod>2018-12-30T07:04:56+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2014-12-24-i-ll-have-what-they-re-having/</loc>
-    <lastmod>2018-12-30T07:45:36+11:00</lastmod>
+    <lastmod>2018-12-30T06:45:36+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2014-03-19-the-human-equation-an-interview-with-george-zachary/</loc>
-    <lastmod>2018-12-30T07:52:38+11:00</lastmod>
+    <lastmod>2018-12-30T06:52:38+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2012-11-28-final-shot-at-ending-industrial-disputes/</loc>
-    <lastmod>2018-12-30T08:05:42+11:00</lastmod>
+    <lastmod>2018-12-30T07:05:42+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2011-05-17-tournaments-could-drive-r-d-effort/</loc>
-    <lastmod>2018-12-30T08:05:23+11:00</lastmod>
+    <lastmod>2018-12-30T07:05:23+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2009-05-25-plastic-policies/</loc>
-    <lastmod>2018-12-30T07:31:45+11:00</lastmod>
+    <lastmod>2018-12-30T06:31:45+10:00</lastmod>
   </url>
   <url>
     <loc>https://rohanalexander.com/posts/2008-05-08-home-buyers-will-be-hurt-by-aid-plan/</loc>
-    <lastmod>2018-12-30T07:28:52+11:00</lastmod>
+    <lastmod>2018-12-30T06:28:52+10:00</lastmod>
   </url>
 </urlset>

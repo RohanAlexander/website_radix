@@ -44,7 +44,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","draft"]}},"value":[{"type":"character","attributes":{},"value":["Gathering and analysing text data"]},{"type":"character","attributes":{},"value":["Text modelling is an exciting area of research. But many guides assume that you already have a nice dataset. Similarly, web scraping is an exciting way to get information, but not many explanations go on to explain what you could do with it. This post attempts to go from scraping text from a website through to modelling the topics. It's not meant to be an exhaustive post, but should hopefully provide enough that you can get started with your own project and know where to go for more information.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Rohan Alexander"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["01-03-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"logical","attributes":{},"value":[true]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Gathering and analysing text data"]},{"type":"character","attributes":{},"value":["Text modelling is an exciting area of research. But many guides assume that you already have a nice dataset. Similarly, web scraping is an exciting way to get information, but not many explanations go on to explain what you could do with it. This post attempts to go from scraping text from a website through to modelling the topics. It's not meant to be an exhaustive post, but should hopefully provide enough that you can get started with your own project and know where to go for more information.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Rohan Alexander"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["01-03-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -942,7 +942,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Gathering and analysing text data","description":"Text modelling is an exciting area of research. But many guides assume that you already have a nice dataset. Similarly, web scraping is an exciting way to get information, but not many explanations go on to explain what you could do with it. This post attempts to go from scraping text from a website through to modelling the topics. It's not meant to be an exhaustive post, but should hopefully provide enough that you can get started with your own project and know where to go for more information.","authors":[{"author":"Rohan Alexander","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2019-01-03T00:00:00.000-05:00","citationText":"Alexander, 2019"}
+{"title":"Gathering and analysing text data","description":"Text modelling is an exciting area of research. But many guides assume that you already have a nice dataset. Similarly, web scraping is an exciting way to get information, but not many explanations go on to explain what you could do with it. This post attempts to go from scraping text from a website through to modelling the topics. It's not meant to be an exhaustive post, but should hopefully provide enough that you can get started with your own project and know where to go for more information.","authors":[{"author":"Rohan Alexander","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2019-01-03T00:00:00.000+10:00","citationText":"Alexander, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -985,11 +985,12 @@ library(rvest)
 library(tidyverse)
 
 # Read in the list of the website addresses
-data_to_scrape &lt;- read_csv(&quot;inputs/addresses.csv&quot;) # Just a list of the URLs and dates for each minutes.
+data_to_scrape &lt;- read_csv(&quot;inputs/addresses.csv&quot;) # Just a list of the URLs 
+# and dates for each minutes.
 address_to_visit &lt;- data_to_scrape$address
 save_name &lt;- data_to_scrape$save_name
 
-# Create the function that will visit address_to_visit and save to save_name files ####
+# Create the function that will visit address_to_visit and save to save_name files
 visit_address_and_save_content &lt;-
   function(name_of_address_to_visit,
            name_of_file_to_save_as) {
@@ -998,8 +999,10 @@ visit_address_and_save_content &lt;-
       html_node(&quot;#content&quot;) %&gt;% # Find the content part
       html_text() %&gt;% # Extract the text of the content part
       write_lines(name_of_file_to_save_as) # Save as a text file
-    print(paste(&quot;Done with&quot;, name_of_address_to_visit, &quot;at&quot;, Sys.time()))  # Helpful so that you know progress when running it on all the records
-    Sys.sleep(sample(30:60, 1)) # Space out each request by somewhere between 30 and 60 seconds each so that we don&#39;t overwhelm their server
+    print(paste(&quot;Done with&quot;, name_of_address_to_visit, &quot;at&quot;, Sys.time()))  
+    # Helpful so that you know progress when running it on all the records
+    Sys.sleep(sample(30:60, 1)) # Space out each request by somewhere between 
+    # 30 and 60 seconds each so that we don&#39;t overwhelm their server
   }
 
 # If there is an error then ignore it and move to the next one
@@ -1072,7 +1075,8 @@ library(tidyverse) # Used for everything
 library(topicmodels) # Used to make basic topic models
 
 # Read in the text that we scraped earlier
-text &lt;- readtext::readtext(&quot;inputs/minutes/*.txt&quot;) # readtext makes this easy, but could also use the usual base approach of listing files that end in txt etc</code></pre>
+text &lt;- readtext::readtext(&quot;inputs/minutes/*.txt&quot;) # readtext makes this easy, 
+# but could also use the usual base approach of listing files that end in txt etc.</code></pre>
 </div>
 <p>In general you’ll often need to do a lot of cleaning before you can do the stats bit and get results. Here, I’ll just show two example steps. I’ve found that cleaning the dataset seems to take about 80 per cent of the time.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1088,16 +1092,22 @@ text$text &lt;- str_replace_all(text$text, &quot;[:punct:]&quot;, &quot; &quot;)
 #### First topic modelling ####
 # Convert the corpus to a form that the topic model can work with
 rba_minutes &lt;- quanteda::corpus(text) %&gt;% # Minimum viable conversion
-  quanteda::dfm(remove_punct = TRUE, remove = stopwords(&#39;en&#39;)) %&gt;% # Get rid of punctuation (in case you didn&#39;t already do that) and stop words - check those stop words assumptions
-  quanteda::dfm_trim(min_termfreq = 2, # Remove any word that doesn&#39;t occur at least twice
+  quanteda::dfm(remove_punct = TRUE, remove = stopwords(&#39;en&#39;)) %&gt;% # Get rid of
+  # punctuation (in case you didn&#39;t already do that) and stop words - check 
+  # those stop words assumptions
+  quanteda::dfm_trim(min_termfreq = 2, # Remove any word that doesn&#39;t occur at 
+                     # least twice
            min_docfreq = 2) # Get rid of any word that isn&#39;t in at least two documents
 
 # Run the topic model with 10 topics
-dtm &lt;- quanteda::convert(rba_minutes, to = &quot;topicmodels&quot;) # Getting the dfm into a form that topicmodels can deal with
-lda_topics &lt;- topicmodels::LDA(dtm, k = 10) # The k is the number of topics - this decision has a big impact
+dtm &lt;- quanteda::convert(rba_minutes, to = &quot;topicmodels&quot;) # Getting the dfm 
+# into a form that topicmodels can deal with
+lda_topics &lt;- topicmodels::LDA(dtm, k = 10) # The k is the number of topics - 
+# this decision has a big impact
 
 # Have a look at the terms
-terms(lda_topics, 10) # Top 10 words for each topic. Topics are just probability distributions over words so you should look at different numbers of words</code></pre>
+terms(lda_topics, 10) # Top 10 words for each topic. Topics are just 
+# probability distributions over words so you should look at different numbers of words</code></pre>
 </div>
 <p>Looking at the words in the topics, it seems as though “per” and “cent” are being treated as separate words. The RBA is proud that it separates “per” and “cent”, and if you’re a grad there that’ll stick with you for a while (see earlier paragraphs), but for our purposes they are one word and we need to combine them.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1116,13 +1126,18 @@ text$text &lt;- stringr::str_replace_all(text$text, &quot;per cent&quot;, &quot;
 toks &lt;- tokens(text$text)
 # First generate 2-grams
 ngrams &lt;- tokens_ngrams(toks, n = 2:4)
-# Somewhat annoyingly for our purposes (although understandably given the broader picture) quanteda puts tokens into its own class, so we need ot convert in order to use the usual tidyverse tools that we may be more familiar with.
-# As a side note, I often find it worthwhile to checking class in R when there&#39;s an issue because often that&#39;s part of the issue, in this case: class(ngrams).
-# The tokens class seems to just be a list, so we can unlist it and then put it into a more-friendly tibble.
+# Somewhat annoyingly for our purposes (although understandably given the broader 
+# picture) quanteda puts tokens into its own class, so we need ot convert in 
+# order to use the usual tidyverse tools that we may be more familiar with.
+# As a side note, I often find it worthwhile to checking class in R when there&#39;s 
+# an issue because often that&#39;s part of the issue, in this case: class(ngrams).
+# The tokens class seems to just be a list, so we can unlist it and then put it 
+# into a more-friendly tibble.
 ngram_counts &lt;- tibble(ngrams = unlist(ngrams)) %&gt;% 
   count(ngrams, sort = TRUE)
 
-# We can identify a bunch of obvious replacements. If we start getting a long list then we can create a file that holds the replacement.
+# We can identify a bunch of obvious replacements. If we start getting a long 
+# list then we can create a file that holds the replacement.
 text$text &lt;- stringr::str_replace_all(text$text, &quot;assistant governor&quot;, &quot;assistant_governor&quot;)
 text$text &lt;- stringr::str_replace_all(text$text, &quot;reserve bank board&quot;, &quot;reserve_bank_board&quot;)
 text$text &lt;- stringr::str_replace_all(text$text, &quot;unemployment rate&quot;, &quot;unemployment_rate&quot;)
@@ -1146,39 +1161,49 @@ rm(toks, ngrams, ngram_counts)</code></pre>
 rba_minutes &lt;- quanteda::corpus(text) %&gt;% # Minimum viable conversion
   quanteda::dfm(remove_punct = TRUE, 
                  remove_numbers = TRUE,
-                 remove = stopwords(&#39;en&#39;)) %&gt;% # Get rid of punctuation (in case you didn&#39;t already do that) and stop words - check those stop words assumptions
+                 remove = stopwords(&#39;en&#39;)) %&gt;% # Get rid of punctuation (in 
+  # case you didn&#39;t already do that) and stop words - check those stop words assumptions
   quanteda::dfm_trim(min_termfreq = 2, # Remove any word that doesn&#39;t occur at least twice
-                     min_docfreq = 0.05, # Get rid of any word that isn&#39;t in at least 5 per cent of documents
-                     max_docfreq = 0.90, # Get rid of any word that is in at least 90 per cent of documents
-                     docfreq_type = &quot;prop&quot; # Above we specified percentages - you could specify counts or ranks
+                     min_docfreq = 0.05, # Get rid of any word that isn&#39;t in at 
+                     # least 5 per cent of documents
+                     max_docfreq = 0.90, # Get rid of any word that is in at 
+                     # least 90 per cent of documents
+                     docfreq_type = &quot;prop&quot; # Above we specified percentages - you 
+                     # could specify counts or ranks
                      ) 
 
 # We can run the topic model using STM
 topics_stm &lt;- stm(rba_minutes, K = 10)
-# Looking at the results you can see that the results are fairly similar to those that we got from the topicmodels package, which is what we want. 
+# Looking at the results you can see that the results are fairly similar to 
+# those that we got from the topicmodels package, which is what we want. 
 labelTopics(topics_stm)
 rm(topics_stm)
-# If we were interested in the results then we might like to pre-process the text a little more, for instance removing the names of months.</code></pre>
+# If we were interested in the results then we might like to pre-process the text 
+# a little more, for instance removing the names of months.</code></pre>
 </div>
 <p>Other than pre-processing decisions, the other major determininat of the outputs of topic models is the number of topics specified. There are a bunch of diagnostic tests that have been developed to help with this decision and we can use some nice code from Julia Silge (<a href="https://juliasilge.com/blog/evaluating-stm/" class="uri">https://juliasilge.com/blog/evaluating-stm/</a>) to try a bunch of different values for the number of topics.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 #### Deciding on the number of topics ####
 tic(&quot;With parallel&quot;) # This allows us to time the code
-many_models &lt;- data_frame(K = seq(5, 20, by = 5)) %&gt;% # Here we&#39;re running four topic models: 5 topics, 10 topics, 15 topics and 20 topics
+many_models &lt;- data_frame(K = seq(5, 20, by = 5)) %&gt;% # Here we&#39;re running four 
+  # topic models: 5 topics, 10 topics, 15 topics and 20 topics
   mutate(topic_model = future_map(K, ~stm(rba_minutes, 
                                           K = .,
                                           verbose = FALSE)))
 toc()
 
-# You can also try setting K to zero within STM and seeing the number of topics that it recommends: e,g, choose_topic_num_for_me &lt;- stm(rba_minutes, K = 0, verbose = FALSE)
+# You can also try setting K to zero within STM and seeing the number of topics 
+# that it recommends: e,g, choose_topic_num_for_me &lt;- stm(rba_minutes, K = 0, verbose = FALSE)
 
 # We want to compare those models with different numbers of topics using various diagnostics.
 heldout &lt;- make.heldout(rba_minutes) # First create a test/training set
 
 k_result &lt;- many_models %&gt;%
   mutate(exclusivity = map(topic_model, exclusivity), # How unique are words to the topics
-         semantic_coherence = map(topic_model, semanticCoherence, rba_minutes), # How much the topics tend to be coherent if we look at them (usually a tradeoff with exclusivity)
+         semantic_coherence = map(topic_model, semanticCoherence, rba_minutes), # How 
+         # much the topics tend to be coherent if we look at them (usually a 
+         # tradeoff with exclusivity)
          eval_heldout = map(topic_model, eval.heldout, heldout$missing),
          residual = map(topic_model, checkResiduals, rba_minutes),
          bound =  map_dbl(topic_model, function(x) max(x$convergence$bound)),

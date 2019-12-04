@@ -12,12 +12,30 @@
       <link>https://rohanalexander.com/</link>
     </image>
     <generator>Radix</generator>
-    <lastBuildDate>Mon, 13 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Getting started with MRP</title>
+      <dc:creator>Rohan Alexander</dc:creator>
+      <link>https://rohanalexander.com/posts/2019-12-04-getting_started_with_mrp</link>
+      <description>Multi-level regression with post-stratification (MRP) is a popular way to adjust non-representative samples to better analyse opinion and other survey responses. This post documents a hands-on workshop that will de-mystify MRP and give participants the ability and confidence to: 1) critically read papers that use it; and 2) apply it in their own work. Examples of how to implement MRP will be illustrated in R using the brms package. No experience with R is required but workshop participants should bring a laptop that is: a) connected to the internet; b) has R and R Studio installed, along with the tidyverse and brms packages.</description>
+      <guid>https://rohanalexander.com/posts/2019-12-04-getting_started_with_mrp</guid>
+      <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://rohanalexander.com/posts/2019-12-04-getting_started_with_mrp/getting-started-with-mrp_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+    <item>
+      <title>Gathering and analysing text data</title>
+      <dc:creator>Rohan Alexander</dc:creator>
+      <link>https://rohanalexander.com/posts/2019-01-03-gathering-and-analysing-text-data</link>
+      <description>Text modelling is an exciting area of research. But many guides assume that you already have a nice dataset. Similarly, web scraping is an exciting way to get information, but not many explanations go on to explain what you could do with it. This post attempts to go from scraping text from a website through to modelling the topics. It's not meant to be an exhaustive post, but should hopefully provide enough that you can get started with your own project and know where to go for more information.</description>
+      <guid>https://rohanalexander.com/posts/2019-01-03-gathering-and-analysing-text-data</guid>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://rohanalexander.com/posts/2019-01-03-gathering-and-analysing-text-data/gathering-and-analysing-text-data_files/figure-html5/diagnosticmeasuregraphs-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Cleaning Hansard: The pay's not great but the work is hard</title>
       <dc:creator>Rohan Alexander</dc:creator>
       <link>https://rohanalexander.com/posts/2018-08-13-cleaning-hansard</link>
-      <description>A short description of the post.</description>
+      <description>Cleaning the Australian Hansard is mind-numbing, annoying and time-consuming, but someone has to do it.</description>
       <guid>https://rohanalexander.com/posts/2018-08-13-cleaning-hansard</guid>
       <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
     </item>

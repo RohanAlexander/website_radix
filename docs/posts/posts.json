@@ -1,8 +1,42 @@
 [
   {
+    "path": "posts/2019-12-04-getting_started_with_mrp/",
+    "title": "Getting started with MRP",
+    "description": "Multi-level regression with post-stratification (MRP) is a popular way to adjust non-representative samples to better analyse opinion and other survey responses. This post documents a hands-on workshop that will de-mystify MRP and give participants the ability and confidence to: 1) critically read papers that use it; and 2) apply it in their own work. Examples of how to implement MRP will be illustrated in R using the brms package. No experience with R is required but workshop participants should bring a laptop that is: a) connected to the internet; b) has R and R Studio installed, along with the tidyverse and brms packages.",
+    "author": [
+      {
+        "name": "Rohan Alexander",
+        "url": {}
+      }
+    ],
+    "date": "2019-12-03",
+    "categories": [],
+    "preview": "posts/2019-12-04-getting_started_with_mrp/getting-started-with-mrp_files/figure-html5/unnamed-chunk-1-1.png",
+    "last_modified": "2019-12-04T11:22:37+10:00",
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
+    "path": "posts/2019-01-03-gathering-and-analysing-text-data/",
+    "title": "Gathering and analysing text data",
+    "description": "Text modelling is an exciting area of research. But many guides assume that you already have a nice dataset. Similarly, web scraping is an exciting way to get information, but not many explanations go on to explain what you could do with it. This post attempts to go from scraping text from a website through to modelling the topics. It's not meant to be an exhaustive post, but should hopefully provide enough that you can get started with your own project and know where to go for more information.",
+    "author": [
+      {
+        "name": "Rohan Alexander",
+        "url": {}
+      }
+    ],
+    "date": "2019-01-03",
+    "categories": [],
+    "preview": "posts/2019-01-03-gathering-and-analysing-text-data/gathering-and-analysing-text-data_files/figure-html5/diagnosticmeasuregraphs-1.png",
+    "last_modified": "2019-12-04T08:47:41+10:00",
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
     "path": "posts/2018-08-13-cleaning-hansard/",
     "title": "Cleaning Hansard: The pay's not great but the work is hard",
-    "description": "A short description of the post.",
+    "description": "Cleaning the Australian Hansard is mind-numbing, annoying and time-consuming, but someone has to do it.",
     "author": [
       {
         "name": "Rohan Alexander",
@@ -12,7 +46,7 @@
     "date": "2018-08-13",
     "categories": [],
     "preview": {},
-    "last_modified": "2018-12-30T02:58:28+11:00"
+    "last_modified": "2019-12-04T11:05:42+10:00"
   },
   {
     "path": "posts/2018-07-28-the-sql-is-never-as-good-as-the-original/",
@@ -27,7 +61,7 @@
     "date": "2018-07-28",
     "categories": [],
     "preview": {},
-    "last_modified": "2018-12-30T12:53:36+11:00"
+    "last_modified": "2018-12-30T11:53:36+10:00"
   },
   {
     "path": "posts/2018-06-29-getting_started_with_topic_modelling-theory/",
@@ -42,7 +76,7 @@
     "date": "2018-06-29",
     "categories": [],
     "preview": "posts/2018-06-29-getting_started_with_topic_modelling-theory/topic_modelling-theory_files/figure-html5/topicsoverdocuments-1.png",
-    "last_modified": "2018-12-30T12:50:10+11:00",
+    "last_modified": "2018-12-30T11:50:10+10:00",
     "preview_width": 1248,
     "preview_height": 768
   },
@@ -59,7 +93,7 @@
     "date": "2017-09-14",
     "categories": [],
     "preview": "posts/2017-09-14-getting-started-with-latex/images/LaTeX_first_example.png",
-    "last_modified": "2018-12-30T12:43:31+11:00",
+    "last_modified": "2018-12-30T11:43:31+10:00",
     "preview_width": 1014,
     "preview_height": 1448
   },
@@ -76,7 +110,7 @@
     "date": "2017-08-11",
     "categories": [],
     "preview": "posts/2017-08-11-reproducing-a-grattan-map/images/grattan.png",
-    "last_modified": "2018-12-30T12:35:13+11:00",
+    "last_modified": "2018-12-30T11:35:13+10:00",
     "preview_width": 1888,
     "preview_height": 1336
   },
@@ -93,7 +127,7 @@
     "date": "2017-07-21",
     "categories": [],
     "preview": "posts/2017-07-21-getting-started-with-blogdown/images/blogdown_github_1.png",
-    "last_modified": "2018-12-30T12:28:23+11:00",
+    "last_modified": "2018-12-30T11:28:23+10:00",
     "preview_width": 2152,
     "preview_height": 1142
   },
@@ -110,7 +144,7 @@
     "date": "2017-07-18",
     "categories": [],
     "preview": {},
-    "last_modified": "2018-12-30T12:28:00+11:00"
+    "last_modified": "2018-12-30T11:28:00+10:00"
   },
   {
     "path": "posts/2016-10-15-greitens-reports-for-duty/",
@@ -140,7 +174,7 @@
     "date": "2016-09-08",
     "categories": [],
     "preview": "posts/2016-09-08-professional-amateurs/images/ProfessionalAmateurs-WelcomeSign.jpg",
-    "last_modified": "2018-12-30T06:33:09+11:00"
+    "last_modified": "2018-12-30T05:33:09+10:00"
   },
   {
     "path": "posts/2016-07-17-trump-revisited/",
@@ -155,7 +189,7 @@
     "date": "2016-07-17",
     "categories": [],
     "preview": "posts/2016-07-17-trump-revisited/images/2016_07_17_Children.jpg",
-    "last_modified": "2018-12-30T07:09:25+11:00"
+    "last_modified": "2018-12-30T06:09:25+10:00"
   },
   {
     "path": "posts/2016-02-03-broader-thinking-needed-on-the-australian-budget/",
@@ -170,7 +204,7 @@
     "date": "2016-02-03",
     "categories": [],
     "preview": "posts/2016-02-03-broader-thinking-needed-on-the-australian-budget/images/DSC_0599.jpg",
-    "last_modified": "2018-12-30T07:15:13+11:00"
+    "last_modified": "2018-12-30T06:15:13+10:00"
   },
   {
     "path": "posts/2016-01-14-notes-and-photos-from-iowa/",
@@ -185,7 +219,7 @@
     "date": "2016-01-14",
     "categories": [],
     "preview": "posts/2016-01-14-notes-and-photos-from-iowa/images/2016_01_11_Bernie.jpg",
-    "last_modified": "2018-12-30T07:23:44+11:00"
+    "last_modified": "2018-12-30T06:23:44+10:00"
   },
   {
     "path": "posts/2015-08-31-prepare-for-future-economic-crises-now/",
@@ -200,7 +234,7 @@
     "date": "2015-08-31",
     "categories": [],
     "preview": "posts/2015-08-31-prepare-for-future-economic-crises-now/images/DSCF1945.jpg",
-    "last_modified": "2018-12-30T07:19:27+11:00"
+    "last_modified": "2018-12-30T06:19:27+10:00"
   },
   {
     "path": "posts/2014-12-24-in-appreciation-of-ronald-coase/",
@@ -215,7 +249,7 @@
     "date": "2014-12-24",
     "categories": [],
     "preview": "posts/2014-12-24-in-appreciation-of-ronald-coase/images/IMG_0145.jpg",
-    "last_modified": "2018-12-30T08:04:56+11:00"
+    "last_modified": "2018-12-30T07:04:56+10:00"
   },
   {
     "path": "posts/2014-12-24-i-ll-have-what-they-re-having/",
@@ -230,7 +264,7 @@
     "date": "2014-12-17",
     "categories": [],
     "preview": "posts/2014-12-24-i-ll-have-what-they-re-having/images/DSCF3336.jpg",
-    "last_modified": "2018-12-30T07:45:36+11:00"
+    "last_modified": "2018-12-30T06:45:36+10:00"
   },
   {
     "path": "posts/2014-03-19-the-human-equation-an-interview-with-george-zachary/",
@@ -245,7 +279,7 @@
     "date": "2014-03-19",
     "categories": [],
     "preview": "posts/2014-03-19-the-human-equation-an-interview-with-george-zachary/images/IMG_0277.jpg",
-    "last_modified": "2018-12-30T07:52:38+11:00"
+    "last_modified": "2018-12-30T06:52:38+10:00"
   },
   {
     "path": "posts/2012-11-28-final-shot-at-ending-industrial-disputes/",
@@ -264,7 +298,7 @@
     "date": "2012-11-28",
     "categories": [],
     "preview": "posts/2012-11-28-final-shot-at-ending-industrial-disputes/images/DSC3132.jpg",
-    "last_modified": "2018-12-30T08:05:42+11:00"
+    "last_modified": "2018-12-30T07:05:42+10:00"
   },
   {
     "path": "posts/2011-05-17-tournaments-could-drive-r-d-effort/",
@@ -283,7 +317,7 @@
     "date": "2011-05-17",
     "categories": [],
     "preview": "posts/2011-05-17-tournaments-could-drive-r-d-effort/images/DSCF4403.jpg",
-    "last_modified": "2018-12-30T08:05:23+11:00"
+    "last_modified": "2018-12-30T07:05:23+10:00"
   },
   {
     "path": "posts/2009-05-25-plastic-policies/",
@@ -302,7 +336,7 @@
     "date": "2009-05-25",
     "categories": [],
     "preview": {},
-    "last_modified": "2018-12-30T07:31:45+11:00"
+    "last_modified": "2018-12-30T06:31:45+10:00"
   },
   {
     "path": "posts/2008-05-08-home-buyers-will-be-hurt-by-aid-plan/",
@@ -317,6 +351,6 @@
     "date": "2008-05-08",
     "categories": [],
     "preview": "posts/2008-05-08-home-buyers-will-be-hurt-by-aid-plan/images/DSCF0213.jpg",
-    "last_modified": "2018-12-30T07:28:52+11:00"
+    "last_modified": "2018-12-30T06:28:52+10:00"
   }
 ]
