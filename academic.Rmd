@@ -35,11 +35,10 @@ I wrote an honours thesis in game theory supervised by [Rabee Tourky](http://tou
 * Rohan Alexander, Patrick Dumond, Lauren Kennedy, and Patrick Leslie, ‘Forecasting Parliamentary Elections’.
 
 ### Presentations
-* Prominence in Parliament and the Incumbency Advantage in Australia (1901–2019)  
- *Upcoming* 9/10 December 2019, Australian Society for Quantitative Political Science Conference, Melbourne.
 * Forecasting Parliamentary Elections  
- *Upcoming* 2 December 2019, Australian National University, Cake for Comments, Canberra.  
- *Upcoming* 1 December 2019, Monash University, Department of Econometrics & Business Statistics, Melbourne.  
+ *Upcoming* 10 December 2019, Monash University, Department of Econometrics & Business Statistics, Melbourne.  
+ [9 December 2019](pdfs/2019-12-09-slides-ASQPS.pdf), Australian Society for Quantitative Political Science Conference, Melbourne.  
+ 2 December 2019, Australian National University, Cake for Comments, Canberra.  
  [20 November 2019](pdfs/2019-11-20-slides-POP.pdf), POP Politics Workshop, Canberra.
  17 October 2018, University of Toronto, Political Behaviour Group, Toronto.
 * A Word-Count Based Classifier of Politicians in the Australian Federal Parliament (1901--2018)  
