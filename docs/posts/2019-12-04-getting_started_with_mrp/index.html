@@ -1426,7 +1426,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>It can allow us to ‘re-weight’ in a way that includes uncertainty front-of-mind and isn’t hamstrung by small samples.</li>
 <li>It can allow us to use broad surveys to speak to subsets.</li>
 </ol>
-<p>From a practical perspective, it tends to be less expensive to collect non-probability samples and so there are benefits of being able to use these types of data. That said, it is not a magic-bullet and the laws of statistics still apply. We will have larger uncertainty around our estimates and they will still be subject to all the usual biases.</p>
+<p>From a practical perspective, it tends to be less expensive to collect non-probability samples and so there are benefits of being able to use these types of data. That said, it is not a magic-bullet and the laws of statistics still apply. We will have larger uncertainty around our estimates and they will still be subject to all the usual biases. As <a href="https://twitter.com/jazzystats">Lauren Kennedy</a> points out, ‘MRP has traditionally been used in probability surveys and had potential for non-probability surveys, but we’re not sure of the limitations at the moment.’</p>
 <p>One famous example is Wei Wang, David Rothschild, Sharad Goel, and Andrew Gelman, 2014, ‘Forecasting elections with non-representative polls’, <em>International Journal of Forecasting</em>. They used data from the Xbox gaming platform to forecast the 2012 US Presidential Election.</p>
 <p>Key facts about the set-up:</p>
 <ul>
@@ -1511,13 +1511,13 @@ Skim summary statistics
  n obs: 5000 
  n variables: 4 
 
-── Variable type:character ────────────────────────────────────────────────────────────────────────────────────
+── Variable type:character ────────────────────────────────────────────────────────────────────────────────
   variable missing complete    n min max empty n_unique
  age_group       0     5000 5000  10  10     0        4
     gender       0     5000 5000   4   6     0        2
      state       0     5000 5000   2   3     0        8
 
-── Variable type:numeric ──────────────────────────────────────────────────────────────────────────────────────
+── Variable type:numeric ──────────────────────────────────────────────────────────────────────────────────
      variable missing complete    n mean  sd p0 p25 p50 p75 p100
  supports_ALP       0     5000 5000 0.55 0.5  0   0   1   1    1
      hist
@@ -1624,7 +1624,7 @@ census_data %&gt;%
 </ol>
 <p>Get started by opening the Rproj file from the workshop repo and opening a new R script.</p>
 <h1 id="live-coding-extended-example">Live coding extended example</h1>
-<p>We’d like to address some of the major issues with our approach, specifically being able to deal with small cell counts, and also taking better account of uncertainty. To do this we’ll use the same broad approach as before, but just improving bits of our workflow.</p>
+<p>We’d like to address some of the major issues with our approach, specifically being able to deal with small cell counts, and also taking better account of uncertainty. As we are dealing with survey data, prediction intervals or something similar are crticial, and it’s not appropriate to only report central estimates. To do this we’ll use the same broad approach as before, but just improving bits of our workflow.</p>
 <p>First load the packages.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1733,14 +1733,14 @@ post_stratified_estimates</code></pre>
 # A tibble: 8 x 4
   state  mean lower upper
   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1 ACT   0.524 0.243 0.791
-2 NSW   0.493 0.214 0.759
-3 NT    0.536 0.200 0.852
-4 QLD   0.495 0.215 0.767
-5 SA    0.476 0.201 0.750
-6 TAS   0.461 0.183 0.756
-7 VIC   0.500 0.224 0.766
-8 WA    0.503 0.219 0.765</code></pre>
+1 ACT   0.531 0.247 0.791
+2 NSW   0.495 0.214 0.767
+3 NT    0.542 0.253 0.852
+4 QLD   0.495 0.215 0.769
+5 SA    0.479 0.201 0.761
+6 TAS   0.464 0.183 0.757
+7 VIC   0.503 0.224 0.760
+8 WA    0.500 0.219 0.765</code></pre>
 </div>
 <p>We now have post-stratified estimates for each division. Our new Bayesian approach will enable us to think more deeply about uncertainty. We could complicate this in a variety of ways including adding more coefficients (but remember that we’d need to get new cell counts), or adding some layers.</p>
 <h1 id="participants-pair-code-extended-example">Participants pair-code extended example</h1>

@@ -74,7 +74,7 @@ Multi-level regression with post-stratification (MRP) is a handy approach when d
 1) It can allow us to 're-weight' in a way that includes uncertainty front-of-mind and isn't hamstrung by small samples.
 2) It can allow us to use broad surveys to speak to subsets.
 
-From a practical perspective, it tends to be less expensive to collect non-probability samples and so there are benefits of being able to use these types of data. That said, it is not a magic-bullet and the laws of statistics still apply. We will have larger uncertainty around our estimates and they will still be subject to all the usual biases. 
+From a practical perspective, it tends to be less expensive to collect non-probability samples and so there are benefits of being able to use these types of data. That said, it is not a magic-bullet and the laws of statistics still apply. We will have larger uncertainty around our estimates and they will still be subject to all the usual biases. As [Lauren Kennedy](https://twitter.com/jazzystats) points out, 'MRP has traditionally been used in probability surveys and had potential for non-probability surveys, but we're not sure of the limitations at the moment.' 
 
 One famous example is Wei Wang, David Rothschild, Sharad Goel, and Andrew Gelman, 2014, 'Forecasting elections with non-representative polls', *International Journal of Forecasting*. They used data from the Xbox gaming platform to forecast the 2012 US Presidential Election.
 
@@ -230,7 +230,7 @@ Get started by opening the Rproj file from the workshop repo and opening a new R
 
 # Live coding extended example
 
-We'd like to address some of the major issues with our approach, specifically being able to deal with small cell counts, and also taking better account of uncertainty. To do this we'll use the same broad approach as before, but just improving bits of our workflow.
+We'd like to address some of the major issues with our approach, specifically being able to deal with small cell counts, and also taking better account of uncertainty. As we are dealing with survey data, prediction intervals or something similar are crticial, and it's not appropriate to only report central estimates. To do this we'll use the same broad approach as before, but just improving bits of our workflow.
 
 First load the packages.
 

@@ -16,7 +16,6 @@ knitr::opts_chunk$set(echo = FALSE)
 My research focused on Australian political and economic history, such as exploring: the impact of various events on discussion in federal parliaments; who voted for Federation; and which politicians get an incumbency effect.  
 Panel: [John Tang](https://sites.google.com/site/jptang/) (primary supervisor), [Martine Mariotti](https://www.cbe.anu.edu.au/about/staff-directory/?profile=Martine-Mariotti) (chair), [Zach Ward](https://sites.google.com/site/zachaward/) and [Tim Hatton](https://sites.google.com/site/timhattonwebsite/).  
 Thesis: Essays on Applied Historical Labour Economics.  
-Status: The award of my degree has been approved, however it will only be conferred at the next graduation ceremony, which is scheduled for December 2019.
 * M.Economics (2012)
 
 #### University of Queensland
@@ -35,27 +34,29 @@ I wrote an honours thesis in game theory supervised by [Rabee Tourky](http://tou
 * Rohan Alexander, Patrick Dumond, Lauren Kennedy, and Patrick Leslie, ‘Forecasting Parliamentary Elections’.
 
 ### Presentations
-* Forecasting Parliamentary Elections  
- *Upcoming* 10 December 2019, Monash University, Department of Econometrics & Business Statistics, Melbourne.  
+* **A Bayesian Multi-Level Model with Post-Stratification for Forecasting Multi-District Elections in Canada***  
+ *(Upcoming)* 2-4 June 2020, Western University, CPSA Annual Conference, London, Ontario.  
+* **Forecasting Parliamentary Elections**  
+ *(Upcoming)* 16-19 April 2020, Midwest Political Science Association, Annual Conference, Chicago.  
+ 10 December 2019, Monash University, Department of Econometrics & Business Statistics, Melbourne.  
  [9 December 2019](pdfs/2019-12-09-slides-ASQPS.pdf), Australian Society for Quantitative Political Science Conference, Melbourne.  
  2 December 2019, Australian National University, Cake for Comments, Canberra.  
  [20 November 2019](pdfs/2019-11-20-slides-POP.pdf), POP Politics Workshop, Canberra.
  17 October 2018, University of Toronto, Political Behaviour Group, Toronto.
-* A Word-Count Based Classifier of Politicians in the Australian Federal Parliament (1901--2018)  
- *Upcoming* 21 November 2019, SoDa Labs, Monash University, Melbourne.  
+* **A Word-Count Based Classifier of Politicians in the Australian Federal Parliament (1901--2018)**  
  [4 September 2019](pdfs/2019-09-04-slides-Wroclow.pdf), European Consortium for Political Research, General Conference, Wroclaw.  
  [22 June 2019](pdfs/2019-06-22-slides-Belfast-EPSA.pdf), European Political Science Association, Annual Conference, Belfast.  
  [18 June 2019](pdfs/2019-06-18-slides-QTADublin.pdf), Quantitative Text Analysis Workshop, Dublin.
-*  The Effect of Elections and Prime Ministers on Discussion in the Australian Federal Parliament (1901—2018)  
+*  **The Effect of Elections and Prime Ministers on Discussion in the Australian Federal Parliament (1901—2018)**  
  [11 January 2019](pdfs/2019-01-11-slides-warwick.pdf), Political Methodology Specialist Group, Annual Conference, Warwick.  
  [11 December 2018](pdfs/2018-12-12-slides-rostock.pdf), Max Planck Institute for Demographic Research, Rostock.  
  [22 November 2018](pdfs/2018-11-22-slides-UofT.pdf), University of Toronto, Political Behaviour Group, Toronto.  
- [25 October 2018](pdfs/2018-10-25-slides-RSE.pdf), Australian National University, Research School of Economics, Canberra..  
+ [25 October 2018](pdfs/2018-10-25-slides-RSE.pdf), Australian National University, Research School of Economics, Canberra.  
  [25 October 2018](pdfs/2018-10-25-slides-parlimentarylibrary.pdf), Parliamentary Library, Parliament of Australia, Canberra.  
  [24 October 2018](pdfs/2018-10-24-slides-SPIR.pdf), Australian National University, School of Politics and International Relations, Canberra. 
-* Exploring Australia's Hansard (1901--2017)  
+* **Exploring Australia's Hansard (1901--2017)**  
  (Poster) 7-9 September, 2018 Economic History Association Meeting, Montreal.
-* A Surnames-Based Analysis of Tasmanian Social Mobility (1803--2015)  
+* **A Surnames-Based Analysis of Tasmanian Social Mobility (1803--2015)**  
  20 May 2016, UC Berkeley, Economic History Lunch, Berkeley.  
  2 May 2016, Australian National University, Research School of Economics, Canberra.
 
@@ -75,3 +76,8 @@ I wrote an honours thesis in game theory supervised by [Rabee Tourky](http://tou
 * Tutor, Microeconomic Theory, Semester 1, 2008
 * Tutor, Introductory Microeconomics, Semester 2, 2007
 * Tutor, Introductory Microeconomics, Semester 1, 2007
+
+
+#### Short courses and workshops
+* Instructor, [Getting started with MRP](http://rohanalexander.com/posts/2019-12-04-getting_started_with_mrp/), Australian National University, 3 December 2019.
+
