@@ -17,8 +17,7 @@ Hi, I’m Rohan Alexander.
 knitr::include_graphics("images/portrait.jpg") 
 ```
 
-
-I am a post-doc at the Faculty of Information Sciences at the University of Toronto, Canada. My [academic research](https://rohanalexander.com/academic.html) explores economic and political history using quantitative methods. This often involves first constructing datasets, either through optical character recognition or web-scraping, as well as cleaning and preparing them in a reproducible way. I then use quantitative methods to analyse the large amounts of information contained in these datasets, drawing on techniques from text analysis, statistical learning, and Bayesian methods. 
+I am a post-doc at the Faculty of Information Sciences at the University of Toronto, Canada. My [academic research](https://rohanalexander.com/academic.html) answers questions in social sciences, such as: are our politicians actually representing us, do elections matter, and how can we make political polling better. To do this I build, clean, maintain, and share datasets in a reproducible way, and then using quantitative methods, such as text analysis, machine learning, and Bayesian hierarchical models, to analyse them.
 
 I run a [brown bag series](https://rohanalexander.com/brownbag.html) about data cleaning, which is more fun than it sounds; please [get in touch](mailto:rohan.alexander@utoronto.ca) if you'd like to attend or present!
 

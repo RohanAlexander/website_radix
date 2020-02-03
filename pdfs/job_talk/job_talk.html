@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Data Science as an Information and Statistics Workflow</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rohan Alexander   University of Toronto" />
+    <meta name="date" content="2020-01-27" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/font-awesome-5.3.1/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my-theme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Data Science as an Information and Statistics Workflow
+### Rohan Alexander <br> University of Toronto
+### 27 January 2020
+
+---
+
+
+
+
+
+
+
+
+class: inverse, center, middle
+
+# Overview
+
+---
+
+background-image: url(IMG_3424.jpeg)
+background-position: center
+background-size: contain
+
+---
+
+# Research focus to date
+
+
+- Multidisciplinary approach to explore questions in social sciences:
+  - Do elections change what is discussed in parliament?
+  - Do childhood educational conditions matter for adult outcomes?
+  - To what extent is economic status inherited?
+- Often first have to construct new datasets.
+- Then typically use quantitative methods to provide answers.
+
+???
+
+- Although the term ‘data science’ is ubiquitous in academia, industry, and even more generally, it is difficult to define. 
+- One reason for the increased demand for data science and quantitative methods over the past decade–individuals and their behaviour are now at the heart of it. Many of the techniques have been around for many decades, but what makes them popular now is this human focus. 
+- As my work is focused on individuals, issues of privacy and consent are of critical importance, and inform all aspects of my research. 
+- Additionally, I follow open science best practises to ensure both reproducibility and replicability. And I am increasingly interested in how we can better approach the archival aspects of this.
+- Increasingly I am interested in formalising approaches to data cleaning and dataset construction, and am building aspects of this into my research program.
+
+-  from historical and other sources in a reproducible way, drawing on methods of digitization, record matching, survey collection, and web scraping. 
+- , drawing on techniques from text analysis, statistical learning, and Bayesian methods, as appropriate.
+
+
+
+---
+
+# Data science as an information and statistical sciences workflow
+
+
+&lt;img src="all_reduced.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+???
+
+I am a post-doc at the University of Toronto, Canada. I use data science approaches to explore questions in economics, history, and politics. My typical workflow involves: first constructing datasets, either through optical character recognition or web-scraping, as well as cleaning and preparing them in a reproducible way. I then use quantitative methods to analyse the large amounts of information contained in these datasets, drawing on techniques from text analysis, statistical learning, and Bayesian methods.
+
+
+
+---
+count: false
+
+# Data science as an information and statistical sciences workflow
+
+
+&lt;img src="all.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+???
+A reproducible, meaningful, data science workflow such as mine requires (and is enhanced by) blending aspects of information and statistical sciences.
+
+
+---
+
+
+
+class: inverse
+
+# A Word-Count Based Classifier of Politicians in the Australian Federal Parliament (1901–2018)
+
+### - Is the Senate a 'states' house’?
+### - How polarised are the political parties in Australia?
+### - Has this changed over time?
+
+
+???
+
+- Create a new dataset of who said what in the Australian Federal Parliament between 1901 and 2018.
+- Analyse politician-specific word counts using elastic net regularization.
+- Then examine the accuracy of the model.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+# Background
+
+.pull-left[
+- Australia was formed in 1901 when six colonies voted to federate.
+- The vote was not a sure-thing and various concessions were made in an effort to placate those who saw it as a 'power-grab' from Sydney.
+- Australia has a two-chamber parliamentary system.
+]
+
+.pull-right[
+&lt;img src="gall.png" width="2091" /&gt;
+.small[1899 'The gall of Sydney', Critic, Adelaide, 18 March, p. 17.]
+]
+
+
+
+???
+
+- Each of the six states (~'provinces') has 12 senators, and each of the two territories have two senators, for a total of 76 senators. 
+- The House of Representatives has 151 members, each of which represents a division comprised of a roughly equal number of voters. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+# Data overview
+.pull-left[
+Hansard PDFs are available since Federation (1901) and creating a corpus required a large PDF-parsing and data-cleaning exercise. 
+
+The corpus: 
+
+- More than a billion words.
+- 7,934 days in House of Representations.
+- 6,746 days in Senate.
+- Covers 119 years.
+- 1,776 different politicians.
+]
+
+.pull-right[
+&lt;img src="hansard_reduced.png" width="90%" style="display: block; margin: auto;" /&gt;
+.small[House of Representatives Hansard, Friday, 13 July 1906.]
+]
+
+???
+
+The structure of the data that we want is a count of the number of times a particular word was spoken, for every year, for every politician. This count becomes our explanatory variables.
+
+
+Our main explanatory variables are the counts of the number of times a politician used certain words. As such, the construction of these word counts is the critical aspect of our analysis. Text data are messy and our dataset remains imperfect. Nonetheless, the steps that we take are to: change all words to lower case, remove stop words, remove any word that does not occur at least 100 times, remove all state names and their close variants, and remove numbers. After that we create a tidy dataset where the rows are politicians, the columns are words, and the cells are counts of the number of times that politician used that word. In the end our model considers counts for almost 10,000 words.
+
+Quantitative text analysis using historical datasets involves a trade-off. On the one hand, examining changes over long time periods is inherently interesting given the primacy of institutions over longer time periods. And the only way to do this efficiently is to use quantitative, automated, methods. But the quality of historical documents is almost inevitably lower than modern documents leading to datasets that are messier. The messi- ness of the dataset informs our methodological choices which focuses on word counts, and avoids imposing meaning to the extent that it is possible.
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+count: false
+
+&lt;img src="workflow_data.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+|Date | Politician | Text|
+|:----|-----------:|----:|
+|1906-07-13 | Mr Kelly | In view of the fact that the Government itself asked the advice of the Imperial Defence Committee... |
+|1906-07-13 | Mr Deakin | I have within the last few weeks addressed the Home authorities by despatch with regard to the very...|
+| ... | ... | ... |
+
+
+???
+In a reproducible way the PDFs are converted to text files, the speaker is identified, and the words are separated. (This dataset also used by Alexander and Alexander, 2020, to examine whether changes in prime minister or elections are are associated with topic changes.)
+
+
+
+
+
+
+
+
+---
+
+count: false
+
+&lt;img src="workflow_data.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+.small[
+| Date       | UniqueID | Word |
+|:-----------|----------:|---:|
+| 1906-07-13 | Kelly1877 | In |
+| 1906-07-13 | Kelly1877 | view |
+| 1906-07-13 | Kelly1877 | of |
+| 1906-07-13 | Kelly1877 | the |
+| 1906-07-13 | Kelly1877 | fact |
+| 1906-07-13 | Kelly1877 | that |
+| 1906-07-13 | Kelly1877 | the |
+| 1906-07-13 | Kelly1877 | Government |
+| 1906-07-13 | Kelly1877 | itself |
+| 1906-07-13 | Kelly1877 | asked |
+| ... | ... | ... |
+]
+
+
+---
+
+count: false
+
+
+&lt;img src="workflow_data.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+|Date 		| UniqueID  | in | view | of | the | fact | that | Government | itself | asked | advice |
+|:----------|:----------|:--:|:----:|:--:|:---:|:----:|:----:|:----------:|:------:|:-----:|:------:|
+|1906 | Kelly1877 | 1 | 1 | 1 | 2 | 1 | 1 | 1 | 1 | 1 | 1 |
+|1907 | Kelly1877 | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |
+
+
+---
+
+count: false
+
+&lt;img src="workflow_data.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+
+|Date 		| UniqueID  | view | government | advice |
+|:----------|:----------|:----:|:----------:|:------:|
+|1906 | Kelly1877 | 1	 | 1 | 1 |
+|1907 | Kelly1877 | ... | ... | ... |
+
+
+---
+
+&lt;img src="workflow_share.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+.pull-left[
+&lt;tt&gt;AustralianPoliticians&lt;/tt&gt; is an R package of datasets related to Australian politicians, that is up-to-date as of 30 November 2019.
+
+Install using:
+.small[
+
+```r
+devtools::install_github(
+  "RohanAlexander/AustralianPoliticians"
+  )
+```
+]
+]
+
+.pull-right[
+&lt;img src="AustralianPoliticians.png" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+
+---
+
+&lt;img src="workflow_stats.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+### Set-up
+
+The model considers state as a multinomial outcome of word choice:
+`$$s_{i,t} = β_1w_{i,t,1} + β_2w_{i,t,2} + \dots + β_nw_{i,t,n}$$`
+In this set-up, `\(s_{i,t}\)` is the state of a particular politician `\(i\)` at time `\(t\)`, and `\(w_{i,t,1}\)` is the count of the number of times politician `\(i\)` used the word or phrase `\(w_1\)` at time `\(t\)`. 
+
+The party model is the same, except that `\(p_{i,t}\)`, which is the party of a particular politician `\(i\)`, replaces `\(s_{i,t}\)`. 
+
+
+
+
+???
+
+Our goal is to build a model that uses the words spoken by politicians in the Australian Federal Parliament to classify the most likely state and party that they belong to. We use a quantitative model as this allows us to examine large-scale changes over a longer time period.
+
+Our set of predictors is a dataset of politicians and how often they used certain words. We separately consider two response datasets – one for the state that a politician was from and another for their party. For ease of interpretation, we only consider the two major parties – the Australian Labor Party (ALP) and the Liberal and National Parties (LNP). For historical parties that were related to one of these we recode them as one of these two, for instance the Lang Labor Party, which separated in the 1920s is nonetheless considered Labor for our purposes. We drop unrelated parties, for instance the Greens.
+
+For the party model, there are two possible classifications and so the model is binomial. For the states model, there are six possible classifications (the territories are dropped) and so the model is multinomial.
+
+---
+
+&lt;img src="workflow_stats.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+### Implementation
+
+- The high-dimensional nature of the dataset (7,245 words) motivates the use of regularized regression, which builds on ordinary least squares, by adding an additional 'tuning parameter', `\(\lambda\)`, to the usual objective function of residual sum of squares that ‘shrinks’ coefficient estimates, `\(\beta_0\)`, `\(\beta_1\)`, `\(\dots\)`, toward zero. 
+- In essence, regularized regression builds variable selection into the regression, decreasing the number of variables in the final model to a more manageable number. 
+
+
+
+
+
+---
+
+&lt;img src="workflow_stats.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+### Implementation
+
+- With ridge regression, if `\(\lambda \geq 0\)`, then the objective function becomes:
+`$$\mbox{Residual sum of squares}+\lambda\sum^p_{j=1}\beta_j^2$$`
+- With lasso regression, if `\(\lambda \geq 0\)`, then the objective function becomes:
+`$$\mbox{Residual sum of squares}+\lambda\sum^p_{j=1}|\beta_j|$$`
+
+???
+
+- The model is estimated using glmnet in the statistical language R.
+
+The 'shrinkage penalty' is reduced when the coefficients are smaller. But now a result is only unique for a value of `\(\lambda\)`, and so an appropriate choice must be made (using cross-validation).
+
+The difference is that with lasso, some coefficients will be set to 0.
+
+Elastic net regularization combines ridge regression and lasso. The use of this approach means the primary means of evaluating the model is forecasting accuracy.
+
+
+
+The models produce probability outputs, for instance, the party model produces a probability that a particular politician is in the LNP. Similarly, the states model produces a probability, for every state, that a particular politician is from that state. To produce a classification of state or party from our models requires a decision rule based on those probability outputs. In the case of the party model we use a simple decision rule, which is if the model assigns a greater than 50 per cent probability that a politician is in the LNP then we assign them to the LNP, otherwise they are assigned to the ALP. The classification of state is done based on which state has the highest probability. More complicated decision rules are possible and may improve the accuracy of the model.
+
+
+
+
+
+---
+
+&lt;img src="workflow_evaluate.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+|Chamber |Party | Classified ALP| Classified LNP| Total|
+|:-------|:-----|-----------:|-----------:|-----:|
+|House    |Australian Labor Party   |         180|         126|   306|
+|    |Liberal National Parties   |          25|         311|   336|
+|Senate  |Australian Labor Party   |          96|          30|   126|
+|  |Liberal National Parties   |           7|         108|   115|
+
+
+&lt;br&gt;
+
+|Chamber	|Recall/sensitivity	|Precision	|Accuracy 	|F1|
+|:------|-------:|-----:|-----------:|-----------:|-----:|
+|House	|0.59	| 0.88 | 0.76	|0.70|
+|Senate	|0.76	|	0.93|0.85	|0.84|
+
+
+???
+Proportion of parties classified correctly
+
+
+79 per cent of politicians are classified correctly by party.
+
+Recall is the proportion of ALP politicians that our model actually classified as being in the ALP. Similarly, precision looks at the proportion that we classified to be in the ALP who were actually in the ALP.
+
+Accuracy is the proportion of cells that we got right. And, while I'd be careful of relying on just one number of decide whether the model is good, F1 is an average of recall and precision.
+
+
+
+---
+
+&lt;img src="workflow_evaluate.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+|Chamber |State | Incorrect| Correct| Total| Proportion correct|
+|:-------|:-----|---------:|-------:|-----:|-------------:|
+|House    |New South Wales   |        38|     181|   219|          0.83|
+|    |Tasmania   |        13|      20|    33|          0.61|
+|    |Victoria   |        14|     155|   169|          0.92|
+|Senate  |New South Wales   |         8|      30|    38|          0.79|
+|  |Tasmania   |        13|      28|    41|          0.68|
+|  |Victoria   |         6|      28|    34|          0.82|
+
+(Queensland, Western Australia, and South Australia were removed for legibility.)
+
+???
+
+Proportion of states classified correctly
+
+80 per cent of politicians are classified correctly by state.
+
+
+---
+
+&lt;img src="workflow_communicate.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+&lt;img src="slides-prop_party_and_state_correct_by_decade_first.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+???
+Proportion classified correctly over time
+
+---
+
+count: false
+
+&lt;img src="workflow_communicate.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+&lt;img src="slides-prop_party_and_state_correct_by_decade.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+???
+Proportion classified correctly over time
+
+
+---
+
+
+&lt;img src="workflow_communicate.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+&lt;img src="slides_partyprobs_first.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+
+count: false
+
+&lt;img src="workflow_communicate.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+&lt;img src="slides_partyprobs.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+???
+
+Estimated party classification probabilities
+
+
+---
+
+# Next steps
+
+
+### Data quality
+Improving the quality of the dataset: allows us to examine in more detail why this change happened.
+
+### Data linkage
+Linking with elections enables us to identify causal aspects around voting.
+
+
+
+
+---
+
+class: inverse
+
+# Forecasting multi-district elections using a Bayesian multilevel model with post-stratification
+
+### - How can we 'improve' polling in multi-district settings?
+### - To what extent can we use non-probability samples in place of probability samples?
+
+
+
+
+
+
+
+
+
+---
+
+
+# Background
+
+- Voting is ‘compulsory’ (usually about 90 per cent).
+- Two chambers; here the focus is on the lower house - ‘House of Representatives’.
+- 151 electoral divisions, each of which with one representative. 
+- Boundaries are drawn by an independent commission.
+- 5-10 candidates in each electoral division.
+- Voters express preferences over candidates.
+
+
+---
+
+# 2PP and primary are related
+
+&lt;img src="twopp_vs_primary.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+
+&lt;img src="workflow_data.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+### Life in Australia survey
+
+- Recurring panel survey.
+- 2,054 responses.
+- Not overly biased. 
+
+### Smartvote Australia voter advice application
+
+- Voter advice application created for the 2019 election.
+- 59,219 responses. 
+- Quite biased.
+
+
+---
+
+&lt;img src="workflow_data.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+### Post-stratification
+
+- The data requirements of an MRP model can be onerous.
+- Use 2016 Census data.
+- For every level of every geographic and demographic feature we need to know the relative proportion of every combination in the population. 
+- Additional features compound, e.g. adding highest level of education by four categories pushes us to 32 sub-groups for every geographic area.
+
+---
+
+
+&lt;img src="workflow_data.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+&lt;img src="map.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+&lt;img src="workflow_share.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+.pull-left[
+&lt;tt&gt;AustralianElections&lt;/tt&gt; is an R package of linked datasets for every election result from Federation (1901) onward.
+
+Install using:
+.small[
+
+```r
+devtools::install_github(
+  "RohanAlexander/AustralianElections"
+  )
+```
+]
+]
+
+.pull-right[
+&lt;img src="AustralianElections.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+
+
+
+---
+
+&lt;img src="workflow_stats.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+### Individual responses
+
+Model the survey responses:
+
+`$$\mbox{Pr}(\hat{\mbox{FP}}_{i, p=1}) = \mbox{logit}^{-1}\left(\delta_{0} + \delta_1\mbox{gender}_{i} + \delta_2\mbox{age}_{i} + \delta_3\mbox{education}_{i} + \delta_4\mbox{division}_{d[i]}\right)$$`
+
+- A person's political preference depends on their gender, age-group, and education. Division enters as a random intercept.
+- Models are estimated using Stan in the statistical language R.
+
+
+
+---
+
+&lt;img src="workflow_stats.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+### Post-stratification
+
+Use that trained model on 'better' data:
+`$$\mbox{Pr}(\hat{\mbox{FP}}^{PS}_{d,p=1}) = \frac{\left(\sum^{C}_{c=1} N_{c,d}\times\mbox{logit}^{-1}\left(\hat{\delta}_0 + \hat{\delta}_1\mbox{gender}_c + \hat{\delta}_2\mbox{age}_c+...\right)\right)}{\sum^{C}_{c=1} N_{c,d}}$$`
+
+Re-weighting based on the sub-cell proportions.
+
+
+
+
+---
+
+&lt;img src="workflow_stats.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+### Change first-preferences into 2pp
+Use that trained model on the post-stratified first-preferences estimates:
+
+`$$\mbox{2PP}_{d,p=1} = \hat{\beta_0} + \hat{\beta_1} \hat{\mbox{FP}}^{PS}_{d, p=1}$$`
+
+Propagate uncertainty by applying this to each posterior distribution.
+
+
+
+---
+
+&lt;img src="workflow_evaluate.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+
+&lt;img src="results_coefs.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="workflow_evaluate.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+
+&lt;img src="results_sharing.png" width="95%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="workflow_communicate.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+
+&lt;img src="results_2pp_first.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+
+count: false
+
+&lt;img src="workflow_communicate.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+
+&lt;img src="results_2pp.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+
+&lt;img src="workflow_communicate.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+
+&lt;img src="results_seatcounts_first.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+
+count: false
+
+&lt;img src="workflow_communicate.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+
+&lt;img src="results_seatcounts.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+
+
+
+
+
+---
+
+# Next steps
+
+### Data vs model
+- Examine the trade-off between increased model specificity and data requirements and uncertainty.
+
+### Communication
+- Replicability still requires confidence with statistics and clean datasets.
+
+
+
+---
+
+class: inverse, center, middle
+
+# Research focus going forward
+
+
+
+---
+
+# Future
+
+
+&lt;img src="all.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+???
+
+Using this information and statistical sciences workflow to answer questions in social sciences.
+
+
+---
+
+
+# Future
+
+
+&lt;img src="workflow_data_with.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+- Forecasting is a well-resourced problem and I am using GPT-2 to improve the quality of text data, by comparing the prediction with the actual.
+- Developing a framework by which cleaned data can become trusted by third-parties. Currently applying for grants toward implementing this.
+
+This means that we can answer questions examining not just what happened, but 'why' it happened.
+
+
+???
+
+ This research project is being applied to the Canadian and Australian hansards and has applications in both information and statistics.
+
+---
+
+
+# Future
+
+
+&lt;img src="workflow_storage_with.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+- Current best-practice is to distribute code and data via GitHub, but this breaks down when the datasets are large. This research project adopts methods from information such as archival and library sciences, to inform best-practice.
+
+This means that we can make better progress by more easily building on previous work.
+
+
+---
+
+
+
+# Future
+
+
+
+&lt;img src="workflow_eda_with.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+- Propogation of uncertainty is typically ignored in many text applications. I am exploring how alternative algorithms could improve this.
+- Understanding the data/modelling trade-off in Bayesian MRP models.
+
+This enables us to better understand the electorate and 'why' people are voting a particular way. It also allows us to make 'better' forecasts of elections.
+
+---
+
+
+
+# Future
+
+
+&lt;img src="workflow_communicate_with.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+- Examining how we can communicate results in a way that central estimates are not removed from uncertainty, and enhancing reproducibility.
+
+???
+
+This ensures better levels of trust in social science findings.
+
+
+---
+
+
+
+class: inverse, center, middle
+
+# Thank you
+
+<i class="fas  fa-envelope "></i> rohan.alexander@utoronto.ca&lt;br&gt;
+<i class="fas  fa-globe "></i> rohanalexander.com&lt;br&gt;
+<i class="fab  fa-github "></i> github.com/RohanAlexander&lt;br&gt;
+<i class="fab  fa-twitter "></i> twitter.com/RohanAlexander
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
