@@ -1,0 +1,10 @@
+.radix-site-nav {
+  color: #ecf0f1;
+  background-color: #3498db;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.radix-site-nav a:hover {
+  color: #2c3e50;
+}
