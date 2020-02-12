@@ -32,5 +32,5 @@ navbar:
     - icon: far fa-envelope
       href: mailto:rohan.alexander@utoronto.ca
 output: 
-  radix::radix_article:
+  distill::distill_article:
     css: styles.css

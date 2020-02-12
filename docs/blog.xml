@@ -11,8 +11,17 @@
       <url>https://rohanalexander.com/images/favicon-coffee.ico</url>
       <link>https://rohanalexander.com/</link>
     </image>
-    <generator>Radix</generator>
-    <lastBuildDate>Tue, 03 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Distill</generator>
+    <lastBuildDate>Tue, 11 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>A review of 'Forecasting elections with non-representative polls'</title>
+      <dc:creator>Rohan Alexander</dc:creator>
+      <link>https://rohanalexander.com/posts/2020-02-11-a-review-of-forecasting-elections-with-non-representative-polls</link>
+      <description>This brief review of Wang, Rothschild, Goel, and Gelman, (2015) 'Forecasting elections with non-representative polls' is designed to motivate discussion during Lauren Kennedy's weekly MRP Discussion Group.</description>
+      <guid>https://rohanalexander.com/posts/2020-02-11-a-review-of-forecasting-elections-with-non-representative-polls</guid>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://rohanalexander.com/posts/2020-02-11-a-review-of-forecasting-elections-with-non-representative-polls/paper_both.png" medium="image" type="image/png" width="2246" height="1548"/>
+    </item>
     <item>
       <title>Getting started with MRP</title>
       <dc:creator>Rohan Alexander</dc:creator>

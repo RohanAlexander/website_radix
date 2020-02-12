@@ -6,7 +6,7 @@ author:
   - name: Rohan Alexander
 date: 2017-07-21
 output:
-  radix::radix_article:
+  distill::distill_article:
     self_contained: false
 ---
 

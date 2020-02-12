@@ -6,7 +6,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
-  <meta name="generator" content="radix" />
+  <meta name="generator" content="distill" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -58,7 +58,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Notes and Photos From Iowa"]},{"type":"character","attributes":{},"value":["Bernie Sanders seems quite reasonable for a revolutionary. An energetic man of 74, he spoke for an hour in Perry, Iowa, to a room of 300 from only a few lines of handwritten notes, and then fielded half an hour of questions. He does not have the same aura that surrounded, then, Senator Obama in his own Iowa battle with, then, Senator Clinton in 2008 say those who saw both. Instead, Sanders has preternatural calm."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Rohan Alexander"]}]}]},{"type":"character","attributes":{},"value":["2016-01-14"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["images/2016_01_11_Bernie.jpg"]},{"type":"character","attributes":{},"value":["https://rohanalexander.com/posts/2016-01-14-notes-and-photos-from-iowa/"]},{"type":"character","attributes":{},"value":["https://rohanalexander.com/posts/2016-01-14-notes-and-photos-from-iowa/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Notes and Photos From Iowa"]},{"type":"character","attributes":{},"value":["Bernie Sanders seems quite reasonable for a revolutionary. An energetic man of 74, he spoke for an hour in Perry, Iowa, to a room of 300 from only a few lines of handwritten notes, and then fielded half an hour of questions. He does not have the same aura that surrounded, then, Senator Obama in his own Iowa battle with, then, Senator Clinton in 2008 say those who saw both. Instead, Sanders has preternatural calm."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Rohan Alexander"]}]}]},{"type":"character","attributes":{},"value":["2016-01-14"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["images/2016_01_11_Bernie.jpg"]},{"type":"character","attributes":{},"value":["https://rohanalexander.com/posts/2016-01-14-notes-and-photos-from-iowa/"]},{"type":"character","attributes":{},"value":["https://rohanalexander.com/posts/2016-01-14-notes-and-photos-from-iowa/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -96,7 +96,7 @@
     });
 
     // responsive menu
-    $('.radix-site-header').each(function(i, val) {
+    $('.distill-site-header').each(function(i, val) {
       var topnav = $(this);
       var toggle = topnav.find('.nav-toggle');
       toggle.on('click', function() {
@@ -123,85 +123,85 @@
 
 /* Theme (user-documented overrideables for nav appearance) */
 
-.radix-site-nav {
+.distill-site-nav {
   color: rgba(255, 255, 255, 0.8);
   background-color: #455a64;
   font-size: 15px;
   font-weight: 300;
 }
 
-.radix-site-nav a {
+.distill-site-nav a {
   color: inherit;
   text-decoration: none;
 }
 
-.radix-site-nav a:hover {
+.distill-site-nav a:hover {
   color: white;
 }
 
 @media print {
-  .radix-site-nav {
+  .distill-site-nav {
     display: none;
   }
 }
 
-.radix-site-header {
+.distill-site-header {
 
 }
 
-.radix-site-footer {
+.distill-site-footer {
 
 }
 
 
 /* Site Header */
 
-.radix-site-header {
+.distill-site-header {
   width: 100%;
   box-sizing: border-box;
   z-index: 3;
 }
 
-.radix-site-header .nav-left {
+.distill-site-header .nav-left {
   display: inline-block;
   margin-left: 8px;
 }
 
 @media screen and (max-width: 768px) {
-  .radix-site-header .nav-left {
+  .distill-site-header .nav-left {
     margin-left: 0;
   }
 }
 
 
-.radix-site-header .nav-right {
+.distill-site-header .nav-right {
   float: right;
   margin-right: 8px;
 }
 
-.radix-site-header a,
-.radix-site-header .title {
+.distill-site-header a,
+.distill-site-header .title {
   display: inline-block;
   text-align: center;
   padding: 14px 10px 14px 10px;
 }
 
-.radix-site-header .title {
+.distill-site-header .title {
   font-size: 18px;
 }
 
-.radix-site-header .logo {
+.distill-site-header .logo {
   padding: 0;
 }
 
-.radix-site-header .logo img {
+.distill-site-header .logo img {
   display: none;
   max-height: 20px;
   width: auto;
   margin-bottom: -4px;
 }
 
-.radix-site-header .nav-image img {
+.distill-site-header .nav-image img {
   max-height: 18px;
   width: auto;
   display: inline-block;
@@ -211,22 +211,22 @@
 
 
 @media screen and (min-width: 1000px) {
-  .radix-site-header .logo img {
+  .distill-site-header .logo img {
     display: inline-block;
   }
-  .radix-site-header .nav-left {
+  .distill-site-header .nav-left {
     margin-left: 20px;
   }
-  .radix-site-header .nav-right {
+  .distill-site-header .nav-right {
     margin-right: 20px;
   }
-  .radix-site-header .title {
+  .distill-site-header .title {
     padding-left: 12px;
   }
 }
 
 
-.radix-site-header .nav-toggle {
+.distill-site-header .nav-toggle {
   display: none;
 }
 
@@ -308,18 +308,18 @@
 }
 
 @media screen and (max-width: 768px) {
-  .radix-site-header a, .radix-site-header .nav-dropdown  {display: none;}
-  .radix-site-header a.nav-toggle {
+  .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+  .distill-site-header a.nav-toggle {
     float: right;
     display: block;
   }
-  .radix-site-header .title {
+  .distill-site-header .title {
     margin-left: 0;
   }
-  .radix-site-header .nav-right {
+  .distill-site-header .nav-right {
     margin-right: 0;
   }
-  .radix-site-header {
+  .distill-site-header {
     overflow: hidden;
   }
   .nav-right .nav-dropdown-content {
@@ -329,24 +329,24 @@
 
 
 @media screen and (max-width: 768px) {
-  .radix-site-header.responsive {position: relative;}
-  .radix-site-header.responsive a.nav-toggle {
+  .distill-site-header.responsive {position: relative;}
+  .distill-site-header.responsive a.nav-toggle {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .radix-site-header.responsive a,
-  .radix-site-header.responsive .nav-dropdown {
+  .distill-site-header.responsive a,
+  .distill-site-header.responsive .nav-dropdown {
     display: block;
     text-align: left;
   }
-  .radix-site-header.responsive .nav-left,
-  .radix-site-header.responsive .nav-right {
+  .distill-site-header.responsive .nav-left,
+  .distill-site-header.responsive .nav-right {
     width: 100%;
   }
-  .radix-site-header.responsive .nav-dropdown {float: none;}
-  .radix-site-header.responsive .nav-dropdown-content {position: relative;}
-  .radix-site-header.responsive .nav-dropdown .nav-dropbtn {
+  .distill-site-header.responsive .nav-dropdown {float: none;}
+  .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+  .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
     display: block;
     width: 100%;
     text-align: left;
@@ -355,7 +355,7 @@
 
 /* Site Footer */
 
-.radix-site-footer {
+.distill-site-footer {
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
@@ -1238,7 +1238,7 @@ function init_common() {
 
   // get rid of index.html references in header
   if (window.location.protocol !== "file:") {
-    $('.radix-site-header a[href]').each(function(i,val) {
+    $('.distill-site-header a[href]').each(function(i,val) {
       $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
     });
   }
@@ -1284,14 +1284,14 @@ document.addEventListener('DOMContentLoaded', function() {
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
 <style type="text/css">
-.radix-site-nav {
+.distill-site-nav {
   color: #ecf0f1;
   background-color: #3498db;
   font-size: 16px;
   font-weight: 300;
 }
 
-.radix-site-nav a:hover {
+.distill-site-nav a:hover {
   color: #2c3e50;
 }
 
@@ -1312,7 +1312,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
 <header class="header header--fixed" role="banner">
-<nav class="radix-site-nav radix-site-header">
+<nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a href="../../index.html" class="title">Rohan Alexander</a>
 </div>
@@ -1358,7 +1358,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Bernie Sanders seems quite reasonable for a revolutionary. An energetic man of 74, he spoke for an hour in Perry, Iowa, to a room of 300 from only a few lines of handwritten notes, and then fielded half an hour of questions. He does not have the same aura that surrounded, then, Senator Obama in his own Iowa battle with, then, Senator Clinton in 2008 say those who saw both. Instead, Sanders has preternatural calm.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:unnamed-chunk-1"></span>
-<img src="images/2016_01_11_Bernie.jpg" alt="Photo of Bernie Sanders and audience at Perry, Iowa, by Monica Alexander."  />
+<img src="images/2016_01_11_Bernie.jpg" alt="Photo of Bernie Sanders and audience at Perry, Iowa, by Monica Alexander." width="2464" />
 <p class="caption">
 Figure 1: Photo of Bernie Sanders and audience at Perry, Iowa, by Monica Alexander.
 </p>
@@ -1370,7 +1370,7 @@ Figure 1: Photo of Bernie Sanders and audience at Perry, Iowa, by Monica Alexand
 <p>Clinton’s ground game advantage is partly due to experience, but it is also due to money. Sanders unexpectedly raised $33 million in the final quarter of 2015, which compares favourably with Clinton’s $37 million, but Clinton has other sources of financial support. Sanders’ supporters should hope that the evident lack of preparation at the event in Perry, Iowa, itself (for instance, Sanders had to repeatedly ask for water as none had been left on the podium, nearly losing his voice on occasion) are not indicative of broader organisational oversights.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:unnamed-chunk-2"></span>
-<img src="images/2016_01_12_Trump_1.jpg" alt="Photo of Trump protesters."  />
+<img src="images/2016_01_12_Trump_1.jpg" alt="Photo of Trump protesters." width="2464" />
 <p class="caption">
 Figure 2: Photo of Trump protesters.
 </p>
@@ -1379,7 +1379,7 @@ Figure 2: Photo of Trump protesters.
 <p>Donald Trump is different. More than a thousand people watched Trump, who is 69, speak in Cedar Falls, Iowa. Almost all were white. What he lacks in substance or structure, Trump makes up for with self-confidence. For 40 minutes he verbally picked at this and that, discussing polls, as well as goading opponents via ‘hypotheticals’ and name-calling. The audience was allowed no questions.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:unnamed-chunk-3"></span>
-<img src="images/2016_01_12_Trump_2.jpg" alt="Photo of Donald Trump at Cedar Falls, Iowa, by Monica Alexander."  />
+<img src="images/2016_01_12_Trump_2.jpg" alt="Photo of Donald Trump at Cedar Falls, Iowa, by Monica Alexander." width="2464" />
 <p class="caption">
 Figure 3: Photo of Donald Trump at Cedar Falls, Iowa, by Monica Alexander.
 </p>
@@ -1388,7 +1388,7 @@ Figure 3: Photo of Donald Trump at Cedar Falls, Iowa, by Monica Alexander.
 <p>Trump does not campaign in poetry (although he did literally recite song lyrics) and he seems unlikely to govern in prose. His operatives were clad in ill-fitting suits and shiny leather shoes that looked newly purchased. These ‘Storm Trumpers’ were unfailingly polite, but nonetheless menacing. The loudspeaker request, moments before Trump spoke, to not physically harm protesters was chilling rather than reassuring, not least since it was followed by laughter from the crowd. The comfort of knowing that the Secret Service would have confiscated any knives or guns at the door was relative rather than absolute. [Edit 26/1/16: Trump has since asserted that he could shoot somebody and not lose any voters. You get the uneasy sense that it would be better for his theory to remain untested, for fear that he may onto something.]</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:unnamed-chunk-4"></span>
-<img src="images/2016_01_12_Trump_3.jpg" alt="Photo of Donald Trump audience at Cedar Falls, Iowa, by Monica Alexander."  />
+<img src="images/2016_01_12_Trump_3.jpg" alt="Photo of Donald Trump audience at Cedar Falls, Iowa, by Monica Alexander." width="2464" />
 <p class="caption">
 Figure 4: Photo of Donald Trump audience at Cedar Falls, Iowa, by Monica Alexander.
 </p>
@@ -1397,7 +1397,7 @@ Figure 4: Photo of Donald Trump audience at Cedar Falls, Iowa, by Monica Alexand
 <p>Trump’s political inexperience seems matched by that of his supporters. His warm-up acts (one of whose qualification, as she explained, was being a runner-up on The Apprentice) spent considerable time explaining the importance of turning out to caucus on 1 February. Unlike the Democrats, Republican caucus-goers do not have to be as resistant to peer pressure - secret ballots are possible. But much of the crowd seemed new to the political process, and getting each of them to turn out, and in some cases register as Republican, may be too much to expect. If so, then it is likely that Senator Ted Cruz, a 45-year-old conservative Republican from Texas, will prevail.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:unnamed-chunk-5"></span>
-<img src="images/2016_01_12_Trump_4.jpg" alt="Photo of Trump at Cedar Falls, Iowa, by Monica Alexander."  />
+<img src="images/2016_01_12_Trump_4.jpg" alt="Photo of Trump at Cedar Falls, Iowa, by Monica Alexander." width="2464" />
 <p class="caption">
 Figure 5: Photo of Trump at Cedar Falls, Iowa, by Monica Alexander.
 </p>
@@ -1409,7 +1409,7 @@ Figure 5: Photo of Trump at Cedar Falls, Iowa, by Monica Alexander.
 <p>Those suffering most from the success of Sanders and Trump are candidates such as John Ellis Bush. Jeb, 62, seems to have carefully studied the art of coming across as a nice guy, albeit one who is a little annoyed about having to speak to about 200 people in Coralville, Iowa. Being a Bush comes with baggage and expectations, but it does have its advantages, such as immaculate event advance work and plenty of press.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:unnamed-chunk-6"></span>
-<img src="images/2016_01_12_Jeb_1.jpg" alt="Photo of Jeb! at Coralville, Iowa, by Monica Alexander."  />
+<img src="images/2016_01_12_Jeb_1.jpg" alt="Photo of Jeb! at Coralville, Iowa, by Monica Alexander." width="2342" />
 <p class="caption">
 Figure 6: Photo of Jeb! at Coralville, Iowa, by Monica Alexander.
 </p>
@@ -1418,7 +1418,7 @@ Figure 6: Photo of Jeb! at Coralville, Iowa, by Monica Alexander.
 <p>Jeb emphasised his commander-in-chief credentials. His older brother’s war in Iraq may have ensured that the age of aggressive American imperialism is over for now, but Jeb was still introduced by a retired Admiral who spoke of Jeb’s leadership fighting hurricanes in Florida and neighbouring states.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:unnamed-chunk-7"></span>
-<img src="images/2016_01_12_Jeb_2.jpg" alt="Photo of Jeb! at Coralville, Iowa, by Monica Alexander."  />
+<img src="images/2016_01_12_Jeb_2.jpg" alt="Photo of Jeb! at Coralville, Iowa, by Monica Alexander." width="2464" />
 <p class="caption">
 Figure 7: Photo of Jeb! at Coralville, Iowa, by Monica Alexander.
 </p>
@@ -1428,7 +1428,7 @@ Figure 7: Photo of Jeb! at Coralville, Iowa, by Monica Alexander.
 <p>For all the well-acknowledged flaws of presidential systems in general, and the US one specifically, it has much to be proud of. Every candidate for their party’s nomination will visit Iowa at some stage this week, many visiting multiple towns in a day. The scrutiny is intense. Iowa is a state of 3 million people, divided into 99 counties, and by 1 February, many candidates will have visited every county.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:unnamed-chunk-8"></span>
-<img src="images/2016_01_12_Iowa_1.jpg" alt="Photo in Iowa, by Monica Alexander."  />
+<img src="images/2016_01_12_Iowa_1.jpg" alt="Photo in Iowa, by Monica Alexander." width="2464" />
 <p class="caption">
 Figure 8: Photo in Iowa, by Monica Alexander.
 </p>
@@ -1437,7 +1437,7 @@ Figure 8: Photo in Iowa, by Monica Alexander.
 <p>If one were starting from scratch, the Iowa Caucuses would probably not be the way to go. Iowa is not representative of the rest of the United States, and its outsized electoral importance skews national policy. But in their own way, the Iowa Caucuses are valuable. In general, the nature of the candidates seems to come through in the events because they are so intimate. Given that so much of leadership consists of reacting to unexpected events, and the difficulty that politicians tend to have implementing their desired policies, perhaps this is the most important consideration. It may be that, to rework Churchill’s aphorism, the Iowa Caucuses are the worst way to select presidential candidates, apart from all the others.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:unnamed-chunk-9"></span>
-<img src="images/2016_01_12_Iowa_2.jpg" alt="Photo in Iowa, by Monica Alexander."  />
+<img src="images/2016_01_12_Iowa_2.jpg" alt="Photo in Iowa, by Monica Alexander." width="2464" />
 <p class="caption">
 Figure 9: Photo in Iowa, by Monica Alexander.
 </p>

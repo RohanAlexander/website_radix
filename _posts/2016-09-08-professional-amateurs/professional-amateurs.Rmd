@@ -6,7 +6,7 @@ author:
   - name: Rohan Alexander
 date: 2016-09-08
 output:
-  radix::radix_article:
+  distill::distill_article:
     self_contained: false
 preview: images/ProfessionalAmateurs-WelcomeSign.jpg
 ---

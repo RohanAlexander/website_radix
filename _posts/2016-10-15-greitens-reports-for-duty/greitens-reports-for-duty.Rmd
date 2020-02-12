@@ -6,7 +6,7 @@ author:
   - name: Rohan Alexander
 date: 2016-10-15
 output:
-  radix::radix_article:
+  distill::distill_article:
     self_contained: false
 preview: images/StLouis_Greitens_1.jpg
 ---

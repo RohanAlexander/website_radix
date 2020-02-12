@@ -7,7 +7,7 @@ author:
   - name: Ben O'Neill
 date: 2012-11-28
 output:
-  radix::radix_article:
+  distill::distill_article:
     self_contained: false
 preview: images/DSC3132.jpg
 ---

@@ -7,7 +7,7 @@ author:
     url: {}
 date: 2019-12-03
 output:
-  radix::radix_article:
+  distill::distill_article:
     self_contained: false
     toc: true
     toc_depth: 2

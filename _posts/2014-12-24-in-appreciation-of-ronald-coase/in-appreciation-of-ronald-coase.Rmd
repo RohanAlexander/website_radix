@@ -6,7 +6,7 @@ author:
   - name: Rohan Alexander
 date: 2014-12-24
 output:
-  radix::radix_article:
+  distill::distill_article:
     self_contained: false
 preview: images/IMG_0145.jpg
 ---

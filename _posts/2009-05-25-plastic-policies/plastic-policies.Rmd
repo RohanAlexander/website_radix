@@ -7,7 +7,7 @@ author:
   - name: Flavio Menezes
 date: 2009-05-25
 output:
-  radix::radix_article:
+  distill::distill_article:
     self_contained: false
 ---
 
