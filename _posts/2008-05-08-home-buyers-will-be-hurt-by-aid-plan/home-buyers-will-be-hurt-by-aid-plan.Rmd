@@ -6,7 +6,7 @@ author:
   - name: Rohan Alexander
 date: 2008-05-08
 output:
-  distill::distill_article:
+  radix::radix_article:
     self_contained: false
 preview: images/DSCF0213.jpg
 ---
