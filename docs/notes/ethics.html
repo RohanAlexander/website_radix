@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Ethics | Data-first: Telling stories with data and quantitative analysis in R</title>
+  <meta name="description" content="6 Ethics | Data-first: Telling stories with data and quantitative analysis in R" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Ethics | Data-first: Telling stories with data and quantitative analysis in R" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Ethics | Data-first: Telling stories with data and quantitative analysis in R" />
+  
+  
+  
+
+<meta name="author" content="Rohan Alexander" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="r-lab-using-r-in-practice.html"/>
+<link rel="next" href="reproducibility.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
+<li class="chapter" data-level="1.1" data-path="overview.html"><a href="overview.html#on-telling-stories"><i class="fa fa-check"></i><b>1.1</b> On telling stories</a></li>
+<li class="chapter" data-level="1.2" data-path="overview.html"><a href="overview.html#these-notes"><i class="fa fa-check"></i><b>1.2</b> These notes</a></li>
+<li class="chapter" data-level="1.3" data-path="overview.html"><a href="overview.html#contact"><i class="fa fa-check"></i><b>1.3</b> Contact</a></li>
+<li class="chapter" data-level="1.4" data-path="overview.html"><a href="overview.html#todos"><i class="fa fa-check"></i><b>1.4</b> TODOs</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html"><i class="fa fa-check"></i><b>2</b> R Lab - Getting started</a><ul>
+<li class="chapter" data-level="2.1" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#tidyverse"><i class="fa fa-check"></i><b>2.2</b> Tidyverse</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#the-pipe"><i class="fa fa-check"></i><b>2.2.1</b> The pipe</a></li>
+<li class="chapter" data-level="2.2.2" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#select"><i class="fa fa-check"></i><b>2.2.2</b> Select</a></li>
+<li class="chapter" data-level="2.2.3" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#filter"><i class="fa fa-check"></i><b>2.2.3</b> Filter</a></li>
+<li class="chapter" data-level="2.2.4" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#arrange"><i class="fa fa-check"></i><b>2.2.4</b> Arrange</a></li>
+<li class="chapter" data-level="2.2.5" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#group_by"><i class="fa fa-check"></i><b>2.2.5</b> group_by</a></li>
+<li class="chapter" data-level="2.2.6" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#mutate"><i class="fa fa-check"></i><b>2.2.6</b> Mutate</a></li>
+<li class="chapter" data-level="2.2.7" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#summarise"><i class="fa fa-check"></i><b>2.2.7</b> Summarise</a></li>
+<li class="chapter" data-level="2.2.8" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#counting-by-group"><i class="fa fa-check"></i><b>2.2.8</b> Counting by group</a></li>
+<li class="chapter" data-level="2.2.9" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#calculate-proportions"><i class="fa fa-check"></i><b>2.2.9</b> Calculate proportions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#ggplot"><i class="fa fa-check"></i><b>2.3</b> ggplot</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#main-features"><i class="fa fa-check"></i><b>2.3.1</b> Main features</a></li>
+<li class="chapter" data-level="2.3.2" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#facets"><i class="fa fa-check"></i><b>2.3.2</b> Facets</a></li>
+<li class="chapter" data-level="2.3.3" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#small-things"><i class="fa fa-check"></i><b>2.3.3</b> Small things</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#other"><i class="fa fa-check"></i><b>2.4</b> Other</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="r-lab-getting-started.html"><a href="r-lab-getting-started.html#case_when"><i class="fa fa-check"></i><b>2.4.1</b> case_when</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html"><i class="fa fa-check"></i><b>3</b> Case study - The 2019 Canadian Federal Election</a><ul>
+<li class="chapter" data-level="3.1" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#create-a-graph-based-on-the-2019-canadian-federal-election"><i class="fa fa-check"></i><b>3.2</b> Create a graph based on the 2019 Canadian Federal election</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#getting-started"><i class="fa fa-check"></i><b>3.2.1</b> Getting started</a></li>
+<li class="chapter" data-level="3.2.2" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#reading-in-the-data"><i class="fa fa-check"></i><b>3.2.2</b> Reading in the data</a></li>
+<li class="chapter" data-level="3.2.3" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#clean-the-data"><i class="fa fa-check"></i><b>3.2.3</b> Clean the data</a></li>
+<li class="chapter" data-level="3.2.4" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#make-a-graph"><i class="fa fa-check"></i><b>3.2.4</b> Make a graph</a></li>
+<li class="chapter" data-level="3.2.5" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#make-a-table"><i class="fa fa-check"></i><b>3.2.5</b> Make a table</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="communication.html"><a href="communication.html"><i class="fa fa-check"></i><b>4</b> Communication</a><ul>
+<li class="chapter" data-level="4.1" data-path="communication.html"><a href="communication.html#introduction-2"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="communication.html"><a href="communication.html#title-abstract-and-introduction"><i class="fa fa-check"></i><b>4.2</b> Title, abstract, and introduction</a></li>
+<li class="chapter" data-level="4.3" data-path="communication.html"><a href="communication.html#figures-tables-equations-and-technical-terms"><i class="fa fa-check"></i><b>4.3</b> Figures, tables, equations, and technical terms</a></li>
+<li class="chapter" data-level="4.4" data-path="communication.html"><a href="communication.html#on-brevity"><i class="fa fa-check"></i><b>4.4</b> On brevity</a></li>
+<li class="chapter" data-level="4.5" data-path="communication.html"><a href="communication.html#other-1"><i class="fa fa-check"></i><b>4.5</b> Other</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="r-lab-using-r-in-practice.html"><a href="r-lab-using-r-in-practice.html"><i class="fa fa-check"></i><b>5</b> R Lab - Using R in practice</a><ul>
+<li class="chapter" data-level="5.1" data-path="r-lab-using-r-in-practice.html"><a href="r-lab-using-r-in-practice.html#introduction-3"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="r-lab-using-r-in-practice.html"><a href="r-lab-using-r-in-practice.html#getting-help"><i class="fa fa-check"></i><b>5.2</b> Getting help</a></li>
+<li class="chapter" data-level="5.3" data-path="r-lab-using-r-in-practice.html"><a href="r-lab-using-r-in-practice.html#mentality"><i class="fa fa-check"></i><b>5.3</b> Mentality</a></li>
+<li class="chapter" data-level="5.4" data-path="r-lab-using-r-in-practice.html"><a href="r-lab-using-r-in-practice.html#style"><i class="fa fa-check"></i><b>5.4</b> Style</a></li>
+<li class="chapter" data-level="5.5" data-path="r-lab-using-r-in-practice.html"><a href="r-lab-using-r-in-practice.html#learning-more"><i class="fa fa-check"></i><b>5.5</b> Learning more</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="ethics.html"><a href="ethics.html"><i class="fa fa-check"></i><b>6</b> Ethics</a><ul>
+<li class="chapter" data-level="6.1" data-path="ethics.html"><a href="ethics.html#introduction-4"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="ethics.html"><a href="ethics.html#questiontask"><i class="fa fa-check"></i><b>6.2</b> Question/task</a></li>
+<li class="chapter" data-level="6.3" data-path="ethics.html"><a href="ethics.html#data"><i class="fa fa-check"></i><b>6.3</b> Data</a></li>
+<li class="chapter" data-level="6.4" data-path="ethics.html"><a href="ethics.html#model"><i class="fa fa-check"></i><b>6.4</b> Model</a></li>
+<li class="chapter" data-level="6.5" data-path="ethics.html"><a href="ethics.html#team"><i class="fa fa-check"></i><b>6.5</b> Team</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>7</b> Reproducibility</a><ul>
+<li class="chapter" data-level="7.1" data-path="reproducibility.html"><a href="reproducibility.html#introduction-5"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="reproducibility.html"><a href="reproducibility.html#data-access"><i class="fa fa-check"></i><b>7.2</b> Data access</a></li>
+<li class="chapter" data-level="7.3" data-path="reproducibility.html"><a href="reproducibility.html#on-mistakes"><i class="fa fa-check"></i><b>7.3</b> On mistakes</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="r-lab-r-markdown-and-r-projects.html"><a href="r-lab-r-markdown-and-r-projects.html"><i class="fa fa-check"></i><b>8</b> R Lab - R Markdown and R Projects</a><ul>
+<li class="chapter" data-level="8.1" data-path="r-lab-r-markdown-and-r-projects.html"><a href="r-lab-r-markdown-and-r-projects.html#r-markdown"><i class="fa fa-check"></i><b>8.1</b> R Markdown</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="r-lab-r-markdown-and-r-projects.html"><a href="r-lab-r-markdown-and-r-projects.html#getting-started-1"><i class="fa fa-check"></i><b>8.1.1</b> Getting started</a></li>
+<li class="chapter" data-level="8.1.2" data-path="r-lab-r-markdown-and-r-projects.html"><a href="r-lab-r-markdown-and-r-projects.html#basic-commands"><i class="fa fa-check"></i><b>8.1.2</b> Basic commands</a></li>
+<li class="chapter" data-level="8.1.3" data-path="r-lab-r-markdown-and-r-projects.html"><a href="r-lab-r-markdown-and-r-projects.html#r-chunks"><i class="fa fa-check"></i><b>8.1.3</b> R chunks</a></li>
+<li class="chapter" data-level="8.1.4" data-path="r-lab-r-markdown-and-r-projects.html"><a href="r-lab-r-markdown-and-r-projects.html#abstracts-and-pdf-outputs"><i class="fa fa-check"></i><b>8.1.4</b> Abstracts and PDF outputs</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="r-lab-r-markdown-and-r-projects.html"><a href="r-lab-r-markdown-and-r-projects.html#r-projects"><i class="fa fa-check"></i><b>8.2</b> R projects</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html"><i class="fa fa-check"></i><b>9</b> Case study - TTC Subway Delays</a><ul>
+<li class="chapter" data-level="9.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#introduction-6"><i class="fa fa-check"></i><b>9.1</b> Introduction</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#prerequesites"><i class="fa fa-check"></i><b>9.1.1</b> Prerequesites</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#finding-and-downloading-data-using-opendatatoronto"><i class="fa fa-check"></i><b>9.2</b> Finding and downloading data using <code>opendatatoronto</code></a><ul>
+<li class="chapter" data-level="9.2.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#finding-the-data"><i class="fa fa-check"></i><b>9.2.1</b> Finding the data</a></li>
+<li class="chapter" data-level="9.2.2" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#retrieving-the-data"><i class="fa fa-check"></i><b>9.2.2</b> Retrieving the data</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#plotting"><i class="fa fa-check"></i><b>9.3</b> Plotting</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#example-1-delays-by-line"><i class="fa fa-check"></i><b>9.3.1</b> Example 1: Delays by line</a></li>
+<li class="chapter" data-level="9.3.2" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#example-2-delays-by-time-of-day"><i class="fa fa-check"></i><b>9.3.2</b> Example 2: Delays by time of day</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="developing-research-questions-and-gathering-data.html"><a href="developing-research-questions-and-gathering-data.html"><i class="fa fa-check"></i><b>10</b> Developing research questions and gathering data</a><ul>
+<li class="chapter" data-level="10.1" data-path="developing-research-questions-and-gathering-data.html"><a href="developing-research-questions-and-gathering-data.html#developing-research-questions"><i class="fa fa-check"></i><b>10.1</b> Developing research questions</a></li>
+<li class="chapter" data-level="10.2" data-path="developing-research-questions-and-gathering-data.html"><a href="developing-research-questions-and-gathering-data.html#gathering-data"><i class="fa fa-check"></i><b>10.2</b> Gathering data</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="developing-research-questions-and-gathering-data.html"><a href="developing-research-questions-and-gathering-data.html#deliberately-available"><i class="fa fa-check"></i><b>10.2.1</b> Deliberately available</a></li>
+<li class="chapter" data-level="10.2.2" data-path="developing-research-questions-and-gathering-data.html"><a href="developing-research-questions-and-gathering-data.html#by-product"><i class="fa fa-check"></i><b>10.2.2</b> By product</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html"><i class="fa fa-check"></i><b>11</b> Case study - Gathering and tidying data from Paspaley</a><ul>
+<li class="chapter" data-level="11.1" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html#introduction-7"><i class="fa fa-check"></i><b>11.1</b> Introduction</a></li>
+<li class="chapter" data-level="11.2" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html#data-acquisition"><i class="fa fa-check"></i><b>11.2</b> Data acquisition</a></li>
+<li class="chapter" data-level="11.3" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html#data-cleaning"><i class="fa fa-check"></i><b>11.3</b> Data cleaning</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>12</b> Exploratory data analysis</a><ul>
+<li class="chapter" data-level="12.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#a-note-on-packages"><i class="fa fa-check"></i><b>12.1</b> A note on packages</a></li>
+<li class="chapter" data-level="12.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#ttc-subway-delays"><i class="fa fa-check"></i><b>12.2</b> TTC subway delays</a></li>
+<li class="chapter" data-level="12.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#eda-and-data-viz"><i class="fa fa-check"></i><b>12.3</b> EDA and data viz</a></li>
+<li class="chapter" data-level="12.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#data-checks"><i class="fa fa-check"></i><b>12.4</b> Data checks</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#sanity-checks"><i class="fa fa-check"></i><b>12.4.1</b> Sanity Checks</a></li>
+<li class="chapter" data-level="12.4.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#missing-values"><i class="fa fa-check"></i><b>12.4.2</b> Missing values</a></li>
+<li class="chapter" data-level="12.4.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#duplicates"><i class="fa fa-check"></i><b>12.4.3</b> Duplicates?</a></li>
+<li class="chapter" data-level="12.4.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-distributions"><i class="fa fa-check"></i><b>12.4.4</b> Visualizing distributions</a></li>
+<li class="chapter" data-level="12.4.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-time-series"><i class="fa fa-check"></i><b>12.4.5</b> Visualizing time series</a></li>
+<li class="chapter" data-level="12.4.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-relationships"><i class="fa fa-check"></i><b>12.4.6</b> Visualizing relationships</a></li>
+<li class="chapter" data-level="12.4.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#pca"><i class="fa fa-check"></i><b>12.4.7</b> PCA</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#exercises"><i class="fa fa-check"></i><b>12.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="linear-regression.html"><a href="linear-regression.html"><i class="fa fa-check"></i><b>13</b> Linear regression</a><ul>
+<li class="chapter" data-level="13.1" data-path="linear-regression.html"><a href="linear-regression.html#introduction-8"><i class="fa fa-check"></i><b>13.1</b> Introduction</a></li>
+<li class="chapter" data-level="13.2" data-path="linear-regression.html"><a href="linear-regression.html#competing-relationships"><i class="fa fa-check"></i><b>13.2</b> Competing relationships</a></li>
+<li class="chapter" data-level="13.3" data-path="linear-regression.html"><a href="linear-regression.html#implementing-this-in-r"><i class="fa fa-check"></i><b>13.3</b> Implementing this in R</a></li>
+<li class="chapter" data-level="13.4" data-path="linear-regression.html"><a href="linear-regression.html#tidy-up-with-broom"><i class="fa fa-check"></i><b>13.4</b> Tidy up with broom</a></li>
+<li class="chapter" data-level="13.5" data-path="linear-regression.html"><a href="linear-regression.html#testing-hypothesis"><i class="fa fa-check"></i><b>13.5</b> Testing hypothesis</a></li>
+<li class="chapter" data-level="13.6" data-path="linear-regression.html"><a href="linear-regression.html#adding-more-and-varied-explanatory-variables"><i class="fa fa-check"></i><b>13.6</b> Adding more and varied explanatory variables</a></li>
+<li class="chapter" data-level="13.7" data-path="linear-regression.html"><a href="linear-regression.html#threats-to-validity-and-aspects-to-think-about"><i class="fa fa-check"></i><b>13.7</b> Threats to validity and aspects to think about</a></li>
+<li class="chapter" data-level="13.8" data-path="linear-regression.html"><a href="linear-regression.html#more-credible-outputs"><i class="fa fa-check"></i><b>13.8</b> More credible outputs</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html"><i class="fa fa-check"></i><b>14</b> Case study - Opinions about a casino in Toronto</a><ul>
+<li class="chapter" data-level="14.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#data-preparation"><i class="fa fa-check"></i><b>14.1</b> Data preparation</a><ul>
+<li class="chapter" data-level="14.1.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#getting-data-from-opendatatoronto"><i class="fa fa-check"></i><b>14.1.1</b> Getting data from <code>opendatatoronto</code></a></li>
+<li class="chapter" data-level="14.1.2" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#getting-the-right-kind-of-object"><i class="fa fa-check"></i><b>14.1.2</b> Getting the right kind of object</a></li>
+<li class="chapter" data-level="14.1.3" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#cleaning-up-the-dataframe"><i class="fa fa-check"></i><b>14.1.3</b> Cleaning up the dataframe</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#some-visual-exploration-and-more-cleanup-of-course"><i class="fa fa-check"></i><b>14.2</b> Some visual exploration (and more cleanup, of course)</a><ul>
+<li class="chapter" data-level="14.2.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#getting-the-data-into-a-more-model-suitable-format"><i class="fa fa-check"></i><b>14.2.1</b> Getting the data into a more model-suitable format</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#logistic-regression"><i class="fa fa-check"></i><b>14.3</b> Logistic Regression</a><ul>
+<li class="chapter" data-level="14.3.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#interpretation"><i class="fa fa-check"></i><b>14.3.1</b> Interpretation</a></li>
+<li class="chapter" data-level="14.3.2" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#baseline-category"><i class="fa fa-check"></i><b>14.3.2</b> Baseline category</a></li>
+<li class="chapter" data-level="14.3.3" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#making-estimates"><i class="fa fa-check"></i><b>14.3.3</b> Making estimates</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html"><i class="fa fa-check"></i><b>15</b> Case study - Airbnb listing in Toronto</a><ul>
+<li class="chapter" data-level="15.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#essentials"><i class="fa fa-check"></i><b>15.1</b> Essentials</a></li>
+<li class="chapter" data-level="15.2" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#set-up"><i class="fa fa-check"></i><b>15.2</b> Set up</a></li>
+<li class="chapter" data-level="15.3" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#get-data"><i class="fa fa-check"></i><b>15.3</b> Get data</a></li>
+<li class="chapter" data-level="15.4" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#clean-data"><i class="fa fa-check"></i><b>15.4</b> Clean data</a><ul>
+<li class="chapter" data-level="15.4.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#price"><i class="fa fa-check"></i><b>15.4.1</b> Price</a></li>
+<li class="chapter" data-level="15.4.2" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#superhosts"><i class="fa fa-check"></i><b>15.4.2</b> Superhosts</a></li>
+<li class="chapter" data-level="15.4.3" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#reviews"><i class="fa fa-check"></i><b>15.4.3</b> Reviews</a></li>
+<li class="chapter" data-level="15.4.4" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#response-time"><i class="fa fa-check"></i><b>15.4.4</b> Response time</a></li>
+<li class="chapter" data-level="15.4.5" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#host-number-of-listings"><i class="fa fa-check"></i><b>15.4.5</b> Host number of listings</a></li>
+<li class="chapter" data-level="15.4.6" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#decisions"><i class="fa fa-check"></i><b>15.4.6</b> Decisions</a></li>
+</ul></li>
+<li class="chapter" data-level="15.5" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#explore-data"><i class="fa fa-check"></i><b>15.5</b> Explore data</a><ul>
+<li class="chapter" data-level="15.5.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#price-and-reviews"><i class="fa fa-check"></i><b>15.5.1</b> Price and reviews</a></li>
+<li class="chapter" data-level="15.5.2" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#superhost-and-response-time"><i class="fa fa-check"></i><b>15.5.2</b> Superhost and response-time</a></li>
+<li class="chapter" data-level="15.5.3" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#neighbourhood"><i class="fa fa-check"></i><b>15.5.3</b> Neighbourhood</a></li>
+</ul></li>
+<li class="chapter" data-level="15.6" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#model-data"><i class="fa fa-check"></i><b>15.6</b> Model data</a><ul>
+<li class="chapter" data-level="15.6.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#logistic-regression-1"><i class="fa fa-check"></i><b>15.6.1</b> Logistic regression</a></li>
+</ul></li>
+<li class="chapter" data-level="15.7" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#next-steps"><i class="fa fa-check"></i><b>15.7</b> Next steps</a></li>
+<li class="chapter" data-level="15.8" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#references"><i class="fa fa-check"></i><b>15.8</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html"><i class="fa fa-check"></i><b>16</b> A/B testing and RCTs</a><ul>
+<li class="chapter" data-level="16.1" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#introduction-9"><i class="fa fa-check"></i><b>16.1</b> Introduction</a></li>
+<li class="chapter" data-level="16.2" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#motivation"><i class="fa fa-check"></i><b>16.2</b> Motivation</a></li>
+<li class="chapter" data-level="16.3" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#tea-party"><i class="fa fa-check"></i><b>16.3</b> Tea party</a></li>
+<li class="chapter" data-level="16.4" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#some-unexpected-properties-from-randomised-sampling"><i class="fa fa-check"></i><b>16.4</b> Some unexpected properties from randomised sampling</a></li>
+<li class="chapter" data-level="16.5" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#anova"><i class="fa fa-check"></i><b>16.5</b> ANOVA</a></li>
+<li class="chapter" data-level="16.6" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#treatment-and-control"><i class="fa fa-check"></i><b>16.6</b> Treatment and control</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html"><i class="fa fa-check"></i><b>17</b> Matching &amp; difference-in-differences</a></li>
+<li class="chapter" data-level="18" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html"><i class="fa fa-check"></i><b>18</b> Regression discontinuity design</a></li>
+<li class="chapter" data-level="19" data-path="instrumental-variables.html"><a href="instrumental-variables.html"><i class="fa fa-check"></i><b>19</b> Instrumental variables</a></li>
+<li class="chapter" data-level="20" data-path="further-topics-to-be-determined-by-student-interest-.html"><a href="further-topics-to-be-determined-by-student-interest-.html"><i class="fa fa-check"></i><b>20</b> Further topics: To be determined by student interest.</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data-first: Telling stories with data and quantitative analysis in R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ethics" class="section level1">
+<h1><span class="header-section-number">6</span> Ethics</h1>
+<p><strong>Required reading</strong></p>
+<ul>
+<li>Arcas, Blaise Agüera y, Alexander Todorov and Margaret Mitchell, 2018, ‘Do algorithms reveal sexual orientation or just expose our stereotypes?’, 11 January, freely available at: <a href="https://medium.com/@blaisea/do-algorithms-reveal-sexual-orientation-or-just-expose-our-stereotypes-d998fafdf477" class="uri">https://medium.com/@blaisea/do-algorithms-reveal-sexual-orientation-or-just-expose-our-stereotypes-d998fafdf477</a>.</li>
+<li>Fritzler, Alan, 2015, ‘An ethical checklist for data science’, freely available at: <a href="http://www.dssgfellowship.org/2015/09/18/an-ethical-checklist-for-data-science/" class="uri">http://www.dssgfellowship.org/2015/09/18/an-ethical-checklist-for-data-science/</a>.</li>
+<li>Hoa, Karen, 2019, ’This is how AI bias really happens - and why it’s so hard to fix, <em>MIT Technology Review</em>, 4 February, freely available at: <a href="https://www.technologyreview.com/s/612876/this-is-how-ai-bias-really-happensand-why-its-so-hard-to-fix/" class="uri">https://www.technologyreview.com/s/612876/this-is-how-ai-bias-really-happensand-why-its-so-hard-to-fix/</a>.</li>
+<li>Institute and Faculty of Actuaries and Royal Statistical Society, 2019, ‘A Guide for Ethical Data Science’, freely available at: <a href="https://www.actuaries.org.uk/system/files/field/document/An%20Ethical%20Charter%20for%20Date%20Science%20WEB%20FINAL.PDF" class="uri">https://www.actuaries.org.uk/system/files/field/document/An%20Ethical%20Charter%20for%20Date%20Science%20WEB%20FINAL.PDF</a>.</li>
+<li>Keyes, Os, 2019, ‘Counting the Countless’, <em>Real Life</em>, 8 April, freely available at: <a href="https://reallifemag.com/counting-the-countless/" class="uri">https://reallifemag.com/counting-the-countless/</a>.</li>
+<li>Saltz, J.S., Dewar, N., 2019, ‘Data science ethical considerations: a systematic literature review and proposed project framework’, <em>Ethics Inf Technol</em>, 21, 197–208. <a href="https://doi.org/10.1007/s10676-019-09502-5" class="uri">https://doi.org/10.1007/s10676-019-09502-5</a>.</li>
+</ul>
+<p><strong>Recommended reading</strong></p>
+<ul>
+<li>Ebert, Philip A., 2019, ‘Bayesian reasoning in avalanche terrain: a theoretical investigation’, <em>Journal of Adventure Education and Outdoor Learning</em>, 19, no. 1, pp. 84-95.</li>
+<li>Gelman, Andrew, and David Madigan, 2015, ‘Ethics and Statistics: How is Ethics Like Logistic Regression?’, <em>CHANCE</em> 28, no. 2, 31-33.</li>
+<li>O’Neil, Cathy, 2016, ‘Weapons of Math Destruction’, Crown, New York, Chapters 1 and 5.</li>
+<li>Phillips, Lisa, 2020, ‘Architecting privacy’, <em>Increment</em>, February, freely available at: <a href="https://increment.com/software-architecture/architecting-privacy/" class="uri">https://increment.com/software-architecture/architecting-privacy/</a>.</li>
+<li>Schrittwieser, Sebastian, Martin Mulazzani and Edgar Weippl, 2013, ‘Ethics in security research which lines should not be crossed?’, 2013 IEEE Security and Privacy Workshops, San Francisco, CA, pp. 1-4.</li>
+</ul>
+<p><strong>Case study reading: Gay face</strong></p>
+<ul>
+<li>Hand DJ, 2018, ‘Aspects of data ethics in a changing world: where are we now?’, <em>Big Data</em>, 6:3, 176–190, DOI: 10.1089/big.2018.0083.</li>
+<li>Leuner, John, 2018, ‘A Replication Study: Machine Learning Models Are Capable of Predicting Sexual Orientation From Facial Images’, freely available at: <a href="https://arxiv.org/pdf/1902.10739.pdf" class="uri">https://arxiv.org/pdf/1902.10739.pdf</a>.</li>
+<li>Simpson, Dan, 2017, ‘It seemed to me that most destruction was being done by those who could not choose between the two’, freely available at: <a href="https://statmodeling.stat.columbia.edu/2017/09/12/seemed-destruction-done-not-choose-two/" class="uri">https://statmodeling.stat.columbia.edu/2017/09/12/seemed-destruction-done-not-choose-two/</a>.</li>
+<li>Wang, Yilun &amp; Michal Kosinski, 2018, ‘Deep neural networks are more accurate than humans at detecting sexual orientation from facial images’, <em>Journal of Personality and Social Psychology</em>, 114, 246-257.</li>
+</ul>
+<p><strong>Case study reading: Allstate</strong></p>
+<ul>
+<li>Varner, Maddy, and Aaron Sankin, 2020, ‘Suckers List: How Allstate’s Secret Auto Insurance Algorithm Squeezes Big Spenders’, <em>The Markup</em>, 25 February, freely available at: <a href="https://themarkup.org/allstates-algorithm/2020/02/25/car-insurance-suckers-list" class="uri">https://themarkup.org/allstates-algorithm/2020/02/25/car-insurance-suckers-list</a>.</li>
+</ul>
+<p><strong>Key concepts/skills/etc</strong></p>
+<ul>
+<li>Work out an ethical framework that is appropriate to you.</li>
+<li>Apply it consistently.</li>
+<li>Update it regularly.</li>
+</ul>
+<div id="introduction-4" class="section level2">
+<h2><span class="header-section-number">6.1</span> Introduction</h2>
+<blockquote>
+<p>“We shouldn’t have to think about the societal impact of our work because it’s hard and other people can do it for us” is a really bad argument.</p>
+<p>I stopped doing CV research because I saw the impact my work was having. I loved the work but the military applications and privacy concerns eventually became impossible to ignore.</p>
+<p>But basically all facial recognition work would not get published if we took Broader Impacts sections seriously. There is almost no upside and enormous downside risk.</p>
+<p>To be fair though i should have a lot of humility here. For most of grad school I bought in to the myth that science is apolitical and research is objectively moral and good no matter what the subject is.</p>
+<p>Joe Redmon, <a href="https://twitter.com/pjreddie/status/1230524770350817280">20 February 2020</a>.</p>
+</blockquote>
+<p>Although the term ‘data science’ is ubiquitous in academia, industry, and even more generally, it is difficult to define. One deliberately antagonistic definition of data science is ‘[t]he inhumane reduction of humanity down to what can be counted’ (Keyes, 2019). While purposefully controversial, this definition highlights one reason for the increased demand for data science and quantitative methods over the past decade—individuals and their behaviour are now at the heart of it. Many of the techniques have been around for many decades, but what makes them popular now is this human focus.</p>
+<p>Unfortunately, even though much of the work may be focused on individuals, issues of privacy and consent, and ethical concerns more broadly, rarely seem front of mind. While there are some exceptions, in general, even at the same time as claiming that AI, machine learning, and data science are going to revolutionise society, these types of issues appear to have been largely treated as things that are nice to have, rather than issues that we may like to think of before we embrace the revolution.</p>
+<p>For the most part, these are not new issues. In the sciences, there has been considerable recent ethical consideration around CRISPR technology and gene editing, but in an earlier time similar conversations were had, for instance, about Wernher von Braun being allowed to building rockets for the US. In medicine, of course, these concerns have been front-of-mind for some time.</p>
+<p>There is some evidence that data scientists are beginning to be more concerned about the ethics surrounding the practice. For instance, NeurIPS, the most prestigious machine learning conference, now requires a statement on ethics to accompany all submissions.</p>
+<blockquote>
+<p>In order to provide a balanced perspective, authors are required to include a statement of the potential broader impact of their work, including its ethical aspects and future societal consequences. Authors should take care to discuss both positive and negative outcomes.</p>
+<p><a href="https://neurips.cc/Conferences/2020/CallForPapers">NeurIPS call for papers</a>, as accessed 26 February 2020.</p>
+</blockquote>
+<p>The purpose of this chapter is not to prescriptively rule things in or out, but to provide some aspects that you may like to think about when you go about your work. The variety of data science applications, the relative youth of the field, and the speed of change, mean that ethical considerations can sometimes be set aside when it comes to data science. This is in contrast to fields such as science, medicine, engineering, and accounting where there is a long history. Nonetheless it can helpful to think through some ethical considerations that you may encounter in the content of a usual data science project.</p>
+</div>
+<div id="questiontask" class="section level2">
+<h2><span class="header-section-number">6.2</span> Question/task</h2>
+<p>Think about how, even with the best of intentions, the question or task that you are wanting to do could be implemented in a way that is unethical. Here I think about the raw incentives that are being faced. This may be obvious. For instance, in the case of the Wells Fargo bank accounts situation, it should have been clear to management that having unachievable goals would result in bad decisions. But in the case of a data science project it can be more difficult to see.</p>
+<p>Think about a lending decision and the variables that go into that. If race (and what does that even mean?) is an important variable then we need to think about whether that is a model that we want to be using. (In the case of race, it’s not just an ethical question, but could be a legal one.) Similarly, what about age or sex? Is asking these questions likely to actively harm people? To what extent are we willing to trade off that harm? And are the benefits and costs accruing to different groups? It’s often some particular group that pays, while some other group benefits.</p>
+</div>
+<div id="data" class="section level2">
+<h2><span class="header-section-number">6.3</span> Data</h2>
+<p>There is a general framework for ethical behaviour when it comes to data in the context of medicine and the sciences. This includes:</p>
+<ul>
+<li>Institutional review boards (IRB), which is generally designed to protect the participants in a study. These rarely exist in data science settings, but even when they do it is not clear that they are able to operate appropriately, for instance the ‘gay face’ paper was approved by IRB.</li>
+<li>Informed consent, for instance, the Tuskegee syphilis experiment is an infamous study in which patients were deliberately not informed that they had syphilis, nor were they treated, despite being part of a study about the effect of syphilis. This case prompted considerable changes in the way that medical studies were approved. While this is considerably less important, it is worth comparing this with, for instance, the deliberate collection of data by technology firms, such as Amazon and Apple to train Alexa and Siri. To what extent do the people who are part of this data collection know that their conversations is being used for this? How likely are we to similarly see government intervention?</li>
+<li>Confidentiality. There are so many flagrant examples of confidentiality being violated in data science that it would be pointless to name them here. Think about the most recent one that affected you. However, it is worth pointing out that in Canada, at least, although the laws and regulations are quite patchy, the Privacy Commissioner as well as parliament are likely to introduce changes in 2020 (Scassa, 2020, ‘Privacy reform and the federal mandate letters’, 7 February.) Try to bake in privacy and confidentiality concerns from the start, rather than just adding it on at the end.</li>
+</ul>
+<blockquote>
+<p>It’s not PII
+There’s no way it’s PII
+It was PII</p>
+<p>‘A GDPR data privacy haiku’, Lisa Phillips, <a href="https://twitter.com/lisaphillips/status/1062419352417271808">13 November 2018</a>.</p>
+</blockquote>
+<p>It’s also the case that when using machine learning, we train it on the past. To use a trivial example - if we wanted to forecast the race and sex of the next US president, it would be a brave model that didn’t suggest it would be a white person, because that is what all of them apart from one, have been; and it would be a braver model that didn’t suggest it would be a man. Does this mean the model is biased or that history is? But if we are wanting to make forecasts about the future, then what do we want? Similarly, what would be most accurate?</p>
+<p>Finally, consider the source of the dataset. There are many cases where academic work has been done using hacked data, for instance, the Ashley Madison.</p>
+</div>
+<div id="model" class="section level2">
+<h2><span class="header-section-number">6.4</span> Model</h2>
+<p>There are basic aspects around constructing the model including ensuring that it is transparent, and reproducible. There may be other concerns, such as ensuring the model results are not a result of p-hacking.</p>
+<p>The scale of data science projects means that the potential for abuse and different outcomes at large-scale should be considered. While a data science project may be ethical at a small-scale, it may be unethical at large-scale. There may also be different ethical concerns when a project is under your control compared with if it was available to others.</p>
+<p>Finally, while it may be the case that the person who made the model understands the trade-offs and value-judgements that were part of constructing the model, it is possible that others may not. This may lead to a false confidence in the results of the model because of a false sense of the impartiality of statistics and quantitative methods more generally, and a failure to properly appreciate the assumptions.</p>
+</div>
+<div id="team" class="section level2">
+<h2><span class="header-section-number">6.5</span> Team</h2>
+<p>People tend to hire people who are similar to them. If this happens in the context of a data science team then what are the sorts of effects that are possible on even the best-intentioned workflow? Should a team that consists only of Australians really be hired by the Maple Leafs to analyse hockey?</p>
+<p>Do the decision-makers understand the trade-offs and realities involved in data science to an extent that they can make informed decisions?</p>
+<p>Finally, consider the existence of conflicts of interest.</p>
+<!-- ## Case study: Gay face -->
+<!-- In the 'gay face' paper,  -->
+<!-- ## Case study: Allstate -->
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="r-lab-using-r-in-practice.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reproducibility.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

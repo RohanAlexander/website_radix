@@ -25,6 +25,8 @@ navbar:
       href: professional.html
     - text: "Projects"
       href: projects.html
+    - text: "Teaching"
+      href: teaching.html
     - icon: fab fa-twitter
       href: https://twitter.com/RohanAlexander
     - icon: fab fa-github

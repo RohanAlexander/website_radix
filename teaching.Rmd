@@ -1,0 +1,35 @@
+---
+title: "Teacing"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+#### University of Toronto
+* Instructor, Experimental Design for Data Science, Faculty of Information, Winter Term, 2020.
+  - In this class students learned how to tell stories with data and quantitative analysis. They learned how to gather data, develop questions, answer those questions using quantitative methods, and communicate their answers. This was a hands-on course in which students used R and real-world datasets. The class focused on what to do when traditional experimental design methods cannot be implemented or are not appropriate. And the extent to which those allow us to speak to causality even when we cannot conduct traditional experiments.
+  - The lecture notes are available here: [INF2178 notes](notes/overview.html) 
+
+
+### Teaching Experience
+#### Australian National University
+* Tutor, Macroeconomics 3, Semester 2, 2017, [evaluations](pdfs/2018-02-05-Sem_2_2017-ECON3102_-_Macroeconomics_3.pdf) 
+* Tutor, Microeconomics 3, Semester 1, 2017, [evaluations](pdfs/2018-02-05-Sem_1_2017-ECON3101_-_Microeconomics_3.pdf) 
+* Tutor, Behavioural Economics, Semester 2, 2015, [evaluations](pdfs/2018-02-05-Sem_2_2015-ECON2013_Behavioural_Economics.pdf) 
+* Tutor, Business Economics, Semester 1, 2015, [evaluations](pdfs/2018-02-05-Sem_1_2015-ECON8069_Business_Economics.pdf) 
+* Tutor, Microeconomics 1, Semester 1, 2013, [evaluations](pdfs/2018-02-05-Sem_1_2013-ECON1101_Microeconomics_1.pdf) 
+* Tutor, Foundations of Economic and Financial Models, Semester 2, 2012
+
+#### University of Queensland
+* Tutor, Microeconomic Policy, Semester 2, 2008
+* Tutor, Microeconomic Theory, Semester 1, 2008
+* Tutor, Introductory Microeconomics, Semester 2, 2007
+* Tutor, Introductory Microeconomics, Semester 1, 2007
+
+
+#### Short courses and workshops
+* Instructor, [Getting started with MRP](http://rohanalexander.com/posts/2019-12-04-getting_started_with_mrp/), Australian National University, 3 December 2019.
+
