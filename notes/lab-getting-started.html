@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Lab - Getting started | Telling Stories with Data</title>
+  <meta name="description" content="2 Lab - Getting started | Telling Stories with Data" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Lab - Getting started | Telling Stories with Data" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Lab - Getting started | Telling Stories with Data" />
+  
+  
+  
+
+<meta name="author" content="Rohan Alexander" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="overview.html"/>
+<link rel="next" href="case-study-the-2019-canadian-federal-election.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
+<li class="chapter" data-level="1.1" data-path="overview.html"><a href="overview.html#on-telling-stories"><i class="fa fa-check"></i><b>1.1</b> On telling stories</a></li>
+<li class="chapter" data-level="1.2" data-path="overview.html"><a href="overview.html#telling-stories-with-data"><i class="fa fa-check"></i><b>1.2</b> Telling stories with data</a></li>
+<li class="chapter" data-level="1.3" data-path="overview.html"><a href="overview.html#these-notes"><i class="fa fa-check"></i><b>1.3</b> These notes</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="overview.html"><a href="overview.html#software"><i class="fa fa-check"></i><b>1.3.1</b> Software</a></li>
+<li class="chapter" data-level="1.3.2" data-path="overview.html"><a href="overview.html#assumed-background"><i class="fa fa-check"></i><b>1.3.2</b> Assumed background</a></li>
+<li class="chapter" data-level="1.3.3" data-path="overview.html"><a href="overview.html#structure"><i class="fa fa-check"></i><b>1.3.3</b> Structure</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="overview.html"><a href="overview.html#acknowledgements"><i class="fa fa-check"></i><b>1.4</b> Acknowledgements</a></li>
+<li class="chapter" data-level="1.5" data-path="overview.html"><a href="overview.html#contact"><i class="fa fa-check"></i><b>1.5</b> Contact</a></li>
+<li class="chapter" data-level="1.6" data-path="overview.html"><a href="overview.html#todos"><i class="fa fa-check"></i><b>1.6</b> TODOs</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lab-getting-started.html"><a href="lab-getting-started.html"><i class="fa fa-check"></i><b>2</b> Lab - Getting started</a><ul>
+<li class="chapter" data-level="2.1" data-path="lab-getting-started.html"><a href="lab-getting-started.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="lab-getting-started.html"><a href="lab-getting-started.html#tidyverse"><i class="fa fa-check"></i><b>2.2</b> Tidyverse</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="lab-getting-started.html"><a href="lab-getting-started.html#the-pipe"><i class="fa fa-check"></i><b>2.2.1</b> The pipe</a></li>
+<li class="chapter" data-level="2.2.2" data-path="lab-getting-started.html"><a href="lab-getting-started.html#select"><i class="fa fa-check"></i><b>2.2.2</b> Select</a></li>
+<li class="chapter" data-level="2.2.3" data-path="lab-getting-started.html"><a href="lab-getting-started.html#filter"><i class="fa fa-check"></i><b>2.2.3</b> Filter</a></li>
+<li class="chapter" data-level="2.2.4" data-path="lab-getting-started.html"><a href="lab-getting-started.html#arrange"><i class="fa fa-check"></i><b>2.2.4</b> Arrange</a></li>
+<li class="chapter" data-level="2.2.5" data-path="lab-getting-started.html"><a href="lab-getting-started.html#group_by"><i class="fa fa-check"></i><b>2.2.5</b> group_by</a></li>
+<li class="chapter" data-level="2.2.6" data-path="lab-getting-started.html"><a href="lab-getting-started.html#mutate"><i class="fa fa-check"></i><b>2.2.6</b> Mutate</a></li>
+<li class="chapter" data-level="2.2.7" data-path="lab-getting-started.html"><a href="lab-getting-started.html#summarise"><i class="fa fa-check"></i><b>2.2.7</b> Summarise</a></li>
+<li class="chapter" data-level="2.2.8" data-path="lab-getting-started.html"><a href="lab-getting-started.html#counting-by-group"><i class="fa fa-check"></i><b>2.2.8</b> Counting by group</a></li>
+<li class="chapter" data-level="2.2.9" data-path="lab-getting-started.html"><a href="lab-getting-started.html#calculate-proportions"><i class="fa fa-check"></i><b>2.2.9</b> Calculate proportions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="lab-getting-started.html"><a href="lab-getting-started.html#ggplot"><i class="fa fa-check"></i><b>2.3</b> ggplot</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="lab-getting-started.html"><a href="lab-getting-started.html#main-features"><i class="fa fa-check"></i><b>2.3.1</b> Main features</a></li>
+<li class="chapter" data-level="2.3.2" data-path="lab-getting-started.html"><a href="lab-getting-started.html#facets"><i class="fa fa-check"></i><b>2.3.2</b> Facets</a></li>
+<li class="chapter" data-level="2.3.3" data-path="lab-getting-started.html"><a href="lab-getting-started.html#small-things"><i class="fa fa-check"></i><b>2.3.3</b> Small things</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="lab-getting-started.html"><a href="lab-getting-started.html#other"><i class="fa fa-check"></i><b>2.4</b> Other</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="lab-getting-started.html"><a href="lab-getting-started.html#case_when"><i class="fa fa-check"></i><b>2.4.1</b> case_when</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html"><i class="fa fa-check"></i><b>3</b> Case study - The 2019 Canadian Federal Election</a><ul>
+<li class="chapter" data-level="3.1" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#create-a-graph-based-on-the-2019-canadian-federal-election"><i class="fa fa-check"></i><b>3.2</b> Create a graph based on the 2019 Canadian Federal election</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#getting-started"><i class="fa fa-check"></i><b>3.2.1</b> Getting started</a></li>
+<li class="chapter" data-level="3.2.2" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#reading-in-the-data"><i class="fa fa-check"></i><b>3.2.2</b> Reading in the data</a></li>
+<li class="chapter" data-level="3.2.3" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#clean-the-data"><i class="fa fa-check"></i><b>3.2.3</b> Clean the data</a></li>
+<li class="chapter" data-level="3.2.4" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#make-a-graph"><i class="fa fa-check"></i><b>3.2.4</b> Make a graph</a></li>
+<li class="chapter" data-level="3.2.5" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#make-a-table"><i class="fa fa-check"></i><b>3.2.5</b> Make a table</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="communication.html"><a href="communication.html"><i class="fa fa-check"></i><b>4</b> Communication</a><ul>
+<li class="chapter" data-level="4.1" data-path="communication.html"><a href="communication.html#introduction-2"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="communication.html"><a href="communication.html#title-abstract-and-introduction"><i class="fa fa-check"></i><b>4.2</b> Title, abstract, and introduction</a></li>
+<li class="chapter" data-level="4.3" data-path="communication.html"><a href="communication.html#figures-tables-equations-and-technical-terms"><i class="fa fa-check"></i><b>4.3</b> Figures, tables, equations, and technical terms</a></li>
+<li class="chapter" data-level="4.4" data-path="communication.html"><a href="communication.html#on-brevity"><i class="fa fa-check"></i><b>4.4</b> On brevity</a></li>
+<li class="chapter" data-level="4.5" data-path="communication.html"><a href="communication.html#other-1"><i class="fa fa-check"></i><b>4.5</b> Other</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lab-using-r-in-practice.html"><a href="lab-using-r-in-practice.html"><i class="fa fa-check"></i><b>5</b> Lab - Using R in practice</a><ul>
+<li class="chapter" data-level="5.1" data-path="lab-using-r-in-practice.html"><a href="lab-using-r-in-practice.html#introduction-3"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="lab-using-r-in-practice.html"><a href="lab-using-r-in-practice.html#getting-help"><i class="fa fa-check"></i><b>5.2</b> Getting help</a></li>
+<li class="chapter" data-level="5.3" data-path="lab-using-r-in-practice.html"><a href="lab-using-r-in-practice.html#mentality"><i class="fa fa-check"></i><b>5.3</b> Mentality</a></li>
+<li class="chapter" data-level="5.4" data-path="lab-using-r-in-practice.html"><a href="lab-using-r-in-practice.html#style"><i class="fa fa-check"></i><b>5.4</b> Style</a></li>
+<li class="chapter" data-level="5.5" data-path="lab-using-r-in-practice.html"><a href="lab-using-r-in-practice.html#learning-more"><i class="fa fa-check"></i><b>5.5</b> Learning more</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="ethics.html"><a href="ethics.html"><i class="fa fa-check"></i><b>6</b> Ethics</a><ul>
+<li class="chapter" data-level="6.1" data-path="ethics.html"><a href="ethics.html#introduction-4"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="ethics.html"><a href="ethics.html#questiontask"><i class="fa fa-check"></i><b>6.2</b> Question/task</a></li>
+<li class="chapter" data-level="6.3" data-path="ethics.html"><a href="ethics.html#data"><i class="fa fa-check"></i><b>6.3</b> Data</a></li>
+<li class="chapter" data-level="6.4" data-path="ethics.html"><a href="ethics.html#model"><i class="fa fa-check"></i><b>6.4</b> Model</a></li>
+<li class="chapter" data-level="6.5" data-path="ethics.html"><a href="ethics.html#team"><i class="fa fa-check"></i><b>6.5</b> Team</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>7</b> Reproducibility</a><ul>
+<li class="chapter" data-level="7.1" data-path="reproducibility.html"><a href="reproducibility.html#introduction-5"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="reproducibility.html"><a href="reproducibility.html#data-access"><i class="fa fa-check"></i><b>7.2</b> Data access</a></li>
+<li class="chapter" data-level="7.3" data-path="reproducibility.html"><a href="reproducibility.html#on-mistakes"><i class="fa fa-check"></i><b>7.3</b> On mistakes</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html"><i class="fa fa-check"></i><b>8</b> Lab - R Markdown and R Projects</a><ul>
+<li class="chapter" data-level="8.1" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#r-markdown"><i class="fa fa-check"></i><b>8.1</b> R Markdown</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#getting-started-1"><i class="fa fa-check"></i><b>8.1.1</b> Getting started</a></li>
+<li class="chapter" data-level="8.1.2" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#basic-commands"><i class="fa fa-check"></i><b>8.1.2</b> Basic commands</a></li>
+<li class="chapter" data-level="8.1.3" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#r-chunks"><i class="fa fa-check"></i><b>8.1.3</b> R chunks</a></li>
+<li class="chapter" data-level="8.1.4" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#abstracts-and-pdf-outputs"><i class="fa fa-check"></i><b>8.1.4</b> Abstracts and PDF outputs</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#r-projects"><i class="fa fa-check"></i><b>8.2</b> R projects</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html"><i class="fa fa-check"></i><b>9</b> Case study - TTC Subway Delays</a><ul>
+<li class="chapter" data-level="9.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#introduction-6"><i class="fa fa-check"></i><b>9.1</b> Introduction</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#prerequesites"><i class="fa fa-check"></i><b>9.1.1</b> Prerequesites</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#finding-and-downloading-data-using-opendatatoronto"><i class="fa fa-check"></i><b>9.2</b> Finding and downloading data using <code>opendatatoronto</code></a><ul>
+<li class="chapter" data-level="9.2.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#finding-the-data"><i class="fa fa-check"></i><b>9.2.1</b> Finding the data</a></li>
+<li class="chapter" data-level="9.2.2" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#retrieving-the-data"><i class="fa fa-check"></i><b>9.2.2</b> Retrieving the data</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#plotting"><i class="fa fa-check"></i><b>9.3</b> Plotting</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#example-1-delays-by-line"><i class="fa fa-check"></i><b>9.3.1</b> Example 1: Delays by line</a></li>
+<li class="chapter" data-level="9.3.2" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#example-2-delays-by-time-of-day"><i class="fa fa-check"></i><b>9.3.2</b> Example 2: Delays by time of day</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="developing-research-questions-and-gathering-data.html"><a href="developing-research-questions-and-gathering-data.html"><i class="fa fa-check"></i><b>10</b> Developing research questions and gathering data</a><ul>
+<li class="chapter" data-level="10.1" data-path="developing-research-questions-and-gathering-data.html"><a href="developing-research-questions-and-gathering-data.html#developing-research-questions"><i class="fa fa-check"></i><b>10.1</b> Developing research questions</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="gathering-data.html"><a href="gathering-data.html"><i class="fa fa-check"></i><b>11</b> Gathering data</a><ul>
+<li class="chapter" data-level="11.1" data-path="gathering-data.html"><a href="gathering-data.html#gathering-data-1"><i class="fa fa-check"></i><b>11.1</b> Gathering data</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="gathering-data.html"><a href="gathering-data.html#deliberately-available"><i class="fa fa-check"></i><b>11.1.1</b> Deliberately available</a></li>
+<li class="chapter" data-level="11.1.2" data-path="gathering-data.html"><a href="gathering-data.html#by-product"><i class="fa fa-check"></i><b>11.1.2</b> By product</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html"><i class="fa fa-check"></i><b>12</b> Case study - Gathering and tidying data from Paspaley</a><ul>
+<li class="chapter" data-level="12.1" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html#introduction-7"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
+<li class="chapter" data-level="12.2" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html#data-acquisition"><i class="fa fa-check"></i><b>12.2</b> Data acquisition</a></li>
+<li class="chapter" data-level="12.3" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html#data-cleaning"><i class="fa fa-check"></i><b>12.3</b> Data cleaning</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html"><i class="fa fa-check"></i><b>13</b> Case study - Rohan’s books</a><ul>
+<li class="chapter" data-level="13.1" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html#introduction-8"><i class="fa fa-check"></i><b>13.1</b> Introduction</a></li>
+<li class="chapter" data-level="13.2" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html#gather-data"><i class="fa fa-check"></i><b>13.2</b> Gather data</a></li>
+<li class="chapter" data-level="13.3" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html#data-parsing-and-cleaning"><i class="fa fa-check"></i><b>13.3</b> Data parsing and cleaning</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>14</b> Exploratory data analysis</a><ul>
+<li class="chapter" data-level="14.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#introduction-9"><i class="fa fa-check"></i><b>14.1</b> Introduction</a></li>
+<li class="chapter" data-level="14.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#a-note-on-packages"><i class="fa fa-check"></i><b>14.2</b> A note on packages</a></li>
+<li class="chapter" data-level="14.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#ttc-subway-delays"><i class="fa fa-check"></i><b>14.3</b> TTC subway delays</a></li>
+<li class="chapter" data-level="14.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#eda-and-data-viz"><i class="fa fa-check"></i><b>14.4</b> EDA and data viz</a></li>
+<li class="chapter" data-level="14.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#data-checks"><i class="fa fa-check"></i><b>14.5</b> Data checks</a><ul>
+<li class="chapter" data-level="14.5.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#sanity-checks"><i class="fa fa-check"></i><b>14.5.1</b> Sanity Checks</a></li>
+<li class="chapter" data-level="14.5.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#missing-values"><i class="fa fa-check"></i><b>14.5.2</b> Missing values</a></li>
+<li class="chapter" data-level="14.5.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#duplicates"><i class="fa fa-check"></i><b>14.5.3</b> Duplicates?</a></li>
+<li class="chapter" data-level="14.5.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-distributions"><i class="fa fa-check"></i><b>14.5.4</b> Visualizing distributions</a></li>
+<li class="chapter" data-level="14.5.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-time-series"><i class="fa fa-check"></i><b>14.5.5</b> Visualizing time series</a></li>
+<li class="chapter" data-level="14.5.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-relationships"><i class="fa fa-check"></i><b>14.5.6</b> Visualizing relationships</a></li>
+<li class="chapter" data-level="14.5.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#pca"><i class="fa fa-check"></i><b>14.5.7</b> PCA</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#exercises"><i class="fa fa-check"></i><b>14.6</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="linear-regression.html"><a href="linear-regression.html"><i class="fa fa-check"></i><b>15</b> Linear regression</a><ul>
+<li class="chapter" data-level="15.1" data-path="linear-regression.html"><a href="linear-regression.html#introduction-10"><i class="fa fa-check"></i><b>15.1</b> Introduction</a></li>
+<li class="chapter" data-level="15.2" data-path="linear-regression.html"><a href="linear-regression.html#competing-relationships"><i class="fa fa-check"></i><b>15.2</b> Competing relationships</a></li>
+<li class="chapter" data-level="15.3" data-path="linear-regression.html"><a href="linear-regression.html#implementing-this-in-r"><i class="fa fa-check"></i><b>15.3</b> Implementing this in R</a></li>
+<li class="chapter" data-level="15.4" data-path="linear-regression.html"><a href="linear-regression.html#tidy-up-with-broom"><i class="fa fa-check"></i><b>15.4</b> Tidy up with broom</a></li>
+<li class="chapter" data-level="15.5" data-path="linear-regression.html"><a href="linear-regression.html#testing-hypothesis"><i class="fa fa-check"></i><b>15.5</b> Testing hypothesis</a></li>
+<li class="chapter" data-level="15.6" data-path="linear-regression.html"><a href="linear-regression.html#adding-more-and-varied-explanatory-variables"><i class="fa fa-check"></i><b>15.6</b> Adding more and varied explanatory variables</a></li>
+<li class="chapter" data-level="15.7" data-path="linear-regression.html"><a href="linear-regression.html#threats-to-validity-and-aspects-to-think-about"><i class="fa fa-check"></i><b>15.7</b> Threats to validity and aspects to think about</a></li>
+<li class="chapter" data-level="15.8" data-path="linear-regression.html"><a href="linear-regression.html#more-credible-outputs"><i class="fa fa-check"></i><b>15.8</b> More credible outputs</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html"><i class="fa fa-check"></i><b>16</b> Case study - Opinions about a casino in Toronto</a><ul>
+<li class="chapter" data-level="16.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#data-preparation"><i class="fa fa-check"></i><b>16.1</b> Data preparation</a><ul>
+<li class="chapter" data-level="16.1.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#getting-data-from-opendatatoronto"><i class="fa fa-check"></i><b>16.1.1</b> Getting data from <code>opendatatoronto</code></a></li>
+<li class="chapter" data-level="16.1.2" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#getting-the-right-kind-of-object"><i class="fa fa-check"></i><b>16.1.2</b> Getting the right kind of object</a></li>
+<li class="chapter" data-level="16.1.3" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#cleaning-up-the-dataframe"><i class="fa fa-check"></i><b>16.1.3</b> Cleaning up the dataframe</a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#some-visual-exploration-and-more-cleanup-of-course"><i class="fa fa-check"></i><b>16.2</b> Some visual exploration (and more cleanup, of course)</a><ul>
+<li class="chapter" data-level="16.2.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#getting-the-data-into-a-more-model-suitable-format"><i class="fa fa-check"></i><b>16.2.1</b> Getting the data into a more model-suitable format</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#logistic-regression"><i class="fa fa-check"></i><b>16.3</b> Logistic Regression</a><ul>
+<li class="chapter" data-level="16.3.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#interpretation"><i class="fa fa-check"></i><b>16.3.1</b> Interpretation</a></li>
+<li class="chapter" data-level="16.3.2" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#baseline-category"><i class="fa fa-check"></i><b>16.3.2</b> Baseline category</a></li>
+<li class="chapter" data-level="16.3.3" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#making-estimates"><i class="fa fa-check"></i><b>16.3.3</b> Making estimates</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html"><i class="fa fa-check"></i><b>17</b> Case study - Airbnb listing in Toronto</a><ul>
+<li class="chapter" data-level="17.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#essentials"><i class="fa fa-check"></i><b>17.1</b> Essentials</a></li>
+<li class="chapter" data-level="17.2" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#set-up"><i class="fa fa-check"></i><b>17.2</b> Set up</a></li>
+<li class="chapter" data-level="17.3" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#get-data"><i class="fa fa-check"></i><b>17.3</b> Get data</a></li>
+<li class="chapter" data-level="17.4" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#clean-data"><i class="fa fa-check"></i><b>17.4</b> Clean data</a><ul>
+<li class="chapter" data-level="17.4.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#price"><i class="fa fa-check"></i><b>17.4.1</b> Price</a></li>
+<li class="chapter" data-level="17.4.2" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#superhosts"><i class="fa fa-check"></i><b>17.4.2</b> Superhosts</a></li>
+<li class="chapter" data-level="17.4.3" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#reviews"><i class="fa fa-check"></i><b>17.4.3</b> Reviews</a></li>
+<li class="chapter" data-level="17.4.4" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#response-time"><i class="fa fa-check"></i><b>17.4.4</b> Response time</a></li>
+<li class="chapter" data-level="17.4.5" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#host-number-of-listings"><i class="fa fa-check"></i><b>17.4.5</b> Host number of listings</a></li>
+<li class="chapter" data-level="17.4.6" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#decisions"><i class="fa fa-check"></i><b>17.4.6</b> Decisions</a></li>
+</ul></li>
+<li class="chapter" data-level="17.5" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#explore-data"><i class="fa fa-check"></i><b>17.5</b> Explore data</a><ul>
+<li class="chapter" data-level="17.5.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#price-and-reviews"><i class="fa fa-check"></i><b>17.5.1</b> Price and reviews</a></li>
+<li class="chapter" data-level="17.5.2" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#superhost-and-response-time"><i class="fa fa-check"></i><b>17.5.2</b> Superhost and response-time</a></li>
+<li class="chapter" data-level="17.5.3" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#neighbourhood"><i class="fa fa-check"></i><b>17.5.3</b> Neighbourhood</a></li>
+</ul></li>
+<li class="chapter" data-level="17.6" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#model-data"><i class="fa fa-check"></i><b>17.6</b> Model data</a><ul>
+<li class="chapter" data-level="17.6.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#logistic-regression-1"><i class="fa fa-check"></i><b>17.6.1</b> Logistic regression</a></li>
+</ul></li>
+<li class="chapter" data-level="17.7" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#next-steps"><i class="fa fa-check"></i><b>17.7</b> Next steps</a></li>
+<li class="chapter" data-level="17.8" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#references"><i class="fa fa-check"></i><b>17.8</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html"><i class="fa fa-check"></i><b>18</b> A/B testing and RCTs</a><ul>
+<li class="chapter" data-level="18.1" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#introduction-11"><i class="fa fa-check"></i><b>18.1</b> Introduction</a></li>
+<li class="chapter" data-level="18.2" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#motivation"><i class="fa fa-check"></i><b>18.2</b> Motivation</a></li>
+<li class="chapter" data-level="18.3" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#tea-party"><i class="fa fa-check"></i><b>18.3</b> Tea party</a></li>
+<li class="chapter" data-level="18.4" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#some-unexpected-properties-from-randomised-sampling"><i class="fa fa-check"></i><b>18.4</b> Some unexpected properties from randomised sampling</a></li>
+<li class="chapter" data-level="18.5" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#anova"><i class="fa fa-check"></i><b>18.5</b> ANOVA</a></li>
+<li class="chapter" data-level="18.6" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#treatment-and-control"><i class="fa fa-check"></i><b>18.6</b> Treatment and control</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html"><i class="fa fa-check"></i><b>19</b> Matching &amp; difference-in-differences</a></li>
+<li class="chapter" data-level="20" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html"><i class="fa fa-check"></i><b>20</b> Regression discontinuity design</a></li>
+<li class="chapter" data-level="21" data-path="instrumental-variables.html"><a href="instrumental-variables.html"><i class="fa fa-check"></i><b>21</b> Instrumental variables</a></li>
+<li class="chapter" data-level="22" data-path="further-topics-to-be-determined-by-student-interest-.html"><a href="further-topics-to-be-determined-by-student-interest-.html"><i class="fa fa-check"></i><b>22</b> Further topics: To be determined by student interest.</a></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Telling Stories with Data</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lab---getting-started" class="section level1">
+<h1><span class="header-section-number">2</span> Lab - Getting started</h1>
+<p><strong>This chapter was written with <a href="https://www.monicaalexander.com/">Monica Alexander</a>.</strong></p>
+<p><strong>Required reading</strong></p>
+<ul>
+<li>Bryan, Jennifer and Jim Hester, 2020, ‘What they Forgot to Teach You About R’, Chapters 1 to 5, freely available at: <a href="https://rstats.wtf/debugging-r-code.html" class="uri">https://rstats.wtf/debugging-r-code.html</a>.</li>
+<li>Wickham, Hadley, and Garrett Grolemund, 2017, ‘R for Data Science’, Chapters 4, 5, 6, 8 and 18, freely available at: <a href="https://r4ds.had.co.nz/" class="uri">https://r4ds.had.co.nz/</a>.</li>
+</ul>
+<p><strong>Alternative reading</strong></p>
+<p>There are a lot of great alternative ‘getting started with R’ type materials. Depending on your background and interests you may find some of the following useful:</p>
+<ul>
+<li>Arnold, Taylor, and Lauren Tilton, 2015, ‘Humanities Data in R’, Springer, Chapters 1 to 5.</li>
+<li>Hall, Megan, 2019, ‘An Introduction to R With Hockey Data’, freely available at: <a href="https://hockey-graphs.com/2019/12/11/an-introduction-to-r-with-hockey-data/" class="uri">https://hockey-graphs.com/2019/12/11/an-introduction-to-r-with-hockey-data/</a>.</li>
+<li>Hanretty, Chris, 2020, ‘ConveRt’, slides freely available at: <a href="http://chrishanretty.co.uk/conveRt/#1" class="uri">http://chrishanretty.co.uk/conveRt/#1</a>.</li>
+<li>Phillips, Nathaniel D., 2018, ‘YaRrr! The Pirate’s Guide to R’, Chapter 2, freely available at: <a href="https://bookdown.org/ndphillips/YaRrr/started.html" class="uri">https://bookdown.org/ndphillips/YaRrr/started.html</a>.</li>
+</ul>
+<p><strong>Key libraries</strong></p>
+<ul>
+<li><code>ggplot2</code></li>
+<li><code>here</code></li>
+<li><code>tidyverse</code></li>
+</ul>
+<p><strong>Key functions</strong></p>
+<ul>
+<li><code>pivot_wider()</code></li>
+<li><code>pivot_longer()</code></li>
+<li><code>%&gt;%</code> ‘pipe’</li>
+<li><code>select()</code></li>
+<li><code>filter()</code></li>
+<li><code>arrange()</code></li>
+<li><code>mutate()</code></li>
+<li><code>summarise()</code></li>
+<li><code>group_by()</code></li>
+<li><code>ungroup()</code></li>
+<li><code>arrange()</code></li>
+<li><code>geom_density()</code></li>
+<li><code>geom_histogram()</code></li>
+<li><code>geom_point()</code></li>
+<li><code>facet_wrap()</code></li>
+<li><code>case_when()</code></li>
+</ul>
+<p><strong>Pre-quiz</strong></p>
+<ul>
+<li>In your own words, what is data science?</li>
+<li>What do you see is the role of causality in data science?</li>
+<li>Imagine that you have a job in which including race as an explanatory variable improves the performance of your model. What types of issues would you consider when deciding whether to include this variable in production? What if the variable was sexuality?</li>
+<li>What role do you see for reproducibility in data science? How about replicability?</li>
+</ul>
+<div id="introduction" class="section level2">
+<h2><span class="header-section-number">2.1</span> Introduction</h2>
+<p>This chapter is the basics of using R. Some of it may not make sense at first, but these are commands that we will come back to throughout these notes. You should initially just go through this chapter quickly, noting aspects that you don’t understand. Then start to play around with some of the initial case studies. Then maybe come back to this chapter. That way you will see how the various bits fit into context, and hopefully be more motivated to pick up various aspects. We will come back to everything in this chapter in more detail at some point in these notes.</p>
+<p>R is an open source language that is useful for statistical programming</p>
+<p>You can download R for free here: <a href="http://cran.utstat.utoronto.ca/" class="uri">http://cran.utstat.utoronto.ca/</a>, and you can download R Studio Desktop for free here: <a href="https://rstudio.com/products/rstudio/download/#download" class="uri">https://rstudio.com/products/rstudio/download/#download</a>.</p>
+<p>When you are using R you will run into trouble at some point. To work through that trouble:</p>
+<ol style="list-style-type: decimal">
+<li>Look at the help file for the function by putting ? before the function e.g. <code>?pivot_wider</code>.</li>
+<li>Check the class of your data, by <code>class(data_set$data_column)</code>.</li>
+<li>Check for typos.</li>
+<li>Google the error.</li>
+<li>Google what you are trying to do.</li>
+<li>Restart R (<code>Session</code> -&gt; <code>Restart R and Clear Output</code>).</li>
+<li>Try to make a small example and see if you have the same issues.</li>
+<li>Restart your computer.</li>
+</ol>
+<p>The general workflow that we will use involves:</p>
+<ol style="list-style-type: decimal">
+<li>Import</li>
+<li>Tidy</li>
+<li>Transforming, descriptive</li>
+<li>Plot</li>
+<li>Model</li>
+<li>Repeat 3/4</li>
+</ol>
+</div>
+<div id="tidyverse" class="section level2">
+<h2><span class="header-section-number">2.2</span> Tidyverse</h2>
+<p>Tidy data has the following features:</p>
+<ol style="list-style-type: decimal">
+<li>each variable has its own column</li>
+<li>each observation has its own row</li>
+<li>each value has its own cell</li>
+</ol>
+<p>Let’s start by reading in some packages that will help (don’t worry too much about what they are doing for now).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(here)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">library</span>(tidyverse)</a></code></pre></div>
+<p>Here we are going to read in a dataset about age specific mortality by year.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">mortality_data &lt;-<span class="st"> </span><span class="kw">read_table</span>(<span class="kw">here</span>(<span class="st">&quot;notes/inputs/data/CAN_Mx_1x1.txt&quot;</span>), <span class="dt">skip =</span> <span class="dv">2</span>)</a></code></pre></div>
+<pre><code>## Parsed with column specification:
+## cols(
+##   Year = col_double(),
+##   Age = col_character(),
+##   Female = col_character(),
+##   Male = col_character(),
+##   Total = col_character()
+## )</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">mortality_data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</a></code></pre></div>
+<pre><code>## # A tibble: 6 x 5
+##    Year Age   Female   Male     Total   
+##   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;   
+## 1  1921 0     0.105821 0.138250 0.122259
+## 2  1921 1     0.015593 0.017806 0.016710
+## 3  1921 2     0.007409 0.008521 0.007970
+## 4  1921 3     0.005442 0.006111 0.005779
+## 5  1921 4     0.004563 0.004745 0.004655
+## 6  1921 5     0.003433 0.003828 0.003633</code></pre>
+<p>How do we get there? The <code>pivot_longer</code> and <code>pivot_wider</code> functions. Notice that the function has a bunch of arguments. You can find out more about the arguments by looking at the function’s help file: <code>?pivot_longer</code>.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">mortality_data &lt;-<span class="st"> </span><span class="kw">pivot_longer</span>(<span class="dt">data =</span> mortality_data, </a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">                               <span class="dt">cols =</span> Female<span class="op">:</span>Total, </a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">                               <span class="dt">names_to =</span> <span class="st">&quot;sex&quot;</span>, </a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">                               <span class="dt">values_to =</span> <span class="st">&quot;rate&quot;</span>)</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">mortality_data</a></code></pre></div>
+<pre><code>## # A tibble: 30,303 x 4
+##     Year Age   sex    rate    
+##    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;   
+##  1  1921 0     Female 0.105821
+##  2  1921 0     Male   0.138250
+##  3  1921 0     Total  0.122259
+##  4  1921 1     Female 0.015593
+##  5  1921 1     Male   0.017806
+##  6  1921 1     Total  0.016710
+##  7  1921 2     Female 0.007409
+##  8  1921 2     Male   0.008521
+##  9  1921 2     Total  0.007970
+## 10  1921 3     Female 0.005442
+## # … with 30,293 more rows</code></pre>
+<p>We will now cover the pipe and six functions that are useful to know and that we will use all the time:</p>
+<ul>
+<li><code>select</code></li>
+<li><code>filter</code></li>
+<li><code>arrange</code></li>
+<li><code>mutate</code></li>
+<li><code>summarise</code> (<code>summarize</code>)</li>
+<li><code>group_by</code></li>
+</ul>
+<div id="the-pipe" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> The pipe</h3>
+<p>One key tidyverse helper is the ‘pipe’: <code>%&gt;%</code>. Read it as “and then” (Mac shortcut: Cmd+Shft+M). This takes the output of a line of code and uses it as an input to the next line of code. You don’t have to use it, but it tends to make your code more readable.</p>
+<p>The idea of the pipe is that you take your dataset <strong>and then</strong> you do stuff</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">infant_mortality &lt;-<span class="st"> </span><span class="kw">read_rds</span>(<span class="kw">here</span>(<span class="st">&quot;notes/inputs/data/infant.RDS&quot;</span>))</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</a></code></pre></div>
+<pre><code>## # A tibble: 6 x 8
+##   sex    aged race   gest ucod  cod       mom_age mom_age_group
+##   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;fct&gt;        
+## 1 F         0 NHW      27 P832  peri_oth       30 30           
+## 2 M         0 NHW      36 Q913  cong_mal       32 30           
+## 3 M         8 NHW      44 P360  peri_inf       25 25           
+## 4 F         0 NHB      21 P072  peri_comp      29 25           
+## 5 M         8 NHB      26 P220  peri_resp      23 20           
+## 6 M        17 NHW      39 Q249  cong_mal       34 30</code></pre>
+</div>
+<div id="select" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Select</h3>
+<p>Select is selecting a column. Get <code>cod</code></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="st">  </span><span class="kw">select</span>(cod) </a></code></pre></div>
+<pre><code>## # A tibble: 17,169 x 1
+##    cod      
+##    &lt;chr&gt;    
+##  1 peri_oth 
+##  2 cong_mal 
+##  3 peri_inf 
+##  4 peri_comp
+##  5 peri_resp
+##  6 cong_mal 
+##  7 peri_inf 
+##  8 sids     
+##  9 cong_mal 
+## 10 cong_mal 
+## # … with 17,159 more rows</code></pre>
+<p>This is (almost) equivalent to the dollar sign:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">infant_mortality<span class="op">$</span>cod <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="st">  </span><span class="kw">head</span>()</a></code></pre></div>
+<pre><code>## [1] &quot;peri_oth&quot;  &quot;cong_mal&quot;  &quot;peri_inf&quot;  &quot;peri_comp&quot; &quot;peri_resp&quot; &quot;cong_mal&quot;</code></pre>
+<p>You can get a vector from <code>select</code> by using <code>pull</code></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="st">  </span><span class="kw">select</span>(cod) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb14-3" data-line-number="3"><span class="st">  </span><span class="kw">pull</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb14-4" data-line-number="4"><span class="st">  </span><span class="kw">head</span>()</a></code></pre></div>
+<pre><code>## [1] &quot;peri_oth&quot;  &quot;cong_mal&quot;  &quot;peri_inf&quot;  &quot;peri_comp&quot; &quot;peri_resp&quot; &quot;cong_mal&quot;</code></pre>
+<p>You can also use <code>select</code> to get rid of columns:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb16-2" data-line-number="2"><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>cod) </a></code></pre></div>
+<pre><code>## # A tibble: 17,169 x 7
+##    sex    aged race   gest ucod  mom_age mom_age_group
+##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;fct&gt;        
+##  1 F         0 NHW      27 P832       30 30           
+##  2 M         0 NHW      36 Q913       32 30           
+##  3 M         8 NHW      44 P360       25 25           
+##  4 F         0 NHB      21 P072       29 25           
+##  5 M         8 NHB      26 P220       23 20           
+##  6 M        17 NHW      39 Q249       34 30           
+##  7 F        10 NHB      26 P369       27 25           
+##  8 F        75 NHB      40 W84        24 20           
+##  9 M        89 NHB      36 Q913       39 35           
+## 10 M        76 NHB      39 Q234       30 30           
+## # … with 17,159 more rows</code></pre>
+</div>
+<div id="filter" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Filter</h3>
+<p>Filter allows you to select rows. Filter all males:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(sex<span class="op">==</span><span class="st">&quot;M&quot;</span>) </a></code></pre></div>
+<pre><code>## # A tibble: 9,669 x 8
+##    sex    aged race   gest ucod  cod       mom_age mom_age_group
+##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;fct&gt;        
+##  1 M         0 NHW      36 Q913  cong_mal       32 30           
+##  2 M         8 NHW      44 P360  peri_inf       25 25           
+##  3 M         8 NHB      26 P220  peri_resp      23 20           
+##  4 M        17 NHW      39 Q249  cong_mal       34 30           
+##  5 M        89 NHB      36 Q913  cong_mal       39 35           
+##  6 M        76 NHB      39 Q234  cong_mal       30 30           
+##  7 M       123 NHB      30 R95   sids           21 20           
+##  8 M       205 NHW      39 R090  other          33 30           
+##  9 M         0 NHW      28 P290  peri_resp      31 30           
+## 10 M        29 NHB      39 J189  resp           22 20           
+## # … with 9,659 more rows</code></pre>
+<p>Two conditions: male babies who died of SIDS (AND)</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb20-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(sex<span class="op">==</span><span class="st">&quot;M&quot;</span>,cod<span class="op">==</span><span class="st">&quot;sids&quot;</span>)</a></code></pre></div>
+<pre><code>## # A tibble: 1,264 x 8
+##    sex    aged race   gest ucod  cod   mom_age mom_age_group
+##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;fct&gt;        
+##  1 M       123 NHB      30 R95   sids       21 20           
+##  2 M        30 NHB      34 R95   sids       24 20           
+##  3 M         3 NHW      44 R95   sids       32 30           
+##  4 M        71 NHW      37 R95   sids       41 40           
+##  5 M        52 NHB      38 R95   sids       31 30           
+##  6 M        86 NHW      38 R95   sids       40 40           
+##  7 M       108 NHW      40 W75   sids       32 30           
+##  8 M        42 NHB      39 W76   sids       27 25           
+##  9 M       250 NHW      38 R95   sids       34 30           
+## 10 M       167 NHB      39 W78   sids       20 20           
+## # … with 1,254 more rows</code></pre>
+<p>Two conditions: male babies OR babies who died of SIDS</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb22-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(sex<span class="op">==</span><span class="st">&quot;M&quot;</span><span class="op">|</span>cod<span class="op">==</span><span class="st">&quot;sids&quot;</span>)</a></code></pre></div>
+<pre><code>## # A tibble: 10,534 x 8
+##    sex    aged race   gest ucod  cod       mom_age mom_age_group
+##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;fct&gt;        
+##  1 M         0 NHW      36 Q913  cong_mal       32 30           
+##  2 M         8 NHW      44 P360  peri_inf       25 25           
+##  3 M         8 NHB      26 P220  peri_resp      23 20           
+##  4 M        17 NHW      39 Q249  cong_mal       34 30           
+##  5 F        75 NHB      40 W84   sids           24 20           
+##  6 M        89 NHB      36 Q913  cong_mal       39 35           
+##  7 M        76 NHB      39 Q234  cong_mal       30 30           
+##  8 M       123 NHB      30 R95   sids           21 20           
+##  9 M       205 NHW      39 R090  other          33 30           
+## 10 M         0 NHW      28 P290  peri_resp      31 30           
+## # … with 10,524 more rows</code></pre>
+<p>Build these up: using with <code>select</code>.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb24-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(sex<span class="op">==</span><span class="st">&quot;M&quot;</span>, cod<span class="op">==</span><span class="st">&quot;sids&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb24-3" data-line-number="3"><span class="st">  </span><span class="kw">select</span>(aged)</a></code></pre></div>
+<pre><code>## # A tibble: 1,264 x 1
+##     aged
+##    &lt;dbl&gt;
+##  1   123
+##  2    30
+##  3     3
+##  4    71
+##  5    52
+##  6    86
+##  7   108
+##  8    42
+##  9   250
+## 10   167
+## # … with 1,254 more rows</code></pre>
+<p><code>&amp;</code> is the same as <code>,</code></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb26-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(cod<span class="op">==</span><span class="st">&quot;sids&quot;</span><span class="op">&amp;</span>sex<span class="op">==</span><span class="st">&quot;M&quot;</span>)</a></code></pre></div>
+<pre><code>## # A tibble: 1,264 x 8
+##    sex    aged race   gest ucod  cod   mom_age mom_age_group
+##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;fct&gt;        
+##  1 M       123 NHB      30 R95   sids       21 20           
+##  2 M        30 NHB      34 R95   sids       24 20           
+##  3 M         3 NHW      44 R95   sids       32 30           
+##  4 M        71 NHW      37 R95   sids       41 40           
+##  5 M        52 NHB      38 R95   sids       31 30           
+##  6 M        86 NHW      38 R95   sids       40 40           
+##  7 M       108 NHW      40 W75   sids       32 30           
+##  8 M        42 NHB      39 W76   sids       27 25           
+##  9 M       250 NHW      38 R95   sids       34 30           
+## 10 M       167 NHB      39 W78   sids       20 20           
+## # … with 1,254 more rows</code></pre>
+<p>Filter a particular row (row 3):</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb28-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(<span class="kw">row_number</span>()<span class="op">==</span><span class="dv">3</span>)</a></code></pre></div>
+<pre><code>## # A tibble: 1 x 8
+##   sex    aged race   gest ucod  cod      mom_age mom_age_group
+##   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;      &lt;dbl&gt; &lt;fct&gt;        
+## 1 M         8 NHW      44 P360  peri_inf      25 25</code></pre>
+</div>
+<div id="arrange" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> Arrange</h3>
+<p><code>arrange</code> is ordering data.</p>
+<p>Arrange by <code>aged</code></p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb30-2" data-line-number="2"><span class="st">  </span><span class="kw">arrange</span>(aged)</a></code></pre></div>
+<pre><code>## # A tibble: 17,169 x 8
+##    sex    aged race   gest ucod  cod       mom_age mom_age_group
+##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;fct&gt;        
+##  1 F         0 NHW      27 P832  peri_oth       30 30           
+##  2 M         0 NHW      36 Q913  cong_mal       32 30           
+##  3 F         0 NHB      21 P072  peri_comp      29 25           
+##  4 F         0 NHB      33 Q042  cong_mal       25 25           
+##  5 M         0 NHW      28 P290  peri_resp      31 30           
+##  6 F         0 NHB      24 P832  peri_oth       22 20           
+##  7 F         0 NHW      37 Q039  cong_mal       18 15           
+##  8 F         0 NHW      26 P072  peri_comp      34 30           
+##  9 F         0 NHW      38 Q042  cong_mal       24 20           
+## 10 F         0 NHB      36 Q000  cong_mal       18 15           
+## # … with 17,159 more rows</code></pre>
+<p>Arrange in descending order</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb32-2" data-line-number="2"><span class="st">  </span><span class="kw">arrange</span>(<span class="op">-</span>aged)</a></code></pre></div>
+<pre><code>## # A tibble: 17,169 x 8
+##    sex    aged race   gest ucod  cod          mom_age mom_age_group
+##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;          &lt;dbl&gt; &lt;fct&gt;        
+##  1 F       364 NHW      41 V877  other             19 15           
+##  2 F       364 NHW      37 V892  other             17 15           
+##  3 M       364 NHW      40 V892  other             31 30           
+##  4 M       363 NHB      37 W73   sids              24 20           
+##  5 M       363 NHW      32 Q249  cong_mal          33 30           
+##  6 F       363 NHW      39 A403  infection         37 35           
+##  7 M       363 NHW      35 G409  other             22 20           
+##  8 M       363 NHW      35 Q249  cong_mal          18 15           
+##  9 F       363 NHW      39 Y09   maltreatment      31 30           
+## 10 M       362 NHW      40 A499  infection         27 25           
+## # … with 17,159 more rows</code></pre>
+<p>Arrange by multiple things (age of death and age of mom)</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb34-2" data-line-number="2"><span class="st">  </span><span class="kw">arrange</span>(aged, mom_age)</a></code></pre></div>
+<pre><code>## # A tibble: 17,169 x 8
+##    sex    aged race   gest ucod  cod          mom_age mom_age_group
+##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;          &lt;dbl&gt; &lt;fct&gt;        
+##  1 F         0 NHB      23 P039  peri_comp         14 &lt;NA&gt;         
+##  2 M         0 NHB      24 P015  peri_comp         14 &lt;NA&gt;         
+##  3 M         0 NHB      21 P072  peri_comp         14 &lt;NA&gt;         
+##  4 M         0 NHW      23 P072  peri_comp         14 &lt;NA&gt;         
+##  5 M         0 NHB      99 Y08   maltreatment      14 &lt;NA&gt;         
+##  6 M         0 NHW      22 P072  peri_comp         14 &lt;NA&gt;         
+##  7 M         0 NHW      24 P072  peri_comp         14 &lt;NA&gt;         
+##  8 F         0 NHW      34 P073  peri_comp         14 &lt;NA&gt;         
+##  9 F         0 NHB      19 P073  peri_comp         14 &lt;NA&gt;         
+## 10 M         0 NHW      99 R99   unknown           14 &lt;NA&gt;         
+## # … with 17,159 more rows</code></pre>
+<p>What happens if we do two arranges:</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb36-2" data-line-number="2"><span class="st">  </span><span class="kw">arrange</span>(aged) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb36-3" data-line-number="3"><span class="st">  </span><span class="kw">arrange</span>(mom_age)</a></code></pre></div>
+<pre><code>## # A tibble: 17,169 x 8
+##    sex    aged race   gest ucod  cod          mom_age mom_age_group
+##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;          &lt;dbl&gt; &lt;fct&gt;        
+##  1 F         0 NHB      23 P039  peri_comp         14 &lt;NA&gt;         
+##  2 M         0 NHB      24 P015  peri_comp         14 &lt;NA&gt;         
+##  3 M         0 NHB      21 P072  peri_comp         14 &lt;NA&gt;         
+##  4 M         0 NHW      23 P072  peri_comp         14 &lt;NA&gt;         
+##  5 M         0 NHB      99 Y08   maltreatment      14 &lt;NA&gt;         
+##  6 M         0 NHW      22 P072  peri_comp         14 &lt;NA&gt;         
+##  7 M         0 NHW      24 P072  peri_comp         14 &lt;NA&gt;         
+##  8 F         0 NHW      34 P073  peri_comp         14 &lt;NA&gt;         
+##  9 F         0 NHB      19 P073  peri_comp         14 &lt;NA&gt;         
+## 10 M         0 NHW      99 R99   unknown           14 &lt;NA&gt;         
+## # … with 17,159 more rows</code></pre>
+<p>Same as</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb38-2" data-line-number="2"><span class="st">  </span><span class="kw">arrange</span>(mom_age, aged)</a></code></pre></div>
+<pre><code>## # A tibble: 17,169 x 8
+##    sex    aged race   gest ucod  cod          mom_age mom_age_group
+##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;          &lt;dbl&gt; &lt;fct&gt;        
+##  1 F         0 NHB      23 P039  peri_comp         14 &lt;NA&gt;         
+##  2 M         0 NHB      24 P015  peri_comp         14 &lt;NA&gt;         
+##  3 M         0 NHB      21 P072  peri_comp         14 &lt;NA&gt;         
+##  4 M         0 NHW      23 P072  peri_comp         14 &lt;NA&gt;         
+##  5 M         0 NHB      99 Y08   maltreatment      14 &lt;NA&gt;         
+##  6 M         0 NHW      22 P072  peri_comp         14 &lt;NA&gt;         
+##  7 M         0 NHW      24 P072  peri_comp         14 &lt;NA&gt;         
+##  8 F         0 NHW      34 P073  peri_comp         14 &lt;NA&gt;         
+##  9 F         0 NHB      19 P073  peri_comp         14 &lt;NA&gt;         
+## 10 M         0 NHW      99 R99   unknown           14 &lt;NA&gt;         
+## # … with 17,159 more rows</code></pre>
+</div>
+<div id="group_by" class="section level3">
+<h3><span class="header-section-number">2.2.5</span> group_by</h3>
+<p>We might want to arrange by age of death <strong>within</strong> the sex group</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb40-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb40-3" data-line-number="3"><span class="st">  </span><span class="kw">arrange</span>(aged)</a></code></pre></div>
+<pre><code>## # A tibble: 17,169 x 8
+## # Groups:   sex [2]
+##    sex    aged race   gest ucod  cod       mom_age mom_age_group
+##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;fct&gt;        
+##  1 F         0 NHW      27 P832  peri_oth       30 30           
+##  2 M         0 NHW      36 Q913  cong_mal       32 30           
+##  3 F         0 NHB      21 P072  peri_comp      29 25           
+##  4 F         0 NHB      33 Q042  cong_mal       25 25           
+##  5 M         0 NHW      28 P290  peri_resp      31 30           
+##  6 F         0 NHB      24 P832  peri_oth       22 20           
+##  7 F         0 NHW      37 Q039  cong_mal       18 15           
+##  8 F         0 NHW      26 P072  peri_comp      34 30           
+##  9 F         0 NHW      38 Q042  cong_mal       24 20           
+## 10 F         0 NHB      36 Q000  cong_mal       18 15           
+## # … with 17,159 more rows</code></pre>
+<p>Say we want to arrange by aged of death, and then get the third row</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb42-2" data-line-number="2"><span class="st">  </span><span class="kw">arrange</span>(aged) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb42-3" data-line-number="3"><span class="st">  </span><span class="kw">filter</span>(<span class="kw">row_number</span>()<span class="op">==</span><span class="dv">3</span>)</a></code></pre></div>
+<pre><code>## # A tibble: 1 x 8
+##   sex    aged race   gest ucod  cod       mom_age mom_age_group
+##   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;fct&gt;        
+## 1 F         0 NHB      21 P072  peri_comp      29 25</code></pre>
+<p>If we wanted to do this by sex of baby:</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb44-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb44-3" data-line-number="3"><span class="st">  </span><span class="kw">arrange</span>(aged) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb44-4" data-line-number="4"><span class="st">  </span><span class="kw">filter</span>(<span class="kw">row_number</span>()<span class="op">==</span><span class="dv">3</span>)</a></code></pre></div>
+<pre><code>## # A tibble: 2 x 8
+## # Groups:   sex [2]
+##   sex    aged race   gest ucod  cod       mom_age mom_age_group
+##   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;fct&gt;        
+## 1 F         0 NHB      33 Q042  cong_mal       25 25           
+## 2 M         0 NHB      19 P072  peri_comp      24 20</code></pre>
+<p>We could group by sex, arrange by age of death, and then get the first 3 rows:</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb46-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb46-3" data-line-number="3"><span class="st">  </span><span class="kw">arrange</span>(aged) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb46-4" data-line-number="4"><span class="st">  </span><span class="kw">filter</span>(<span class="kw">row_number</span>() <span class="op">%in%</span><span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</a></code></pre></div>
+<pre><code>## # A tibble: 6 x 8
+## # Groups:   sex [2]
+##   sex    aged race   gest ucod  cod       mom_age mom_age_group
+##   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;fct&gt;        
+## 1 F         0 NHW      27 P832  peri_oth       30 30           
+## 2 M         0 NHW      36 Q913  cong_mal       32 30           
+## 3 F         0 NHB      21 P072  peri_comp      29 25           
+## 4 F         0 NHB      33 Q042  cong_mal       25 25           
+## 5 M         0 NHW      28 P290  peri_resp      31 30           
+## 6 M         0 NHB      19 P072  peri_comp      24 20</code></pre>
+<p>Equivalently:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb48-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb48-3" data-line-number="3"><span class="st">  </span><span class="kw">arrange</span>(aged) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb48-4" data-line-number="4"><span class="st">  </span><span class="kw">slice</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</a></code></pre></div>
+<pre><code>## # A tibble: 6 x 8
+## # Groups:   sex [2]
+##   sex    aged race   gest ucod  cod       mom_age mom_age_group
+##   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;fct&gt;        
+## 1 F         0 NHW      27 P832  peri_oth       30 30           
+## 2 F         0 NHB      21 P072  peri_comp      29 25           
+## 3 F         0 NHB      33 Q042  cong_mal       25 25           
+## 4 M         0 NHW      36 Q913  cong_mal       32 30           
+## 5 M         0 NHW      28 P290  peri_resp      31 30           
+## 6 M         0 NHB      19 P072  peri_comp      24 20</code></pre>
+</div>
+<div id="mutate" class="section level3">
+<h3><span class="header-section-number">2.2.6</span> Mutate</h3>
+<p>The <code>mutate</code> function is used when you want to make a new variable.</p>
+<p>Firstly, let’s change <code>gest</code> to days</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" data-line-number="1">infant_mortality &lt;-<span class="st"> </span></a>
+<a class="sourceLine" id="cb50-2" data-line-number="2"><span class="st">  </span>infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb50-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">gest_days =</span> gest<span class="op">*</span><span class="dv">7</span>)</a>
+<a class="sourceLine" id="cb50-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb50-5" data-line-number="5">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</a></code></pre></div>
+<pre><code>## # A tibble: 6 x 9
+##   sex    aged race   gest ucod  cod       mom_age mom_age_group gest_days
+##   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;fct&gt;             &lt;dbl&gt;
+## 1 F         0 NHW      27 P832  peri_oth       30 30                  189
+## 2 M         0 NHW      36 Q913  cong_mal       32 30                  252
+## 3 M         8 NHW      44 P360  peri_inf       25 25                  308
+## 4 F         0 NHB      21 P072  peri_comp      29 25                  147
+## 5 M         8 NHB      26 P220  peri_resp      23 20                  182
+## 6 M        17 NHW      39 Q249  cong_mal       34 30                  273</code></pre>
+<p>Now, let’s make a new variable that is total days in existence (aged+ gest_days)</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb52-2" data-line-number="2"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">tot_life =</span> aged<span class="op">+</span>gest_days)</a></code></pre></div>
+<pre><code>## # A tibble: 17,169 x 10
+##    sex    aged race   gest ucod  cod    mom_age mom_age_group gest_days tot_life
+##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    &lt;dbl&gt; &lt;fct&gt;             &lt;dbl&gt;    &lt;dbl&gt;
+##  1 F         0 NHW      27 P832  peri_…      30 30                  189      189
+##  2 M         0 NHW      36 Q913  cong_…      32 30                  252      252
+##  3 M         8 NHW      44 P360  peri_…      25 25                  308      316
+##  4 F         0 NHB      21 P072  peri_…      29 25                  147      147
+##  5 M         8 NHB      26 P220  peri_…      23 20                  182      190
+##  6 M        17 NHW      39 Q249  cong_…      34 30                  273      290
+##  7 F        10 NHB      26 P369  peri_…      27 25                  182      192
+##  8 F        75 NHB      40 W84   sids        24 20                  280      355
+##  9 M        89 NHB      36 Q913  cong_…      39 35                  252      341
+## 10 M        76 NHB      39 Q234  cong_…      30 30                  273      349
+## # … with 17,159 more rows</code></pre>
+</div>
+<div id="summarise" class="section level3">
+<h3><span class="header-section-number">2.2.7</span> Summarise</h3>
+<p><code>summarise</code> = new summary variables</p>
+<p>Let’s look at maximum of <code>mom_age</code></p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb54-2" data-line-number="2"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">max_mom_age =</span> <span class="kw">max</span>(mom_age))</a></code></pre></div>
+<pre><code>## # A tibble: 1 x 1
+##   max_mom_age
+##         &lt;dbl&gt;
+## 1          50</code></pre>
+<p>Check:</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb56-2" data-line-number="2"><span class="st">  </span><span class="kw">arrange</span>(<span class="op">-</span>mom_age)</a></code></pre></div>
+<pre><code>## # A tibble: 17,169 x 9
+##    sex    aged race   gest ucod  cod       mom_age mom_age_group gest_days
+##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;fct&gt;             &lt;dbl&gt;
+##  1 M         9 NHB      34 Q999  cong_mal       50 45                  238
+##  2 M        65 NHW      32 I514  heart          50 45                  224
+##  3 M         2 NHB      45 P293  peri_resp      50 45                  315
+##  4 M        87 NHW      30 A090  infection      49 45                  210
+##  5 M        13 NHB      27 P912  peri_oth       49 45                  189
+##  6 F         0 NHW      24 P220  peri_resp      48 45                  168
+##  7 F        41 NHB      27 A090  infection      48 45                  189
+##  8 F         9 NHW      26 P280  peri_resp      48 45                  182
+##  9 F        88 NHB      35 Q210  cong_mal       48 45                  245
+## 10 F       123 NHW      41 Q913  cong_mal       47 45                  287
+## # … with 17,159 more rows</code></pre>
+<p>Summarise is particularly powerful in conjunction with <code>group_by</code>.</p>
+<p>Let’s look at the maximum of mom age by <code>cod</code></p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb58-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb58-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(cod) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb58-3" data-line-number="3"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">max_mom_age =</span> <span class="kw">max</span>(mom_age))</a></code></pre></div>
+<pre><code>## # A tibble: 12 x 2
+##    cod          max_mom_age
+##    &lt;chr&gt;              &lt;dbl&gt;
+##  1 cong_mal              50
+##  2 heart                 50
+##  3 infection             49
+##  4 maltreatment          38
+##  5 other                 46
+##  6 peri_comp             47
+##  7 peri_inf              44
+##  8 peri_oth              49
+##  9 peri_resp             50
+## 10 resp                  44
+## 11 sids                  44
+## 12 unknown               45</code></pre>
+<p>Let’s look at mean of age at death by cod</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb60-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb60-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(cod) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb60-3" data-line-number="3"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">mean_age_of_death =</span> <span class="kw">round</span>(<span class="kw">mean</span>(aged), <span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb60-4" data-line-number="4"><span class="st">  </span><span class="kw">arrange</span>(<span class="op">-</span>mean_age_of_death)</a></code></pre></div>
+<pre><code>## # A tibble: 12 x 2
+##    cod          mean_age_of_death
+##    &lt;chr&gt;                    &lt;dbl&gt;
+##  1 maltreatment            143.  
+##  2 resp                    136.  
+##  3 other                   112.  
+##  4 sids                    102.  
+##  5 heart                   101.  
+##  6 unknown                  97.2 
+##  7 infection                74.0 
+##  8 cong_mal                 39.0 
+##  9 peri_resp                12.2 
+## 10 peri_inf                 12.2 
+## 11 peri_oth                 11.5 
+## 12 peri_comp                 2.68</code></pre>
+<p>We can group by and summarise for multiple groups at a time:</p>
+<p>mean age of death by cod and race of mother</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb62-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb62-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(cod, race) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb62-3" data-line-number="3"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">mean_age_of_death =</span> <span class="kw">round</span>(<span class="kw">mean</span>(aged), <span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb62-4" data-line-number="4"><span class="st">  </span><span class="kw">arrange</span>(<span class="op">-</span>mean_age_of_death, race)</a></code></pre></div>
+<pre><code>## # A tibble: 24 x 3
+## # Groups:   cod [12]
+##    cod          race  mean_age_of_death
+##    &lt;chr&gt;        &lt;chr&gt;             &lt;dbl&gt;
+##  1 resp         NHB               146. 
+##  2 maltreatment NHB               146. 
+##  3 maltreatment NHW               141. 
+##  4 resp         NHW               128. 
+##  5 other        NHW               113. 
+##  6 other        NHB               108. 
+##  7 sids         NHW               104. 
+##  8 heart        NHB               104  
+##  9 heart        NHW                99.9
+## 10 sids         NHB                99.4
+## # … with 14 more rows</code></pre>
+</div>
+<div id="counting-by-group" class="section level3">
+<h3><span class="header-section-number">2.2.8</span> Counting by group</h3>
+<p>Number of deaths by cod.</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb64-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb64-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(cod) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb64-3" data-line-number="3"><span class="st">  </span><span class="kw">count</span>()</a></code></pre></div>
+<pre><code>## # A tibble: 12 x 2
+## # Groups:   cod [12]
+##    cod              n
+##    &lt;chr&gt;        &lt;int&gt;
+##  1 cong_mal      3368
+##  2 heart          353
+##  3 infection      344
+##  4 maltreatment   266
+##  5 other          953
+##  6 peri_comp     5168
+##  7 peri_inf       561
+##  8 peri_oth      1057
+##  9 peri_resp     1746
+## 10 resp           412
+## 11 sids          2129
+## 12 unknown        812</code></pre>
+</div>
+<div id="calculate-proportions" class="section level3">
+<h3><span class="header-section-number">2.2.9</span> Calculate proportions</h3>
+<p>Often calculating proportions is a combination of summarise and mutate (and group by).</p>
+<p>Let’s calculate the proportion of deaths by cause. We’re using <code>count</code> here, but it’s sort of like <code>summarise</code>.</p>
+<p>Note here, that we needed to <code>ungroup()</code> the data before mutating.</p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb66-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb66-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(cod) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb66-3" data-line-number="3"><span class="st">  </span><span class="kw">count</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb66-4" data-line-number="4"><span class="st">  </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb66-5" data-line-number="5"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">prop =</span> n<span class="op">/</span>(<span class="kw">sum</span>(n)))</a></code></pre></div>
+<pre><code>## # A tibble: 12 x 3
+##    cod              n   prop
+##    &lt;chr&gt;        &lt;int&gt;  &lt;dbl&gt;
+##  1 cong_mal      3368 0.196 
+##  2 heart          353 0.0206
+##  3 infection      344 0.0200
+##  4 maltreatment   266 0.0155
+##  5 other          953 0.0555
+##  6 peri_comp     5168 0.301 
+##  7 peri_inf       561 0.0327
+##  8 peri_oth      1057 0.0616
+##  9 peri_resp     1746 0.102 
+## 10 resp           412 0.0240
+## 11 sids          2129 0.124 
+## 12 unknown        812 0.0473</code></pre>
+<p>Highlight difference between mutate and summarise.
+Let’s get the maximum age of death by cod group</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb68-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb68-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(cod) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb68-3" data-line-number="3"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">max_age_death =</span> <span class="kw">max</span>(aged))</a></code></pre></div>
+<pre><code>## # A tibble: 12 x 2
+##    cod          max_age_death
+##    &lt;chr&gt;                &lt;dbl&gt;
+##  1 cong_mal               363
+##  2 heart                  354
+##  3 infection              363
+##  4 maltreatment           363
+##  5 other                  364
+##  6 peri_comp              345
+##  7 peri_inf               152
+##  8 peri_oth               357
+##  9 peri_resp              357
+## 10 resp                   362
+## 11 sids                   363
+## 12 unknown                357</code></pre>
+<p>Could also do this as a mutate:</p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb70-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb70-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(cod) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb70-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">max_age_death =</span> <span class="kw">max</span>(aged)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb70-4" data-line-number="4"><span class="st">  </span><span class="kw">arrange</span>(cod)</a></code></pre></div>
+<pre><code>## # A tibble: 17,169 x 10
+## # Groups:   cod [12]
+##    sex    aged race   gest ucod  cod   mom_age mom_age_group gest_days
+##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;fct&gt;             &lt;dbl&gt;
+##  1 M         0 NHW      36 Q913  cong…      32 30                  252
+##  2 M        17 NHW      39 Q249  cong…      34 30                  273
+##  3 M        89 NHB      36 Q913  cong…      39 35                  252
+##  4 M        76 NHB      39 Q234  cong…      30 30                  273
+##  5 F         0 NHB      33 Q042  cong…      25 25                  231
+##  6 F         0 NHW      37 Q039  cong…      18 15                  259
+##  7 M        51 NHW      38 Q917  cong…      20 20                  266
+##  8 F         0 NHW      38 Q042  cong…      24 20                  266
+##  9 F         0 NHB      36 Q000  cong…      18 15                  252
+## 10 M         0 NHW      18 Q909  cong…      40 40                  126
+## # … with 17,159 more rows, and 1 more variable: max_age_death &lt;dbl&gt;</code></pre>
+<p>Could be useful: use this as an intermediate step to get a new variable that is looking at age of death reelative to the maximum</p>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb72-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb72-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(cod) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb72-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">max_age_death =</span> <span class="kw">max</span>(aged)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb72-4" data-line-number="4"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">frac_max =</span> aged<span class="op">/</span>max_age_death)</a></code></pre></div>
+<pre><code>## # A tibble: 17,169 x 11
+## # Groups:   cod [12]
+##    sex    aged race   gest ucod  cod   mom_age mom_age_group gest_days
+##    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;fct&gt;             &lt;dbl&gt;
+##  1 F         0 NHW      27 P832  peri…      30 30                  189
+##  2 M         0 NHW      36 Q913  cong…      32 30                  252
+##  3 M         8 NHW      44 P360  peri…      25 25                  308
+##  4 F         0 NHB      21 P072  peri…      29 25                  147
+##  5 M         8 NHB      26 P220  peri…      23 20                  182
+##  6 M        17 NHW      39 Q249  cong…      34 30                  273
+##  7 F        10 NHB      26 P369  peri…      27 25                  182
+##  8 F        75 NHB      40 W84   sids       24 20                  280
+##  9 M        89 NHB      36 Q913  cong…      39 35                  252
+## 10 M        76 NHB      39 Q234  cong…      30 30                  273
+## # … with 17,159 more rows, and 2 more variables: max_age_death &lt;dbl&gt;,
+## #   frac_max &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<div id="ggplot" class="section level2">
+<h2><span class="header-section-number">2.3</span> ggplot</h2>
+<p>The <code>ggplot</code> package is the plotting package that is part of the <code>tidyverse</code>.</p>
+<p>In a similar way to piping, it works in layers. But instead of using the pipe (<code>%&gt;%</code>) ggplot uses <code>+</code>.</p>
+<div id="main-features" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Main features</h3>
+<ol style="list-style-type: decimal">
+<li>data</li>
+<li>aesthetics / mapping</li>
+<li>type (<code>geom</code>)</li>
+</ol>
+<p>Let’s build up a histogram of age of death with increasing complexity.</p>
+<p>Starts with a grey box:</p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb74-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> infant_mortality, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> aged))</a></code></pre></div>
+<p><img src="notes_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<p>We need to tell it what we want to plot. This is where <code>geom</code> comes in</p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb75-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> infant_mortality, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> aged)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb75-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">fill =</span> <span class="st">&quot;blue&quot;</span>)</a></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="notes_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<p>Let’s look at the histograms by race. This is an aesthetic.</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb77-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> infant_mortality, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> aged, <span class="dt">fill =</span> race)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb77-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.5</span>, <span class="dt">color =</span> <span class="ot">NA</span>)</a></code></pre></div>
+<p><img src="notes_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+<p>Make it prettier?</p>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb78-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> infant_mortality, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> aged, <span class="dt">fill =</span> race)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb78-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.5</span>, <span class="dt">color =</span> <span class="ot">NA</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb78-3" data-line-number="3"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Age of deaths (days)&quot;</span>, </a>
+<a class="sourceLine" id="cb78-4" data-line-number="4">       <span class="dt">title =</span> <span class="st">&quot;Density of infant deaths&quot;</span>, </a>
+<a class="sourceLine" id="cb78-5" data-line-number="5">       <span class="dt">subtitle =</span> <span class="st">&quot;because we can&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb78-6" data-line-number="6"><span class="st">  </span><span class="kw">theme_bw</span>()</a></code></pre></div>
+<p><img src="notes_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p>Change the color</p>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb79-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> infant_mortality, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> aged, <span class="dt">fill =</span> cod)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb79-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.5</span>, <span class="dt">color =</span> <span class="ot">NA</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb79-3" data-line-number="3"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Age of deaths (days)&quot;</span>, </a>
+<a class="sourceLine" id="cb79-4" data-line-number="4">       <span class="dt">title =</span> <span class="st">&quot;Density of infant deaths&quot;</span>, </a>
+<a class="sourceLine" id="cb79-5" data-line-number="5">       <span class="dt">subtitle =</span> <span class="st">&quot;because we can&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb79-6" data-line-number="6"><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb79-7" data-line-number="7"><span class="st">  </span><span class="kw">scale_fill_viridis_d</span>()</a></code></pre></div>
+<p><img src="notes_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+</div>
+<div id="facets" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Facets</h3>
+<p>Facets == subplots</p>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb80-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> infant_mortality, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> aged, <span class="dt">fill =</span> cod)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb80-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.5</span>, <span class="dt">color =</span> <span class="ot">NA</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb80-3" data-line-number="3"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Age of deaths (days)&quot;</span>, </a>
+<a class="sourceLine" id="cb80-4" data-line-number="4">       <span class="dt">title =</span> <span class="st">&quot;Density of infant deaths&quot;</span>, </a>
+<a class="sourceLine" id="cb80-5" data-line-number="5">       <span class="dt">subtitle =</span> <span class="st">&quot;because we can&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb80-6" data-line-number="6"><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb80-7" data-line-number="7"><span class="st">  </span><span class="kw">scale_fill_viridis_d</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb80-8" data-line-number="8"><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>race)</a></code></pre></div>
+<p><img src="notes_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
+</div>
+<div id="small-things" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> Small things</h3>
+<ol style="list-style-type: decimal">
+<li>You can pipe data into ggplot</li>
+</ol>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb81-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb81-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(cod, race) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb81-3" data-line-number="3"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">n</span>()) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb81-4" data-line-number="4"><span class="st">  </span><span class="kw">group_by</span>(race) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb81-5" data-line-number="5"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">prop =</span> n<span class="op">/</span><span class="kw">sum</span>(n)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb81-6" data-line-number="6"><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> race, <span class="dt">y =</span> prop, <span class="dt">fill =</span> cod)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb81-7" data-line-number="7"><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb81-8" data-line-number="8"><span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb81-9" data-line-number="9"><span class="st">  </span><span class="kw">scale_fill_viridis_d</span>()</a></code></pre></div>
+<p><img src="notes_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
+</div>
+</div>
+<div id="other" class="section level2">
+<h2><span class="header-section-number">2.4</span> Other</h2>
+<div id="case_when" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> case_when</h3>
+<p>This graph above has a lot of categories. Let’s change this into:</p>
+<ul>
+<li>perinatal</li>
+<li>sid + maltreat</li>
+<li>everything else</li>
+</ul>
+<p>Use <code>case_when</code></p>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb82-1" data-line-number="1">infant_mortality <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb82-2" data-line-number="2"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">cod_aggregated =</span> <span class="kw">case_when</span>(</a>
+<a class="sourceLine" id="cb82-3" data-line-number="3">    <span class="kw">str_starts</span>(cod, <span class="st">&quot;peri&quot;</span>) <span class="op">~</span><span class="st"> &quot;perintal&quot;</span>,</a>
+<a class="sourceLine" id="cb82-4" data-line-number="4">    cod<span class="op">==</span><span class="st">&quot;sids&quot;</span><span class="op">|</span>cod<span class="op">==</span><span class="st">&quot;matreatment&quot;</span> <span class="op">~</span><span class="st"> &quot;sids+mal&quot;</span>,</a>
+<a class="sourceLine" id="cb82-5" data-line-number="5">    <span class="ot">TRUE</span> <span class="op">~</span><span class="st"> &quot;other&quot;</span></a>
+<a class="sourceLine" id="cb82-6" data-line-number="6">  )) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb82-7" data-line-number="7"><span class="st">  </span><span class="kw">group_by</span>(cod_aggregated, race) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb82-8" data-line-number="8"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">n</span>()) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb82-9" data-line-number="9"><span class="st">  </span><span class="kw">group_by</span>(race) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb82-10" data-line-number="10"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">prop =</span> n<span class="op">/</span><span class="kw">sum</span>(n)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb82-11" data-line-number="11"><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> race, <span class="dt">y =</span> prop, <span class="dt">fill =</span> cod_aggregated)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb82-12" data-line-number="12"><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb82-13" data-line-number="13"><span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb82-14" data-line-number="14"><span class="st">  </span><span class="kw">scale_fill_viridis_d</span>()</a></code></pre></div>
+<p><img src="notes_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="overview.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="case-study-the-2019-canadian-federal-election.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
