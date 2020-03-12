@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>28 Regression discontinuity design | Telling Stories with Data</title>
-  <meta name="description" content="28 Regression discontinuity design | Telling Stories with Data" />
+  <title>Chapter 31 Regression discontinuity design | Telling Stories with Data</title>
+  <meta name="description" content="Chapter 31 Regression discontinuity design | Telling Stories with Data" />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="28 Regression discontinuity design | Telling Stories with Data" />
+  <meta property="og:title" content="Chapter 31 Regression discontinuity design | Telling Stories with Data" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="28 Regression discontinuity design | Telling Stories with Data" />
+  <meta name="twitter:title" content="Chapter 31 Regression discontinuity design | Telling Stories with Data" />
   
   
   
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="shiny-applications.html"/>
-<link rel="next" href="introduction-14.html"/>
+<link rel="next" href="instrumental-variables.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -114,6 +114,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -126,17 +127,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
-<li class="chapter" data-level="1.1" data-path="overview.html"><a href="overview.html#on-telling-stories"><i class="fa fa-check"></i><b>1.1</b> On telling stories</a></li>
-<li class="chapter" data-level="1.2" data-path="overview.html"><a href="overview.html#telling-stories-with-data"><i class="fa fa-check"></i><b>1.2</b> Telling stories with data</a></li>
-<li class="chapter" data-level="1.3" data-path="overview.html"><a href="overview.html#these-notes"><i class="fa fa-check"></i><b>1.3</b> These notes</a><ul>
-<li class="chapter" data-level="1.3.1" data-path="overview.html"><a href="overview.html#software"><i class="fa fa-check"></i><b>1.3.1</b> Software</a></li>
-<li class="chapter" data-level="1.3.2" data-path="overview.html"><a href="overview.html#assumed-background"><i class="fa fa-check"></i><b>1.3.2</b> Assumed background</a></li>
-<li class="chapter" data-level="1.3.3" data-path="overview.html"><a href="overview.html#structure"><i class="fa fa-check"></i><b>1.3.3</b> Structure</a></li>
+<li><a href="./">Telling Stories With Data</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#on-telling-stories"><i class="fa fa-check"></i><b>1.1</b> On telling stories</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#telling-stories-with-data"><i class="fa fa-check"></i><b>1.2</b> Telling stories with data</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#these-notes"><i class="fa fa-check"></i><b>1.3</b> These notes</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#software"><i class="fa fa-check"></i><b>1.3.1</b> Software</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#assumed-background"><i class="fa fa-check"></i><b>1.3.2</b> Assumed background</a></li>
+<li class="chapter" data-level="1.3.3" data-path="index.html"><a href="index.html#structure"><i class="fa fa-check"></i><b>1.3.3</b> Structure</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="overview.html"><a href="overview.html#acknowledgements"><i class="fa fa-check"></i><b>1.4</b> Acknowledgements</a></li>
-<li class="chapter" data-level="1.5" data-path="overview.html"><a href="overview.html#contact"><i class="fa fa-check"></i><b>1.5</b> Contact</a></li>
-<li class="chapter" data-level="1.6" data-path="overview.html"><a href="overview.html#todos"><i class="fa fa-check"></i><b>1.6</b> TODOs</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i><b>1.4</b> Acknowledgements</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#contact"><i class="fa fa-check"></i><b>1.5</b> Contact</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="lab-getting-started.html"><a href="lab-getting-started.html"><i class="fa fa-check"></i><b>2</b> Lab - Getting started</a><ul>
 <li class="chapter" data-level="2.1" data-path="lab-getting-started.html"><a href="lab-getting-started.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
@@ -191,149 +194,177 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.4" data-path="ethics.html"><a href="ethics.html#model"><i class="fa fa-check"></i><b>6.4</b> Model</a></li>
 <li class="chapter" data-level="6.5" data-path="ethics.html"><a href="ethics.html#team"><i class="fa fa-check"></i><b>6.5</b> Team</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>7</b> Reproducibility</a><ul>
-<li class="chapter" data-level="7.1" data-path="reproducibility.html"><a href="reproducibility.html#introduction-5"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
-<li class="chapter" data-level="7.2" data-path="reproducibility.html"><a href="reproducibility.html#data-access"><i class="fa fa-check"></i><b>7.2</b> Data access</a></li>
-<li class="chapter" data-level="7.3" data-path="reproducibility.html"><a href="reproducibility.html#on-mistakes"><i class="fa fa-check"></i><b>7.3</b> On mistakes</a></li>
+<li class="chapter" data-level="7" data-path="case-study-all-state.html"><a href="case-study-all-state.html"><i class="fa fa-check"></i><b>7</b> Case-study: All state</a></li>
+<li class="chapter" data-level="8" data-path="case-study-gay-face.html"><a href="case-study-gay-face.html"><i class="fa fa-check"></i><b>8</b> Case-study: Gay face</a></li>
+<li class="chapter" data-level="9" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>9</b> Reproducibility</a><ul>
+<li class="chapter" data-level="9.1" data-path="reproducibility.html"><a href="reproducibility.html#introduction-5"><i class="fa fa-check"></i><b>9.1</b> Introduction</a></li>
+<li class="chapter" data-level="9.2" data-path="reproducibility.html"><a href="reproducibility.html#data-access"><i class="fa fa-check"></i><b>9.2</b> Data access</a></li>
+<li class="chapter" data-level="9.3" data-path="reproducibility.html"><a href="reproducibility.html#on-mistakes"><i class="fa fa-check"></i><b>9.3</b> On mistakes</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html"><i class="fa fa-check"></i><b>8</b> Lab - R Markdown and R Projects</a><ul>
-<li class="chapter" data-level="8.1" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#r-markdown"><i class="fa fa-check"></i><b>8.1</b> R Markdown</a><ul>
-<li class="chapter" data-level="8.1.1" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#getting-started-1"><i class="fa fa-check"></i><b>8.1.1</b> Getting started</a></li>
-<li class="chapter" data-level="8.1.2" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#basic-commands"><i class="fa fa-check"></i><b>8.1.2</b> Basic commands</a></li>
-<li class="chapter" data-level="8.1.3" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#r-chunks"><i class="fa fa-check"></i><b>8.1.3</b> R chunks</a></li>
-<li class="chapter" data-level="8.1.4" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#abstracts-and-pdf-outputs"><i class="fa fa-check"></i><b>8.1.4</b> Abstracts and PDF outputs</a></li>
+<li class="chapter" data-level="10" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html"><i class="fa fa-check"></i><b>10</b> Lab - R Markdown and R Projects</a><ul>
+<li class="chapter" data-level="10.1" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#r-markdown"><i class="fa fa-check"></i><b>10.1</b> R Markdown</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#getting-started-1"><i class="fa fa-check"></i><b>10.1.1</b> Getting started</a></li>
+<li class="chapter" data-level="10.1.2" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#basic-commands"><i class="fa fa-check"></i><b>10.1.2</b> Basic commands</a></li>
+<li class="chapter" data-level="10.1.3" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#r-chunks"><i class="fa fa-check"></i><b>10.1.3</b> R chunks</a></li>
+<li class="chapter" data-level="10.1.4" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#abstracts-and-pdf-outputs"><i class="fa fa-check"></i><b>10.1.4</b> Abstracts and PDF outputs</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#r-projects"><i class="fa fa-check"></i><b>8.2</b> R projects</a></li>
+<li class="chapter" data-level="10.2" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#r-projects"><i class="fa fa-check"></i><b>10.2</b> R projects</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="lab-git-and-docker.html"><a href="lab-git-and-docker.html"><i class="fa fa-check"></i><b>9</b> Lab - Git and Docker</a></li>
-<li class="chapter" data-level="10" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html"><i class="fa fa-check"></i><b>10</b> Case study - TTC Subway Delays</a><ul>
-<li class="chapter" data-level="10.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#introduction-6"><i class="fa fa-check"></i><b>10.1</b> Introduction</a><ul>
-<li class="chapter" data-level="10.1.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#prerequesites"><i class="fa fa-check"></i><b>10.1.1</b> Prerequesites</a></li>
+<li class="chapter" data-level="11" data-path="lab-git-and-github.html"><a href="lab-git-and-github.html"><i class="fa fa-check"></i><b>11</b> Lab - Git and GitHub</a><ul>
+<li class="chapter" data-level="11.1" data-path="lab-git-and-github.html"><a href="lab-git-and-github.html#introduction-6"><i class="fa fa-check"></i><b>11.1</b> Introduction</a></li>
+<li class="chapter" data-level="11.2" data-path="lab-git-and-github.html"><a href="lab-git-and-github.html#git"><i class="fa fa-check"></i><b>11.2</b> Git</a></li>
+<li class="chapter" data-level="11.3" data-path="lab-git-and-github.html"><a href="lab-git-and-github.html#github"><i class="fa fa-check"></i><b>11.3</b> GitHub</a></li>
+<li class="chapter" data-level="11.4" data-path="lab-git-and-github.html"><a href="lab-git-and-github.html#using-git-within-rstudio"><i class="fa fa-check"></i><b>11.4</b> Using Git within RStudio</a></li>
+<li class="chapter" data-level="11.5" data-path="lab-git-and-github.html"><a href="lab-git-and-github.html#next-steps"><i class="fa fa-check"></i><b>11.5</b> Next steps</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#finding-and-downloading-data-using-opendatatoronto"><i class="fa fa-check"></i><b>10.2</b> Finding and downloading data using <code>opendatatoronto</code></a><ul>
-<li class="chapter" data-level="10.2.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#finding-the-data"><i class="fa fa-check"></i><b>10.2.1</b> Finding the data</a></li>
-<li class="chapter" data-level="10.2.2" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#retrieving-the-data"><i class="fa fa-check"></i><b>10.2.2</b> Retrieving the data</a></li>
+<li class="chapter" data-level="12" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html"><i class="fa fa-check"></i><b>12</b> Case study - TTC Subway Delays</a><ul>
+<li class="chapter" data-level="12.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#introduction-7"><i class="fa fa-check"></i><b>12.1</b> Introduction</a><ul>
+<li class="chapter" data-level="12.1.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#prerequesites"><i class="fa fa-check"></i><b>12.1.1</b> Prerequesites</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#plotting"><i class="fa fa-check"></i><b>10.3</b> Plotting</a><ul>
-<li class="chapter" data-level="10.3.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#example-1-delays-by-line"><i class="fa fa-check"></i><b>10.3.1</b> Example 1: Delays by line</a></li>
-<li class="chapter" data-level="10.3.2" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#example-2-delays-by-time-of-day"><i class="fa fa-check"></i><b>10.3.2</b> Example 2: Delays by time of day</a></li>
+<li class="chapter" data-level="12.2" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#finding-and-downloading-data-using-opendatatoronto"><i class="fa fa-check"></i><b>12.2</b> Finding and downloading data using <code>opendatatoronto</code></a><ul>
+<li class="chapter" data-level="12.2.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#finding-the-data"><i class="fa fa-check"></i><b>12.2.1</b> Finding the data</a></li>
+<li class="chapter" data-level="12.2.2" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#retrieving-the-data"><i class="fa fa-check"></i><b>12.2.2</b> Retrieving the data</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="problem-set-1.html"><a href="problem-set-1.html"><i class="fa fa-check"></i><b>11</b> Problem Set 1</a></li>
-<li class="chapter" data-level="12" data-path="developing-research-questions.html"><a href="developing-research-questions.html"><i class="fa fa-check"></i><b>12</b> Developing research questions</a><ul>
-<li class="chapter" data-level="12.1" data-path="developing-research-questions.html"><a href="developing-research-questions.html#developing-research-questions-1"><i class="fa fa-check"></i><b>12.1</b> Developing research questions</a></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="gathering-data.html"><a href="gathering-data.html"><i class="fa fa-check"></i><b>13</b> Gathering data</a><ul>
-<li class="chapter" data-level="13.1" data-path="gathering-data.html"><a href="gathering-data.html#gathering-data-1"><i class="fa fa-check"></i><b>13.1</b> Gathering data</a><ul>
-<li class="chapter" data-level="13.1.1" data-path="gathering-data.html"><a href="gathering-data.html#deliberately-available"><i class="fa fa-check"></i><b>13.1.1</b> Deliberately available</a></li>
-<li class="chapter" data-level="13.1.2" data-path="gathering-data.html"><a href="gathering-data.html#by-product"><i class="fa fa-check"></i><b>13.1.2</b> By product</a></li>
+<li class="chapter" data-level="12.3" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#plotting"><i class="fa fa-check"></i><b>12.3</b> Plotting</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#example-1-delays-by-line"><i class="fa fa-check"></i><b>12.3.1</b> Example 1: Delays by line</a></li>
+<li class="chapter" data-level="12.3.2" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#example-2-delays-by-time-of-day"><i class="fa fa-check"></i><b>12.3.2</b> Example 2: Delays by time of day</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="lab-the-tidyverse.html"><a href="lab-the-tidyverse.html"><i class="fa fa-check"></i><b>14</b> Lab - The Tidyverse</a></li>
-<li class="chapter" data-level="15" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html"><i class="fa fa-check"></i><b>15</b> Case study - Gathering and tidying data from Paspaley</a><ul>
-<li class="chapter" data-level="15.1" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html#introduction-7"><i class="fa fa-check"></i><b>15.1</b> Introduction</a></li>
-<li class="chapter" data-level="15.2" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html#data-acquisition"><i class="fa fa-check"></i><b>15.2</b> Data acquisition</a></li>
-<li class="chapter" data-level="15.3" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html#data-cleaning"><i class="fa fa-check"></i><b>15.3</b> Data cleaning</a></li>
+<li class="chapter" data-level="13" data-path="developing-research-questions.html"><a href="developing-research-questions.html"><i class="fa fa-check"></i><b>13</b> Developing research questions</a><ul>
+<li class="chapter" data-level="13.1" data-path="developing-research-questions.html"><a href="developing-research-questions.html#developing-research-questions-1"><i class="fa fa-check"></i><b>13.1</b> Developing research questions</a></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html"><i class="fa fa-check"></i><b>16</b> Case study - Rohan’s books</a><ul>
-<li class="chapter" data-level="16.1" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html#introduction-8"><i class="fa fa-check"></i><b>16.1</b> Introduction</a></li>
-<li class="chapter" data-level="16.2" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html#gather-data"><i class="fa fa-check"></i><b>16.2</b> Gather data</a></li>
-<li class="chapter" data-level="16.3" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html#data-parsing-and-cleaning"><i class="fa fa-check"></i><b>16.3</b> Data parsing and cleaning</a></li>
-</ul></li>
-<li class="chapter" data-level="17" data-path="lab-ggplot2.html"><a href="lab-ggplot2.html"><i class="fa fa-check"></i><b>17</b> Lab - ggplot2</a></li>
-<li class="chapter" data-level="18" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>18</b> Exploratory data analysis</a><ul>
-<li class="chapter" data-level="18.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#introduction-9"><i class="fa fa-check"></i><b>18.1</b> Introduction</a></li>
-<li class="chapter" data-level="18.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#a-note-on-packages"><i class="fa fa-check"></i><b>18.2</b> A note on packages</a></li>
-<li class="chapter" data-level="18.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#ttc-subway-delays"><i class="fa fa-check"></i><b>18.3</b> TTC subway delays</a></li>
-<li class="chapter" data-level="18.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#eda-and-data-viz"><i class="fa fa-check"></i><b>18.4</b> EDA and data viz</a></li>
-<li class="chapter" data-level="18.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#data-checks"><i class="fa fa-check"></i><b>18.5</b> Data checks</a><ul>
-<li class="chapter" data-level="18.5.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#sanity-checks"><i class="fa fa-check"></i><b>18.5.1</b> Sanity Checks</a></li>
-<li class="chapter" data-level="18.5.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#missing-values"><i class="fa fa-check"></i><b>18.5.2</b> Missing values</a></li>
-<li class="chapter" data-level="18.5.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#duplicates"><i class="fa fa-check"></i><b>18.5.3</b> Duplicates?</a></li>
-<li class="chapter" data-level="18.5.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-distributions"><i class="fa fa-check"></i><b>18.5.4</b> Visualizing distributions</a></li>
-<li class="chapter" data-level="18.5.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-time-series"><i class="fa fa-check"></i><b>18.5.5</b> Visualizing time series</a></li>
-<li class="chapter" data-level="18.5.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-relationships"><i class="fa fa-check"></i><b>18.5.6</b> Visualizing relationships</a></li>
-<li class="chapter" data-level="18.5.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#pca"><i class="fa fa-check"></i><b>18.5.7</b> PCA</a></li>
-</ul></li>
-<li class="chapter" data-level="18.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#exercises"><i class="fa fa-check"></i><b>18.6</b> Exercises</a></li>
-</ul></li>
-<li class="chapter" data-level="19" data-path="case-study-historical-canadian-elections.html"><a href="case-study-historical-canadian-elections.html"><i class="fa fa-check"></i><b>19</b> Case study - Historical Canadian elections</a></li>
-<li class="chapter" data-level="20" data-path="linear-regression.html"><a href="linear-regression.html"><i class="fa fa-check"></i><b>20</b> Linear regression</a><ul>
-<li class="chapter" data-level="20.1" data-path="linear-regression.html"><a href="linear-regression.html#introduction-10"><i class="fa fa-check"></i><b>20.1</b> Introduction</a></li>
-<li class="chapter" data-level="20.2" data-path="linear-regression.html"><a href="linear-regression.html#competing-relationships"><i class="fa fa-check"></i><b>20.2</b> Competing relationships</a></li>
-<li class="chapter" data-level="20.3" data-path="linear-regression.html"><a href="linear-regression.html#implementing-this-in-r"><i class="fa fa-check"></i><b>20.3</b> Implementing this in R</a></li>
-<li class="chapter" data-level="20.4" data-path="linear-regression.html"><a href="linear-regression.html#tidy-up-with-broom"><i class="fa fa-check"></i><b>20.4</b> Tidy up with broom</a></li>
-<li class="chapter" data-level="20.5" data-path="linear-regression.html"><a href="linear-regression.html#testing-hypothesis"><i class="fa fa-check"></i><b>20.5</b> Testing hypothesis</a></li>
-<li class="chapter" data-level="20.6" data-path="linear-regression.html"><a href="linear-regression.html#adding-more-and-varied-explanatory-variables"><i class="fa fa-check"></i><b>20.6</b> Adding more and varied explanatory variables</a></li>
-<li class="chapter" data-level="20.7" data-path="linear-regression.html"><a href="linear-regression.html#threats-to-validity-and-aspects-to-think-about"><i class="fa fa-check"></i><b>20.7</b> Threats to validity and aspects to think about</a></li>
-<li class="chapter" data-level="20.8" data-path="linear-regression.html"><a href="linear-regression.html#more-credible-outputs"><i class="fa fa-check"></i><b>20.8</b> More credible outputs</a></li>
-</ul></li>
-<li class="chapter" data-level="21" data-path="lab-reporting-regression-results.html"><a href="lab-reporting-regression-results.html"><i class="fa fa-check"></i><b>21</b> Lab - Reporting regression results</a></li>
-<li class="chapter" data-level="22" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html"><i class="fa fa-check"></i><b>22</b> Case study - Opinions about a casino in Toronto</a><ul>
-<li class="chapter" data-level="22.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#data-preparation"><i class="fa fa-check"></i><b>22.1</b> Data preparation</a><ul>
-<li class="chapter" data-level="22.1.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#getting-data-from-opendatatoronto"><i class="fa fa-check"></i><b>22.1.1</b> Getting data from <code>opendatatoronto</code></a></li>
-<li class="chapter" data-level="22.1.2" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#getting-the-right-kind-of-object"><i class="fa fa-check"></i><b>22.1.2</b> Getting the right kind of object</a></li>
-<li class="chapter" data-level="22.1.3" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#cleaning-up-the-dataframe"><i class="fa fa-check"></i><b>22.1.3</b> Cleaning up the dataframe</a></li>
-</ul></li>
-<li class="chapter" data-level="22.2" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#some-visual-exploration-and-more-cleanup-of-course"><i class="fa fa-check"></i><b>22.2</b> Some visual exploration (and more cleanup, of course)</a><ul>
-<li class="chapter" data-level="22.2.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#getting-the-data-into-a-more-model-suitable-format"><i class="fa fa-check"></i><b>22.2.1</b> Getting the data into a more model-suitable format</a></li>
-</ul></li>
-<li class="chapter" data-level="22.3" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#logistic-regression"><i class="fa fa-check"></i><b>22.3</b> Logistic Regression</a><ul>
-<li class="chapter" data-level="22.3.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#interpretation"><i class="fa fa-check"></i><b>22.3.1</b> Interpretation</a></li>
-<li class="chapter" data-level="22.3.2" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#baseline-category"><i class="fa fa-check"></i><b>22.3.2</b> Baseline category</a></li>
-<li class="chapter" data-level="22.3.3" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#making-estimates"><i class="fa fa-check"></i><b>22.3.3</b> Making estimates</a></li>
+<li class="chapter" data-level="14" data-path="gathering-data.html"><a href="gathering-data.html"><i class="fa fa-check"></i><b>14</b> Gathering data</a><ul>
+<li class="chapter" data-level="14.1" data-path="gathering-data.html"><a href="gathering-data.html#gathering-data-1"><i class="fa fa-check"></i><b>14.1</b> Gathering data</a><ul>
+<li class="chapter" data-level="14.1.1" data-path="gathering-data.html"><a href="gathering-data.html#deliberately-available"><i class="fa fa-check"></i><b>14.1.1</b> Deliberately available</a></li>
+<li class="chapter" data-level="14.1.2" data-path="gathering-data.html"><a href="gathering-data.html#by-product"><i class="fa fa-check"></i><b>14.1.2</b> By product</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="23" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html"><i class="fa fa-check"></i><b>23</b> Case study - Airbnb listing in Toronto</a><ul>
-<li class="chapter" data-level="23.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#essentials"><i class="fa fa-check"></i><b>23.1</b> Essentials</a></li>
-<li class="chapter" data-level="23.2" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#set-up"><i class="fa fa-check"></i><b>23.2</b> Set up</a></li>
-<li class="chapter" data-level="23.3" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#get-data"><i class="fa fa-check"></i><b>23.3</b> Get data</a></li>
-<li class="chapter" data-level="23.4" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#clean-data"><i class="fa fa-check"></i><b>23.4</b> Clean data</a><ul>
-<li class="chapter" data-level="23.4.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#price"><i class="fa fa-check"></i><b>23.4.1</b> Price</a></li>
-<li class="chapter" data-level="23.4.2" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#superhosts"><i class="fa fa-check"></i><b>23.4.2</b> Superhosts</a></li>
-<li class="chapter" data-level="23.4.3" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#reviews"><i class="fa fa-check"></i><b>23.4.3</b> Reviews</a></li>
-<li class="chapter" data-level="23.4.4" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#response-time"><i class="fa fa-check"></i><b>23.4.4</b> Response time</a></li>
-<li class="chapter" data-level="23.4.5" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#host-number-of-listings"><i class="fa fa-check"></i><b>23.4.5</b> Host number of listings</a></li>
-<li class="chapter" data-level="23.4.6" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#decisions"><i class="fa fa-check"></i><b>23.4.6</b> Decisions</a></li>
+<li class="chapter" data-level="15" data-path="lab-the-tidyverse.html"><a href="lab-the-tidyverse.html"><i class="fa fa-check"></i><b>15</b> Lab - The Tidyverse</a></li>
+<li class="chapter" data-level="16" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html"><i class="fa fa-check"></i><b>16</b> Case study - Gathering and tidying data from Paspaley</a><ul>
+<li class="chapter" data-level="16.1" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html#introduction-8"><i class="fa fa-check"></i><b>16.1</b> Introduction</a></li>
+<li class="chapter" data-level="16.2" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html#data-acquisition"><i class="fa fa-check"></i><b>16.2</b> Data acquisition</a></li>
+<li class="chapter" data-level="16.3" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html#data-cleaning"><i class="fa fa-check"></i><b>16.3</b> Data cleaning</a></li>
 </ul></li>
-<li class="chapter" data-level="23.5" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#explore-data"><i class="fa fa-check"></i><b>23.5</b> Explore data</a><ul>
-<li class="chapter" data-level="23.5.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#price-and-reviews"><i class="fa fa-check"></i><b>23.5.1</b> Price and reviews</a></li>
-<li class="chapter" data-level="23.5.2" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#superhost-and-response-time"><i class="fa fa-check"></i><b>23.5.2</b> Superhost and response-time</a></li>
-<li class="chapter" data-level="23.5.3" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#neighbourhood"><i class="fa fa-check"></i><b>23.5.3</b> Neighbourhood</a></li>
+<li class="chapter" data-level="17" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html"><i class="fa fa-check"></i><b>17</b> Case study - Rohan’s books</a><ul>
+<li class="chapter" data-level="17.1" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html#introduction-9"><i class="fa fa-check"></i><b>17.1</b> Introduction</a></li>
+<li class="chapter" data-level="17.2" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html#gather-data"><i class="fa fa-check"></i><b>17.2</b> Gather data</a></li>
+<li class="chapter" data-level="17.3" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html#data-parsing-and-cleaning"><i class="fa fa-check"></i><b>17.3</b> Data parsing and cleaning</a></li>
 </ul></li>
-<li class="chapter" data-level="23.6" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#model-data"><i class="fa fa-check"></i><b>23.6</b> Model data</a><ul>
-<li class="chapter" data-level="23.6.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#logistic-regression-1"><i class="fa fa-check"></i><b>23.6.1</b> Logistic regression</a></li>
+<li class="chapter" data-level="18" data-path="lab-ggplot2.html"><a href="lab-ggplot2.html"><i class="fa fa-check"></i><b>18</b> Lab - ggplot2</a></li>
+<li class="chapter" data-level="19" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>19</b> Exploratory data analysis</a><ul>
+<li class="chapter" data-level="19.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#introduction-10"><i class="fa fa-check"></i><b>19.1</b> Introduction</a></li>
+<li class="chapter" data-level="19.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#a-note-on-packages"><i class="fa fa-check"></i><b>19.2</b> A note on packages</a></li>
+<li class="chapter" data-level="19.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#ttc-subway-delays"><i class="fa fa-check"></i><b>19.3</b> TTC subway delays</a></li>
+<li class="chapter" data-level="19.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#eda-and-data-viz"><i class="fa fa-check"></i><b>19.4</b> EDA and data viz</a></li>
+<li class="chapter" data-level="19.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#data-checks"><i class="fa fa-check"></i><b>19.5</b> Data checks</a><ul>
+<li class="chapter" data-level="19.5.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#sanity-checks"><i class="fa fa-check"></i><b>19.5.1</b> Sanity Checks</a></li>
+<li class="chapter" data-level="19.5.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#missing-values"><i class="fa fa-check"></i><b>19.5.2</b> Missing values</a></li>
+<li class="chapter" data-level="19.5.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#duplicates"><i class="fa fa-check"></i><b>19.5.3</b> Duplicates?</a></li>
+<li class="chapter" data-level="19.5.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-distributions"><i class="fa fa-check"></i><b>19.5.4</b> Visualizing distributions</a></li>
+<li class="chapter" data-level="19.5.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-time-series"><i class="fa fa-check"></i><b>19.5.5</b> Visualizing time series</a></li>
+<li class="chapter" data-level="19.5.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-relationships"><i class="fa fa-check"></i><b>19.5.6</b> Visualizing relationships</a></li>
+<li class="chapter" data-level="19.5.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#pca"><i class="fa fa-check"></i><b>19.5.7</b> PCA</a></li>
 </ul></li>
-<li class="chapter" data-level="23.7" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#next-steps"><i class="fa fa-check"></i><b>23.7</b> Next steps</a></li>
-<li class="chapter" data-level="23.8" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#references"><i class="fa fa-check"></i><b>23.8</b> References</a></li>
+<li class="chapter" data-level="19.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#exercises"><i class="fa fa-check"></i><b>19.6</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="24" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html"><i class="fa fa-check"></i><b>24</b> A/B testing and RCTs</a><ul>
-<li class="chapter" data-level="24.1" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#introduction-11"><i class="fa fa-check"></i><b>24.1</b> Introduction</a></li>
-<li class="chapter" data-level="24.2" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#motivation"><i class="fa fa-check"></i><b>24.2</b> Motivation</a></li>
-<li class="chapter" data-level="24.3" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#tea-party"><i class="fa fa-check"></i><b>24.3</b> Tea party</a></li>
-<li class="chapter" data-level="24.4" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#some-unexpected-properties-from-randomised-sampling"><i class="fa fa-check"></i><b>24.4</b> Some unexpected properties from randomised sampling</a></li>
-<li class="chapter" data-level="24.5" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#anova"><i class="fa fa-check"></i><b>24.5</b> ANOVA</a></li>
-<li class="chapter" data-level="24.6" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#treatment-and-control"><i class="fa fa-check"></i><b>24.6</b> Treatment and control</a></li>
+<li class="chapter" data-level="20" data-path="case-study-historical-canadian-elections.html"><a href="case-study-historical-canadian-elections.html"><i class="fa fa-check"></i><b>20</b> Case study - Historical Canadian elections</a></li>
+<li class="chapter" data-level="21" data-path="linear-regression.html"><a href="linear-regression.html"><i class="fa fa-check"></i><b>21</b> Linear regression</a><ul>
+<li class="chapter" data-level="21.1" data-path="linear-regression.html"><a href="linear-regression.html#introduction-11"><i class="fa fa-check"></i><b>21.1</b> Introduction</a></li>
+<li class="chapter" data-level="21.2" data-path="linear-regression.html"><a href="linear-regression.html#competing-relationships"><i class="fa fa-check"></i><b>21.2</b> Competing relationships</a></li>
+<li class="chapter" data-level="21.3" data-path="linear-regression.html"><a href="linear-regression.html#implementing-this-in-r"><i class="fa fa-check"></i><b>21.3</b> Implementing this in R</a></li>
+<li class="chapter" data-level="21.4" data-path="linear-regression.html"><a href="linear-regression.html#tidy-up-with-broom"><i class="fa fa-check"></i><b>21.4</b> Tidy up with broom</a></li>
+<li class="chapter" data-level="21.5" data-path="linear-regression.html"><a href="linear-regression.html#testing-hypothesis"><i class="fa fa-check"></i><b>21.5</b> Testing hypothesis</a></li>
+<li class="chapter" data-level="21.6" data-path="linear-regression.html"><a href="linear-regression.html#adding-more-and-varied-explanatory-variables"><i class="fa fa-check"></i><b>21.6</b> Adding more and varied explanatory variables</a></li>
+<li class="chapter" data-level="21.7" data-path="linear-regression.html"><a href="linear-regression.html#threats-to-validity-and-aspects-to-think-about"><i class="fa fa-check"></i><b>21.7</b> Threats to validity and aspects to think about</a></li>
+<li class="chapter" data-level="21.8" data-path="linear-regression.html"><a href="linear-regression.html#more-credible-outputs"><i class="fa fa-check"></i><b>21.8</b> More credible outputs</a></li>
 </ul></li>
-<li class="chapter" data-level="25" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html"><i class="fa fa-check"></i><b>25</b> Matching &amp; difference-in-differences</a><ul>
-<li class="chapter" data-level="25.1" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html#introduction-12"><i class="fa fa-check"></i><b>25.1</b> Introduction</a></li>
-<li class="chapter" data-level="25.2" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html#motivation-1"><i class="fa fa-check"></i><b>25.2</b> Motivation</a></li>
-<li class="chapter" data-level="25.3" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html#example"><i class="fa fa-check"></i><b>25.3</b> Example</a></li>
-<li class="chapter" data-level="25.4" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html#assumptions"><i class="fa fa-check"></i><b>25.4</b> Assumptions</a></li>
-<li class="chapter" data-level="25.5" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html#matching"><i class="fa fa-check"></i><b>25.5</b> Matching</a></li>
+<li class="chapter" data-level="22" data-path="lab-reporting-regression-results.html"><a href="lab-reporting-regression-results.html"><i class="fa fa-check"></i><b>22</b> Lab - Reporting regression results</a></li>
+<li class="chapter" data-level="23" data-path="count-data.html"><a href="count-data.html"><i class="fa fa-check"></i><b>23</b> Count data</a><ul>
+<li class="chapter" data-level="23.1" data-path="count-data.html"><a href="count-data.html#logistic-regression"><i class="fa fa-check"></i><b>23.1</b> Logistic regression</a></li>
+<li class="chapter" data-level="23.2" data-path="count-data.html"><a href="count-data.html#poisson-regression"><i class="fa fa-check"></i><b>23.2</b> Poisson regression</a></li>
 </ul></li>
-<li class="chapter" data-level="26" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><i class="fa fa-check"></i><b>26</b> Case study - Lower advertising revenue reduced French newspaper prices between 1960 and 1974</a><ul>
-<li class="chapter" data-level="26.1" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#introduction-13"><i class="fa fa-check"></i><b>26.1</b> Introduction</a></li>
-<li class="chapter" data-level="26.2" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#background"><i class="fa fa-check"></i><b>26.2</b> Background</a></li>
-<li class="chapter" data-level="26.3" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#data-1"><i class="fa fa-check"></i><b>26.3</b> Data</a></li>
-<li class="chapter" data-level="26.4" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#model-1"><i class="fa fa-check"></i><b>26.4</b> Model</a></li>
-<li class="chapter" data-level="26.5" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#results"><i class="fa fa-check"></i><b>26.5</b> Results</a></li>
-<li class="chapter" data-level="26.6" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#other-points"><i class="fa fa-check"></i><b>26.6</b> Other points</a></li>
+<li class="chapter" data-level="24" data-path="classification.html"><a href="classification.html"><i class="fa fa-check"></i><b>24</b> Classification</a></li>
+<li class="chapter" data-level="25" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html"><i class="fa fa-check"></i><b>25</b> Case study - Opinions about a casino in Toronto</a><ul>
+<li class="chapter" data-level="25.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#data-preparation"><i class="fa fa-check"></i><b>25.1</b> Data preparation</a><ul>
+<li class="chapter" data-level="25.1.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#getting-data-from-opendatatoronto"><i class="fa fa-check"></i><b>25.1.1</b> Getting data from <code>opendatatoronto</code></a></li>
+<li class="chapter" data-level="25.1.2" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#getting-the-right-kind-of-object"><i class="fa fa-check"></i><b>25.1.2</b> Getting the right kind of object</a></li>
+<li class="chapter" data-level="25.1.3" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#cleaning-up-the-dataframe"><i class="fa fa-check"></i><b>25.1.3</b> Cleaning up the dataframe</a></li>
 </ul></li>
-<li class="chapter" data-level="27" data-path="shiny-applications.html"><a href="shiny-applications.html"><i class="fa fa-check"></i><b>27</b> Shiny applications</a></li>
-<li class="chapter" data-level="28" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html"><i class="fa fa-check"></i><b>28</b> Regression discontinuity design</a></li>
-<li class="chapter" data-level="29" data-path="introduction-14.html"><a href="introduction-14.html"><i class="fa fa-check"></i><b>29</b> Introduction</a></li>
-<li class="chapter" data-level="30" data-path="instrumental-variables.html"><a href="instrumental-variables.html"><i class="fa fa-check"></i><b>30</b> Instrumental variables</a></li>
+<li class="chapter" data-level="25.2" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#some-visual-exploration-and-more-cleanup-of-course"><i class="fa fa-check"></i><b>25.2</b> Some visual exploration (and more cleanup, of course)</a><ul>
+<li class="chapter" data-level="25.2.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#getting-the-data-into-a-more-model-suitable-format"><i class="fa fa-check"></i><b>25.2.1</b> Getting the data into a more model-suitable format</a></li>
+</ul></li>
+<li class="chapter" data-level="25.3" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#logistic-regression-1"><i class="fa fa-check"></i><b>25.3</b> Logistic Regression</a><ul>
+<li class="chapter" data-level="25.3.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#interpretation"><i class="fa fa-check"></i><b>25.3.1</b> Interpretation</a></li>
+<li class="chapter" data-level="25.3.2" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#baseline-category"><i class="fa fa-check"></i><b>25.3.2</b> Baseline category</a></li>
+<li class="chapter" data-level="25.3.3" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#making-estimates"><i class="fa fa-check"></i><b>25.3.3</b> Making estimates</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="26" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html"><i class="fa fa-check"></i><b>26</b> Case study - Airbnb listing in Toronto</a><ul>
+<li class="chapter" data-level="26.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#essentials"><i class="fa fa-check"></i><b>26.1</b> Essentials</a></li>
+<li class="chapter" data-level="26.2" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#set-up"><i class="fa fa-check"></i><b>26.2</b> Set up</a></li>
+<li class="chapter" data-level="26.3" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#get-data"><i class="fa fa-check"></i><b>26.3</b> Get data</a></li>
+<li class="chapter" data-level="26.4" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#clean-data"><i class="fa fa-check"></i><b>26.4</b> Clean data</a><ul>
+<li class="chapter" data-level="26.4.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#price"><i class="fa fa-check"></i><b>26.4.1</b> Price</a></li>
+<li class="chapter" data-level="26.4.2" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#superhosts"><i class="fa fa-check"></i><b>26.4.2</b> Superhosts</a></li>
+<li class="chapter" data-level="26.4.3" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#reviews"><i class="fa fa-check"></i><b>26.4.3</b> Reviews</a></li>
+<li class="chapter" data-level="26.4.4" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#response-time"><i class="fa fa-check"></i><b>26.4.4</b> Response time</a></li>
+<li class="chapter" data-level="26.4.5" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#host-number-of-listings"><i class="fa fa-check"></i><b>26.4.5</b> Host number of listings</a></li>
+<li class="chapter" data-level="26.4.6" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#decisions"><i class="fa fa-check"></i><b>26.4.6</b> Decisions</a></li>
+</ul></li>
+<li class="chapter" data-level="26.5" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#explore-data"><i class="fa fa-check"></i><b>26.5</b> Explore data</a><ul>
+<li class="chapter" data-level="26.5.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#price-and-reviews"><i class="fa fa-check"></i><b>26.5.1</b> Price and reviews</a></li>
+<li class="chapter" data-level="26.5.2" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#superhost-and-response-time"><i class="fa fa-check"></i><b>26.5.2</b> Superhost and response-time</a></li>
+<li class="chapter" data-level="26.5.3" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#neighbourhood"><i class="fa fa-check"></i><b>26.5.3</b> Neighbourhood</a></li>
+</ul></li>
+<li class="chapter" data-level="26.6" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#model-data"><i class="fa fa-check"></i><b>26.6</b> Model data</a><ul>
+<li class="chapter" data-level="26.6.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#logistic-regression-2"><i class="fa fa-check"></i><b>26.6.1</b> Logistic regression</a></li>
+</ul></li>
+<li class="chapter" data-level="26.7" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#next-steps-1"><i class="fa fa-check"></i><b>26.7</b> Next steps</a></li>
+<li class="chapter" data-level="26.8" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#references"><i class="fa fa-check"></i><b>26.8</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="27" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html"><i class="fa fa-check"></i><b>27</b> A/B testing and RCTs</a><ul>
+<li class="chapter" data-level="27.1" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#introduction-12"><i class="fa fa-check"></i><b>27.1</b> Introduction</a></li>
+<li class="chapter" data-level="27.2" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#motivation"><i class="fa fa-check"></i><b>27.2</b> Motivation</a></li>
+<li class="chapter" data-level="27.3" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#tea-party"><i class="fa fa-check"></i><b>27.3</b> Tea party</a></li>
+<li class="chapter" data-level="27.4" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#some-unexpected-properties-from-randomised-sampling"><i class="fa fa-check"></i><b>27.4</b> Some unexpected properties from randomised sampling</a></li>
+<li class="chapter" data-level="27.5" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#anova"><i class="fa fa-check"></i><b>27.5</b> ANOVA</a></li>
+<li class="chapter" data-level="27.6" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#treatment-and-control"><i class="fa fa-check"></i><b>27.6</b> Treatment and control</a></li>
+</ul></li>
+<li class="chapter" data-level="28" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html"><i class="fa fa-check"></i><b>28</b> Matching &amp; difference-in-differences</a><ul>
+<li class="chapter" data-level="28.1" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html#introduction-13"><i class="fa fa-check"></i><b>28.1</b> Introduction</a></li>
+<li class="chapter" data-level="28.2" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html#motivation-1"><i class="fa fa-check"></i><b>28.2</b> Motivation</a></li>
+<li class="chapter" data-level="28.3" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html#simulated-example"><i class="fa fa-check"></i><b>28.3</b> Simulated example</a></li>
+<li class="chapter" data-level="28.4" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html#assumptions"><i class="fa fa-check"></i><b>28.4</b> Assumptions</a></li>
+<li class="chapter" data-level="28.5" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html#matching"><i class="fa fa-check"></i><b>28.5</b> Matching</a></li>
+</ul></li>
+<li class="chapter" data-level="29" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><i class="fa fa-check"></i><b>29</b> Case study - Lower advertising revenue reduced French newspaper prices between 1960 and 1974</a><ul>
+<li class="chapter" data-level="29.1" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#introduction-14"><i class="fa fa-check"></i><b>29.1</b> Introduction</a></li>
+<li class="chapter" data-level="29.2" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#background"><i class="fa fa-check"></i><b>29.2</b> Background</a></li>
+<li class="chapter" data-level="29.3" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#data-1"><i class="fa fa-check"></i><b>29.3</b> Data</a></li>
+<li class="chapter" data-level="29.4" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#model-1"><i class="fa fa-check"></i><b>29.4</b> Model</a></li>
+<li class="chapter" data-level="29.5" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#results"><i class="fa fa-check"></i><b>29.5</b> Results</a></li>
+<li class="chapter" data-level="29.6" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#other-points"><i class="fa fa-check"></i><b>29.6</b> Other points</a></li>
+</ul></li>
+<li class="chapter" data-level="30" data-path="shiny-applications.html"><a href="shiny-applications.html"><i class="fa fa-check"></i><b>30</b> Shiny applications</a></li>
+<li class="chapter" data-level="31" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html"><i class="fa fa-check"></i><b>31</b> Regression discontinuity design</a><ul>
+<li class="chapter" data-level="31.1" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#introduction-15"><i class="fa fa-check"></i><b>31.1</b> Introduction</a></li>
+<li class="chapter" data-level="31.2" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#simulated-example-1"><i class="fa fa-check"></i><b>31.2</b> Simulated example</a><ul>
+<li class="chapter" data-level="31.2.1" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#different-slopes"><i class="fa fa-check"></i><b>31.2.1</b> Different slopes</a></li>
+</ul></li>
+<li class="chapter" data-level="31.3" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#overlap"><i class="fa fa-check"></i><b>31.3</b> Overlap</a></li>
+<li class="chapter" data-level="31.4" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#examples"><i class="fa fa-check"></i><b>31.4</b> Examples</a><ul>
+<li class="chapter" data-level="31.4.1" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#elections"><i class="fa fa-check"></i><b>31.4.1</b> Elections</a></li>
+<li class="chapter" data-level="31.4.2" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#economic-development"><i class="fa fa-check"></i><b>31.4.2</b> Economic development</a></li>
+</ul></li>
+<li class="chapter" data-level="31.5" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#implementation"><i class="fa fa-check"></i><b>31.5</b> Implementation</a></li>
+<li class="chapter" data-level="31.6" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#fuzzy-rdd"><i class="fa fa-check"></i><b>31.6</b> Fuzzy RDD</a></li>
+<li class="chapter" data-level="31.7" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#threats-to-validity"><i class="fa fa-check"></i><b>31.7</b> Threats to validity</a></li>
+<li class="chapter" data-level="31.8" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#weaknesses"><i class="fa fa-check"></i><b>31.8</b> Weaknesses</a></li>
+</ul></li>
+<li class="chapter" data-level="32" data-path="instrumental-variables.html"><a href="instrumental-variables.html"><i class="fa fa-check"></i><b>32</b> Instrumental variables</a></li>
+<li class="chapter" data-level="33" data-path="assessment.html"><a href="assessment.html"><i class="fa fa-check"></i><b>33</b> Assessment</a><ul>
+<li class="chapter" data-level="33.1" data-path="assessment.html"><a href="assessment.html#problem-set-1"><i class="fa fa-check"></i><b>33.1</b> Problem Set 1</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
 
@@ -353,27 +384,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="regression-discontinuity-design" class="section level1">
-<h1><span class="header-section-number">28</span> Regression discontinuity design</h1>
+<h1><span class="header-section-number">Chapter 31</span> Regression discontinuity design</h1>
 <p><strong>Required reading</strong></p>
 <ul>
 <li>Gertler, Paul, Sebastian Martinez, Patrick Premand, Laura Rawlings, and Christel Vermeersch, ‘Impact Evaluation in Practice’, Chapter 6.</li>
 </ul>
 <p><strong>Recommended reading</strong></p>
 <ul>
-<li>Cunningham, Scott, ‘Causal Inference: The Mixtape’, chapter ‘Regression discontinuity’, freely available at: <a href="http://scunning.com/cunningham_mixtape.pdf" class="uri">http://scunning.com/cunningham_mixtape.pdf</a>.</li>
+<li>Cunningham, Scott, ‘Causal Inference: The Mixtape’, chapter ‘Regression discontinuity’, freely available at: <a href="http://www.scunning.com/causalinference_norap.pdf" class="uri">http://www.scunning.com/causalinference_norap.pdf</a>.</li>
 <li>Dell, Melissa, Pablo Querubin, 2018, ‘Nation Building Through Foreign Intervention: Evidence from Discontinuities in Military Strategies’, <em>The Quarterly Journal of Economics</em>, Volume 133, Issue 2, pp. 701–764, <a href="https://doi.org/10.1093/qje/qjx037" class="uri">https://doi.org/10.1093/qje/qjx037</a>.</li>
+<li>Evans, David, 2013, ‘Regression Discontinuity Porn’, <em>World Bank Blogs</em>, 16 November, freely available at: <a href="https://blogs.worldbank.org/impactevaluations/regression-discontinuity-porn" class="uri">https://blogs.worldbank.org/impactevaluations/regression-discontinuity-porn</a>.</li>
+<li>Gelman, Andrew, and Jennifer Hill, 2007, <em>Data Analysis Using Regression and Multilevel/Hierarchical Models</em>, Chapter 10, pp. 212-215.</li>
+<li>Gelman, Andrew, and Guido Imbens, 2019, “Why high-order polynomials should not be used in regression discontinuity designs”, <em>Journal of Business &amp; Economic Statistics</em>, 37, pp. 447-456.</li>
+<li>Gelman, Andrew, 2019, ‘Another Regression Discontinuity Disaster and what can we learn from it’, <em>Statistical Modeling, Causal Inference, and Social Science</em>, 25 June, freely available at: <a href="https://statmodeling.stat.columbia.edu/2019/06/25/another-regression-discontinuity-disaster-and-what-can-we-learn-from-it/" class="uri">https://statmodeling.stat.columbia.edu/2019/06/25/another-regression-discontinuity-disaster-and-what-can-we-learn-from-it/</a>.</li>
 <li>Harris, Rich, Mlacki Migliozzi and Niraj Chokshi, ‘13,000 Missing Flights: The Global Consequences of the Coronavirus’, <em>New York Times</em>, 21 February 2020. freely available here (if you make an account): <a href="https://www.nytimes.com/interactive/2020/02/21/business/coronavirus-airline-travel.html" class="uri">https://www.nytimes.com/interactive/2020/02/21/business/coronavirus-airline-travel.html</a>.</li>
 <li>Imbens, Guido W., and Thomas Lemieux, 2008, ‘Regression discontinuity designs: A guide to practice’, <em>Journal of Econometrics</em>, vol. 142, no. 2, pp. 615-635.</li>
 <li>Myllyvirta, Lauri, 2020, ‘Analysis: Coronavirus has temporarily reduced China’s CO2 emissions by a quarter’, <em>Carbon Brief</em>, 19 February, freely available at: <a href="https://www.carbonbrief.org/analysis-coronavirus-has-temporarily-reduced-chinas-co2-emissions-by-a-quarter" class="uri">https://www.carbonbrief.org/analysis-coronavirus-has-temporarily-reduced-chinas-co2-emissions-by-a-quarter</a>.</li>
-<li>Taddy, Matt, 2019, <em>Business Data Science</em>, Chapter 5.</li>
+<li>Taddy, Matt, 2019, <em>Business Data Science</em>, Chapter 5, pp. 146-152.</li>
 <li>Travis, D.J., Carleton, A.M. and Lauritsen, R.G., 2004. ‘Regional variations in US diurnal temperature range for the 11–14 September 2001 aircraft groundings: Evidence of jet contrail influence on climate’, Journal of climate, 17(5), pp.1123-1134.</li>
 <li>Travis, David J., Andrew M. Carleton, and Ryan G. Lauritsen. “Contrails reduce daily temperature range.” Nature, 418, no. 6898 (2002): 601-601.</li>
-<li>Zinovyeva, Natalia and Maryna Tverdostup, 2019, ‘Why are women who earn slightly more than their husbands hard to find?’, 10 June, freely available at: <a href="https://blogs.lse.ac.uk/businessreview/2019/06/10/why-are-women-who-earn-slightly-more-than-their-husbands-hard-to-find/" class="uri">https://blogs.lse.ac.uk/businessreview/2019/06/10/why-are-women-who-earn-slightly-more-than-their-husbands-hard-to-find/</a>.
-<a href="https://www.nytimes.com/interactive/2020/02/21/business/coronavirus-airline-travel.html" class="uri">https://www.nytimes.com/interactive/2020/02/21/business/coronavirus-airline-travel.html</a>.</li>
+<li>Zinovyeva, Natalia and Maryna Tverdostup, 2019, ‘Why are women who earn slightly more than their husbands hard to find?’, 10 June, freely available at: <a href="https://blogs.lse.ac.uk/businessreview/2019/06/10/why-are-women-who-earn-slightly-more-than-their-husbands-hard-to-find/" class="uri">https://blogs.lse.ac.uk/businessreview/2019/06/10/why-are-women-who-earn-slightly-more-than-their-husbands-hard-to-find/</a>.</li>
 </ul>
 <p><strong>Key concepts/skills/etc</strong></p>
+<ul>
+<li>Generating simulated data.</li>
+<li>Understanding regression discontinuity and implementing it both manually and using packages.</li>
+<li>Appreciating the threats to the validity of regression discontinuity.</li>
+<li>A better appreciation of movies from the 1990s.</li>
+</ul>
 <p><strong>Key libraries</strong></p>
+<ul>
+<li><code>broom</code></li>
+<li><code>rdrobust</code></li>
+<li><code>tidyverse</code></li>
+</ul>
 <p><strong>Key functions/etc</strong></p>
+<ul>
+<li><code>lm()</code></li>
+<li><code>tidy()</code></li>
+<li><code>rdrobust()()</code></li>
+</ul>
 <p><strong>Pre-quiz</strong></p>
 <ol style="list-style-type: decimal">
 <li>What are the fundamental features of regression discontinuity design?</li>
@@ -383,6 +433,291 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Please look at the <code>performance</code> package: <a href="https://easystats.github.io/performance/index.html" class="uri">https://easystats.github.io/performance/index.html</a>. What are some features of this package that may be useful in your own work?</li>
 <li>What do you think about using COVID-19 in an RDD setting? Statistically? Ethically?</li>
 </ol>
+<div id="introduction-15" class="section level2">
+<h2><span class="header-section-number">31.1</span> Introduction</h2>
+<p>Regression discontinuity design (RDD) is a popular way to get causality when there is some continuous variable with cut-offs that determine treatment. Is there a difference between a student who gets 79 per cent and a student who gets 80 per cent? Probably not much, but one gets an A-, while the other gets a B+, and seeing that on a transcript could affect who gets a job which could affect income. In this case the percentage is a ‘forcing variable’ and the cut-off for an A- is a ‘threshold’. As the treatment is determined by the forcing variable all you need to do is to control for that variable. And, these seemingly arbitrary cut-offs can be seen all the time. Hence, there has been an ‘explosion’ in the use of regression discontinuity design (Figure <a href="regression-discontinuity-design.html#fig:johnholbein">31.1</a>).</p>
+<p>Please note that I’ve followed the terminology of Taddy, 2019. Gelman and Hill, 2007, and others use slightly different terminology. For instance, Cunningham refers to the forcing function as the running variable. It doesn’t matter what you use so long as you are consistent. If you have a terminology that you are familiar with then please feel free to use it, and to share it with me!</p>
+<div class="figure"><span id="fig:johnholbein"></span>
+<img src="figures/johnholbein.jpeg" alt="The explosion of regression discontinuity designs in recent years." width="90%" />
+<p class="caption">
+Figure 31.1: The explosion of regression discontinuity designs in recent years.
+</p>
+</div>
+<p>Source: John Holbein, <a href="https://twitter.com/JohnHolbein1/status/1228050675378069504">13 February 2020</a>.</p>
+<p>The key assumptions are:</p>
+<ol style="list-style-type: decimal">
+<li>The cut-off is ‘known, precise and free of manipulation’ (Cunningham, 2020, p. 163).</li>
+<li>The forcing function should be continuous because this means we can say that people on either side of the threshold are the same, other than happening to just fall on either side of the threshold.</li>
+</ol>
+</div>
+<div id="simulated-example-1" class="section level2">
+<h2><span class="header-section-number">31.2</span> Simulated example</h2>
+<p>Let’s generate some data.</p>
+<div class="sourceCode" id="cb388"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb388-1" data-line-number="1"><span class="kw">library</span>(broom)</a>
+<a class="sourceLine" id="cb388-2" data-line-number="2"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb388-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb388-4" data-line-number="4"><span class="kw">set.seed</span>(<span class="dv">853</span>)</a>
+<a class="sourceLine" id="cb388-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb388-6" data-line-number="6">number_of_observation &lt;-<span class="st"> </span><span class="dv">1000</span></a>
+<a class="sourceLine" id="cb388-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb388-8" data-line-number="8">rdd_example_data &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">person =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span>number_of_observation),</a>
+<a class="sourceLine" id="cb388-9" data-line-number="9">                           <span class="dt">grade =</span> <span class="kw">runif</span>(number_of_observation, <span class="dt">min =</span> <span class="dv">78</span>, <span class="dt">max =</span> <span class="dv">82</span>),</a>
+<a class="sourceLine" id="cb388-10" data-line-number="10">                           <span class="dt">income =</span> <span class="kw">rnorm</span>(number_of_observation, <span class="dv">10</span>, <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb388-11" data-line-number="11">                           )</a>
+<a class="sourceLine" id="cb388-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb388-13" data-line-number="13"><span class="co"># We want to make an accident more likely if they are grade 21 and over</span></a>
+<a class="sourceLine" id="cb388-14" data-line-number="14">rdd_example_data &lt;-<span class="st"> </span></a>
+<a class="sourceLine" id="cb388-15" data-line-number="15"><span class="st">  </span>rdd_example_data <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb388-16" data-line-number="16"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">income =</span> <span class="kw">if_else</span>(grade <span class="op">&gt;</span><span class="st"> </span><span class="dv">80</span>, income <span class="op">+</span><span class="st"> </span><span class="dv">2</span>, income))</a>
+<a class="sourceLine" id="cb388-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb388-18" data-line-number="18"><span class="kw">head</span>(rdd_example_data)</a></code></pre></div>
+<table class="huxtable" style="border-collapse: collapse; margin-bottom: 2em; margin-top: 2em; width: 36.6666666666667%; margin-left: 0%; margin-right: auto;  ">
+<col><col><col><tr>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0.4pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">person</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">grade</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">income</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">1</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">79.4</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">9.43</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt;">2</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt;">78.5</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt;">9.69</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">3</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">79.9</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">10.8&nbsp;</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt;">4</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt;">79.3</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt;">9.34</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">5</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">78.1</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">10.7&nbsp;</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0.4pt; padding: 4pt 4pt 4pt 4pt;">6</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt;">79.6</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt;">9.83</td>
+</tr>
+</table>
+
+<p>Let’s make a graph.</p>
+<div class="sourceCode" id="cb389"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb389-1" data-line-number="1">rdd_example_data <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb389-2" data-line-number="2"><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> grade,</a>
+<a class="sourceLine" id="cb389-3" data-line-number="3">             <span class="dt">y =</span> income)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb389-4" data-line-number="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb389-5" data-line-number="5"><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">data =</span> rdd_example_data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(grade <span class="op">&lt;</span><span class="st"> </span><span class="dv">80</span>), </a>
+<a class="sourceLine" id="cb389-6" data-line-number="6">              <span class="dt">method=</span><span class="st">&#39;lm&#39;</span>,</a>
+<a class="sourceLine" id="cb389-7" data-line-number="7">              <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb389-8" data-line-number="8"><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">data =</span> rdd_example_data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(grade <span class="op">&gt;=</span><span class="st"> </span><span class="dv">80</span>), </a>
+<a class="sourceLine" id="cb389-9" data-line-number="9">              <span class="dt">method=</span><span class="st">&#39;lm&#39;</span>,</a>
+<a class="sourceLine" id="cb389-10" data-line-number="10">              <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb389-11" data-line-number="11"><span class="st">  </span><span class="kw">theme_minimal</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb389-12" data-line-number="12"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Grade&quot;</span>,</a>
+<a class="sourceLine" id="cb389-13" data-line-number="13">       <span class="dt">y =</span> <span class="st">&quot;Income ($)&quot;</span>)</a></code></pre></div>
+<p><img src="test_files/figure-html/unnamed-chunk-230-1.png" width="672" /></p>
+<p>We can use a dummy variable with linear regression to estimate the effect (we’re hoping that it’s 2 because that is what we imposed.)</p>
+<div class="sourceCode" id="cb390"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb390-1" data-line-number="1">rdd_example_data &lt;-<span class="st"> </span></a>
+<a class="sourceLine" id="cb390-2" data-line-number="2"><span class="st">  </span>rdd_example_data <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb390-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">grade_21_and_over =</span> <span class="kw">if_else</span>(grade <span class="op">&lt;</span><span class="st"> </span><span class="dv">80</span>, <span class="dv">0</span>, <span class="dv">1</span>)) </a>
+<a class="sourceLine" id="cb390-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb390-5" data-line-number="5"><span class="kw">lm</span>(income <span class="op">~</span><span class="st"> </span>grade <span class="op">+</span><span class="st"> </span>grade_<span class="dv">21</span>_and_over, <span class="dt">data =</span> rdd_example_data) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb390-6" data-line-number="6"><span class="st">  </span><span class="kw">tidy</span>()</a></code></pre></div>
+<table class="huxtable" style="border-collapse: collapse; margin-bottom: 2em; margin-top: 2em; width: 100%; margin-left: 0%; margin-right: auto;  ">
+<col><col><col><col><col><tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0.4pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">term</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">estimate</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">std.error</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">statistic</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">p.value</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">(Intercept)</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">11.7&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">4.24&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">2.76&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">0.00585&nbsp;</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt;">grade</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt;">-0.021</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt;">0.0537</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt;">-0.391</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt;">0.696&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">grade_21_and_over</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">1.99&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">0.123&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">16.2&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">1.34e-52</td>
+</tr>
+</table>
+
+<p>There are various caveats to this estimate that we’ll get into later, but the essentials are here.</p>
+<p>The other great thing about regression discontinuity is that is can almost be as good as an RCT. For instance, (and I thank John Holbein for the pointer) <span class="citation">Bloom, Bell, and Reiman (<a href="#ref-bloombellreiman2020">2020</a>)</span> compare randomized trials with RCTs and find that the RCTs compare favourably.</p>
+<div id="different-slopes" class="section level3">
+<h3><span class="header-section-number">31.2.1</span> Different slopes</h3>
+<p>(Figure <a href="regression-discontinuity-design.html#fig:scotland">31.2</a>)</p>
+<div class="figure"><span id="fig:scotland"></span>
+<img src="figures/scotland.png" alt="Effect of minimum unit pricing for alcohol in Scotland." width="90%" />
+<p class="caption">
+Figure 31.2: Effect of minimum unit pricing for alcohol in Scotland.
+</p>
+</div>
+<p>Source: John Burn-Murdoch, <a href="https://twitter.com/jburnmurdoch/status/1225773931342303233">7 February 2020</a>.</p>
+</div>
+</div>
+<div id="overlap" class="section level2">
+<h2><span class="header-section-number">31.3</span> Overlap</h2>
+<p>In the randomised control trial and A/B testing section, because of randomised assignment of the treatment, we imposed that the control and treatment groups were the same but for the treatment. We moved to difference-in-differences, and we assumed that there was a common trend between the treated and control groups. We allowed that the groups could be different, but that we could ‘difference out’ their differences. Finally, we considered matching, and we said that even if we the control and treatment groups seemed quite different we were able to match those who were treated with a group that were similar to them in all ways, apart from the fact that they were not treated.</p>
+<p>In regression discontinuity we consider a slightly different setting - the two groups are completely different in terms of the forcing variable - they are on either side of the threshold. So there is no overlap at all. But we know the threshold and believe that those on either side are essentially matched. Let’s consider the 2019 NBA Eastern Conference Semifinals - Toronto and the Philadelphia. Game 1: Raptors win 108-95; Game 2: 76ers win 94-89; Game 3: 76ers win 116-95; Game 4: Raptors win 101-96; Game 5: Raptors win 125-89; Game 6: 76ers win 112-101; and finally, Game 7: Raptors win 92-90, because of a ball that win in after bouncing on the rim four times. Was there really that much difference between the teams (Figure <a href="regression-discontinuity-design.html#fig:kawai">31.3</a>)?</p>
+<div class="figure"><span id="fig:kawai"></span>
+<img src="figures/torraptors13.jpg" alt="It took four bounces to go in, so how different were the teams...?" width="90%" />
+<p class="caption">
+Figure 31.3: It took four bounces to go in, so how different were the teams…?
+</p>
+</div>
+<p>Source: Stan Behal / <a href="https://nationalpost.com/sports/kawhi-leonard-miracle-shot-toronto-raptors-game-7-scott-stinson-kawhi-leonards-miracle-shot-sends-toronto-raptors-into-game-7-elation">Postmedia Network</a>.</p>
+</div>
+<div id="examples" class="section level2">
+<h2><span class="header-section-number">31.4</span> Examples</h2>
+<p>As with difference-in-differences, after I learnt about it, I began to see opportunities to implement it everywhere. Frankly, I find it a lot easier to think of legitimate examples of using regression discontinuity than difference-in-differences. But, at the risk of mentioning yet another movie from the 1990s that none of you have seen, when I think of RDD, my first thought is often of Sliding Doors (Figure <a href="regression-discontinuity-design.html#fig:slidingdoors">31.4</a>).</p>
+<div class="figure"><span id="fig:slidingdoors"></span>
+<img src="figures/sliding_doors.png" alt="Nobody expects the Spanish Inquisition." width="90%" />
+<p class="caption">
+Figure 31.4: Nobody expects the Spanish Inquisition.
+</p>
+</div>
+<p>Source: Mlotek, Haley, 2018, ‘The Almosts and What-ifs of ’Sliding Doors’’, <em>The Ringer</em>, 24 April, freely available at: <a href="https://www.theringer.com/movies/2018/4/24/17261506/sliding-doors-20th-anniversary" class="uri">https://www.theringer.com/movies/2018/4/24/17261506/sliding-doors-20th-anniversary</a>.</p>
+<p>Not only did the movie have a great soundtrack and help propel Gwyneth Paltrow to super-stardom, but it features an iconic moment in which Paltrow’s character, Helen, arrives at a tube station at which point the movie splits into two. In one version she just makes the train, and arrives home to find her boyfriend cheating on her; and in another she just misses the train and doesn’t find out about the boyfriend.</p>
+<p>I’d say, spoiler alert, but the movie was released in 1998, so… Of course, that ‘threshold’ turns out to be important. In the world in which she gets the train she leaves the boyfriend, cuts her hair, and changes everything about her life. In the world in which she misses the train she doesn’t. At least initially. But, and I can’t say this any better than Ashley Fetters:</p>
+<blockquote>
+<p>At the end of Sliding Doors, the “bad” version of Helen’s life elides right into the “good” version; even in the “bad” version, the philandering !@#$%^&amp; boyfriend eventually gets found out and dumped, the true love eventually gets met-cute, and the MVP friend comes through. According to the Sliding Doors philosophy, in other words, even when our lives take fluky, chaotic detours, ultimately good-hearted people find each other, and the bad boyfriends and home-wreckers of the world get their comeuppance. There’s no freak turn of events that allows the cheating boyfriend to just keep cheating, or the well-meaning, morally upright soulmates to just keep floating around in the universe unacquainted.</p>
+<p>Fetters, Ashley, 2018, ‘I Think About This a Lot: The Sliding Doors in Sliding Doors’, <em>The Cut</em>, 9 April, freely available at: <a href="https://www.thecut.com/2018/04/i-think-about-this-a-lot-the-sliding-doors-in-sliding-doors.html" class="uri">https://www.thecut.com/2018/04/i-think-about-this-a-lot-the-sliding-doors-in-sliding-doors.html</a>.</p>
+</blockquote>
+<p>I’m getting off-track here, but the point is, not only does it seem as though we have a ‘threshold’, but it seems as though there’s continuity!</p>
+<p>Let’s see some more legitimate implementations of regression discontinuity. (And thank you to <a href="http://www.ryanbedwards.com/">Ryan Edwards</a> for pointing me to these.)</p>
+<div id="elections" class="section level3">
+<h3><span class="header-section-number">31.4.1</span> Elections</h3>
+<p>Elections are a common area of application for regression discontinuity because if the election is close then arguably there’s not much difference between the candidates. There are plenty of examples of regression discontinuity in an elections setting, but one recent one is George, Siddharth Eapen, 2019, ‘Like Father, Like Son? The Effect of Political Dynasties on Economic Development’, freely available at: <a href="https://www.dropbox.com/s/orhvh3n03wd9ybl/sid_JMP_dynasties_latestdraft.pdf?dl=0" class="uri">https://www.dropbox.com/s/orhvh3n03wd9ybl/sid_JMP_dynasties_latestdraft.pdf?dl=0</a>.</p>
+<p>In this paper George is interested in political dynasties. But is the child of a politician more likely to be elected because they are the child of a politician, or because they happen to also be similarly skilled at politics? Regression discontinuity can help because in a close election, we can look at differences between places where someone narrowly won with where a similar someone narrowly lost.</p>
+<p>In the George, 2019, case he examines:</p>
+<blockquote>
+<p>descendant effects using a close elections regression discontinuity (RD) design. We focus on close races between dynastic descendants (i.e. direct relatives of former officeholders) and non-dynasts, and we compare places where a descendant narrowly won to those where a descendant narrowly lost. In these elections, descendants and non-dynasts have similar demographic and political characteristics, and win in similar places and at similar rates. Nevertheless, we find negative economic effects when a descendant narrowly wins. Villages represented by a descendant have lower asset ownership and public good provision after an electoral term: households are less likely to live in a brick house and to own basic amenities like a refrigerator, mobile phone, or vehicle. Moreover, voters assess descendants to perform worse in office. An additional standard deviation of exposure to descendants lowers a village’s wealth rank by 12pp.</p>
+</blockquote>
+<p>The model that George, 2019, estimates is (p. 19:
+<span class="math display">\[y_i = \alpha_{\mbox{district}} + \beta \times \mbox{Years descendant rule}_i + f(\mbox{Descendant margin}) + \gamma X_i + \epsilon_{i,t}.\]</span>
+In this model, <span class="math inline">\(y_i\)</span> is various development outcomes in village <span class="math inline">\(i\)</span>; <span class="math inline">\(\mbox{Years descendant rule}_i\)</span> is the number of years a dynastic descendant has represented village <span class="math inline">\(i\)</span> in the national or state parliament; <span class="math inline">\(\mbox{Descendant margin}\)</span> is the vote share difference between the dynastic descendant and non-dynast; and <span class="math inline">\(\gamma X_i\)</span> is a vector of village-level adjustments.</p>
+<p>George, 2019, then conducts a whole bunch of tests of the validity of the regression discontinuity design (p. 19). These are critical in order for the results to be believed. There are a lot of different results but one is shown in Figure <a href="regression-discontinuity-design.html#fig:descendantsinindia">31.5</a>.</p>
+<div class="figure"><span id="fig:descendantsinindia"></span>
+<img src="figures/descendantsinindia.png" alt="George, 2019, descendant effects identified using close elections RD design (p. 41)." width="90%" />
+<p class="caption">
+Figure 31.5: George, 2019, descendant effects identified using close elections RD design (p. 41).
+</p>
+</div>
+</div>
+<div id="economic-development" class="section level3">
+<h3><span class="header-section-number">31.4.2</span> Economic development</h3>
+<p>One of the issues with considering economic development is that a place typically is either subject to some treatment or not. However, sometimes regression discontinuity allows us to compare areas that were just barely treated with those that were just barely not.</p>
+<p>One recent paper that does this Esteban Mendez-Chacon and Diana Van Patten, 2020, ‘Multinationals, monopsony and local development: Evidence from the United Fruit Company’ available here: <a href="https://www.dianavanpatten.com/" class="uri">https://www.dianavanpatten.com/</a>. They are interested in the effect of the United Fruit Company (UFCo), which was given land in Costa Rica between 1889 and 1984. They were given roughly 4 per cent of the national territory or around 4500 acres. They key is that this land assignment was redrawn in 1904 based on a river and hence the re-assignment was essentially random with regard to determinants of growth to that point. They compare areas that were assigned to UFCo with those that were not. They find:</p>
+<blockquote>
+<p>We find that the firm had a positive and persistent effect on living standards. Regions within the UFCo were 26 per cent less likely to be poor in 1973 than nearby counterfactual locations, with only 63 per cent of the gap closing over the following three decades. Company documents explain that a key concern at the time was to attract and maintain a sizable workforce, which induced the firm to invest heavily in local amenities that likely account for our result.</p>
+</blockquote>
+<p>The model is:
+<span class="math display">\[y_{i,g,t} = \gamma\mbox{UFCo}_g + f(\mbox{geographic location}_g) + X_{i,g,t}\beta + X_g\Gamma + \alpha_t + \epsilon_{i,g,t}.\]</span>
+In this model, <span class="math inline">\(y_{i,g,t}\)</span> is the development outcome for a household <span class="math inline">\(i\)</span> in census-block <span class="math inline">\(g\)</span> and year <span class="math inline">\(t\)</span>; <span class="math inline">\(\gamma\mbox{UFCo}_g\)</span> is an indicator variable as to whether the census-block was in a UFCo area or not; <span class="math inline">\(f(\mbox{geographic location}_g)\)</span> is a function of the latitude and longitude to adjust for geographic area; <span class="math inline">\(X_{i,g,t}\)</span> is covariates for household <span class="math inline">\(i\)</span>; <span class="math inline">\(X_g\)</span> is geographic characteristics for that census-block; and <span class="math inline">\(\alpha_t\)</span> is a year fixed effect.</p>
+<p>Again, there are a lot of different results but one is shown in Figure <a href="regression-discontinuity-design.html#fig:ufco">31.6</a>.</p>
+<div class="figure"><span id="fig:ufco"></span>
+<img src="figures/ufco.png" alt="George, 2020, UFCo effect on the probability of being poor (p. 17)." width="90%" />
+<p class="caption">
+Figure 31.6: George, 2020, UFCo effect on the probability of being poor (p. 17).
+</p>
+</div>
+</div>
+</div>
+<div id="implementation" class="section level2">
+<h2><span class="header-section-number">31.5</span> Implementation</h2>
+<p>Although they are fairly conceptually similar to work that we have done in the past, if you are wanting to use regression discontinuity in your work then you might like to consider a specialised package. The package <code>rdrobust</code> is a one recommendation, although there are others available and you should try those if you are interested. (The <code>rdd</code> package had been the go-to for a while, but seems to have been taken off CRAN recently. If you use RDD, then maybe just follow up to see if it comes back on as that one is pretty nice.)</p>
+<p>Let’s look at our example using <code>rdrobust</code>.</p>
+<div class="sourceCode" id="cb391"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb391-1" data-line-number="1"><span class="kw">library</span>(rdrobust)</a>
+<a class="sourceLine" id="cb391-2" data-line-number="2"><span class="kw">rdrobust</span>(<span class="dt">y =</span> rdd_example_data<span class="op">$</span>income, <span class="dt">x =</span> rdd_example_data<span class="op">$</span>grade, <span class="dt">c =</span> <span class="dv">80</span>, <span class="dt">h =</span> <span class="dv">2</span>, <span class="dt">all =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summary</span>()</a></code></pre></div>
+<pre><code>## Call: rdrobust
+## 
+## Number of Obs.                 1000
+## BW type                      Manual
+## Kernel                   Triangular
+## VCE method                       NN
+## 
+## Number of Obs.                 497         503
+## Eff. Number of Obs.            497         503
+## Order est. (p)                   1           1
+## Order bias  (q)                  2           2
+## BW est. (h)                  2.000       2.000
+## BW bias (b)                  2.000       2.000
+## rho (h/b)                    1.000       1.000
+## Unique Obs.                    497         503
+## 
+## =============================================================================
+##         Method     Coef. Std. Err.         z     P&gt;|z|      [ 95% C.I. ]       
+## =============================================================================
+##   Conventional     1.974     0.143    13.783     0.000     [1.693 , 2.255]     
+## Bias-Corrected     1.977     0.143    13.805     0.000     [1.696 , 2.258]     
+##         Robust     1.977     0.211     9.374     0.000     [1.564 , 2.390]     
+## =============================================================================</code></pre>
+</div>
+<div id="fuzzy-rdd" class="section level2">
+<h2><span class="header-section-number">31.6</span> Fuzzy RDD</h2>
+<p>The examples to this point have been ‘sharp’ RDD. That is, the threshold is strict. However, in reality, often the boundary is a little less strict. For instance, consider the drinking age. Although there is a legal drinking age, say 19. If we looked at the number of people who had drank, then it’s likely to increase in the few years leading up to that age. Perhaps you went to Australia where the drinking age is 18 and drank. Or perhaps you snuck into a bar when you were 17, etc.</p>
+<p>In a sharp RDD setting, if you know the value of the forcing function then you know the outcome. For instance, if you get a grade of 80 then we know that you got an A-, but if you got a grade of 79 then we know that you got a B+. But with fuzzy RDD it is only known with some probability. We can say that a Canadian 19-year-old is more likely to have drunk alcohol than a Canadian 18 year old, but the number of Canadian 18-year-olds who have drunk alcohol is not zero.</p>
+<p>It may be possible to deal with fuzzy RDD settings with appropriate choice of model or data. It may also be possible to deal with them using instrumental variables, which we cover in the next section.</p>
+</div>
+<div id="threats-to-validity" class="section level2">
+<h2><span class="header-section-number">31.7</span> Threats to validity</h2>
+<p>The continuity assumption is fairly important, but we cannot test this as it is based on a counterfactual. Instead we need to convince people of it. Ways to do this include:</p>
+<ul>
+<li>Using a test/train set-up.</li>
+<li>Trying different specifications (and be very careful if your results don’t broadly persist when just consider linear or quadratic functions).</li>
+<li>Considering different subsets of the data.</li>
+<li>Consider different windows.</li>
+<li>Be up-front about uncertainty intervals, especially in graphs.</li>
+<li>Discuss and assuage concerns about the possibility of omitted variables.</li>
+</ul>
+<p>The threshold is also important. For instance, is there an actual shift or is there a non-linear relationship?</p>
+<p>We want as ‘sharp’ an effect as possible, but if the thresholds are known, then they will be gamed. For instance, there is a lot of evidence that people run for certain marathon times, and we know that people aim for certain grades. Similarly, from the other side, it is a lot easier for an instructor to just give out As than it is to have to justify Bs. One way to look at this is to consider how ‘balanced’ the sample is on either side of the threshold. Do this by using histograms with appropriate bins, for instance Figure <a href="regression-discontinuity-design.html#fig:marathontimes">31.7</a>, which is from <span class="citation">Allen et al. (<a href="#ref-allen2017reference">2017</a>)</span>.</p>
+<div class="figure"><span id="fig:marathontimes"></span>
+<img src="figures/marathontimes.png" alt="Bunching around marathon times." width="90%" />
+<p class="caption">
+Figure 31.7: Bunching around marathon times.
+</p>
+</div>
+</div>
+<div id="weaknesses" class="section level2">
+<h2><span class="header-section-number">31.8</span> Weaknesses</h2>
+<ul>
+<li>External validity may be hard - think about the A-/B+ example - do you think the findings generalise to B-/C+?</li>
+<li>The important responses are those that are close to the cut-off. So even if we have a whole bunch of B- and A+ students, they don’t really help much. Hence we need a lot of data.</li>
+<li>There is a lot of freedom for the researcher, so open science best practice becomes vital.</li>
+</ul>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-allen2017reference">
+<p>Allen, Eric J, Patricia M Dechow, Devin G Pope, and George Wu. 2017. “Reference-Dependent Preferences: Evidence from Marathon Runners.” <em>Management Science</em> 63 (6). INFORMS: 1657–72.</p>
+</div>
+<div id="ref-bloombellreiman2020">
+<p>Bloom, Howard, Andrew Bell, and Kayla Reiman. 2020. “Using Data from Randomized Trials to Assess the Likely Generalizability of Educational Treatment-Effect Estimates from Regression Discontinuity Designs.” <em>Journal of Research on Educational Effectiveness</em>, 1–30. <a href="https://doi.org/10.1080/19345747.2019.1634169">https://doi.org/10.1080/19345747.2019.1634169</a>.</p>
+</div>
 </div>
             </section>
 
@@ -390,7 +725,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="shiny-applications.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="introduction-14.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="instrumental-variables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -432,11 +767,10 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["test.pdf", "test.epub"],
 "toc": {
 "collapse": "subsection"
-},
-"search": false
+}
 });
 });
 </script>
