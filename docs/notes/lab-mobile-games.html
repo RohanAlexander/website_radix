@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 29 Lab: Mobile games | Telling Stories with Data</title>
+  <meta name="description" content="Chapter 29 Lab: Mobile games | Telling Stories with Data" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 29 Lab: Mobile games | Telling Stories with Data" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 29 Lab: Mobile games | Telling Stories with Data" />
+  
+  
+  
+
+<meta name="author" content="Rohan Alexander" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="ab-testing-and-rcts.html"/>
+<link rel="next" href="matching-difference-in-differences.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Telling Stories With Data</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#on-telling-stories"><i class="fa fa-check"></i><b>1.1</b> On telling stories</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#telling-stories-with-data"><i class="fa fa-check"></i><b>1.2</b> Telling stories with data</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#these-notes"><i class="fa fa-check"></i><b>1.3</b> These notes</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#software"><i class="fa fa-check"></i><b>1.3.1</b> Software</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#assumed-background"><i class="fa fa-check"></i><b>1.3.2</b> Assumed background</a></li>
+<li class="chapter" data-level="1.3.3" data-path="index.html"><a href="index.html#structure"><i class="fa fa-check"></i><b>1.3.3</b> Structure</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i><b>1.4</b> Acknowledgements</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#contact"><i class="fa fa-check"></i><b>1.5</b> Contact</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lab-getting-started.html"><a href="lab-getting-started.html"><i class="fa fa-check"></i><b>2</b> Lab - Getting started</a><ul>
+<li class="chapter" data-level="2.1" data-path="lab-getting-started.html"><a href="lab-getting-started.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="lab-getting-started.html"><a href="lab-getting-started.html#tidyverse"><i class="fa fa-check"></i><b>2.2</b> Tidyverse</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="lab-getting-started.html"><a href="lab-getting-started.html#the-pipe"><i class="fa fa-check"></i><b>2.2.1</b> The pipe</a></li>
+<li class="chapter" data-level="2.2.2" data-path="lab-getting-started.html"><a href="lab-getting-started.html#select"><i class="fa fa-check"></i><b>2.2.2</b> Select</a></li>
+<li class="chapter" data-level="2.2.3" data-path="lab-getting-started.html"><a href="lab-getting-started.html#filter"><i class="fa fa-check"></i><b>2.2.3</b> Filter</a></li>
+<li class="chapter" data-level="2.2.4" data-path="lab-getting-started.html"><a href="lab-getting-started.html#arrange"><i class="fa fa-check"></i><b>2.2.4</b> Arrange</a></li>
+<li class="chapter" data-level="2.2.5" data-path="lab-getting-started.html"><a href="lab-getting-started.html#group_by"><i class="fa fa-check"></i><b>2.2.5</b> group_by</a></li>
+<li class="chapter" data-level="2.2.6" data-path="lab-getting-started.html"><a href="lab-getting-started.html#mutate"><i class="fa fa-check"></i><b>2.2.6</b> Mutate</a></li>
+<li class="chapter" data-level="2.2.7" data-path="lab-getting-started.html"><a href="lab-getting-started.html#summarise"><i class="fa fa-check"></i><b>2.2.7</b> Summarise</a></li>
+<li class="chapter" data-level="2.2.8" data-path="lab-getting-started.html"><a href="lab-getting-started.html#counting-by-group"><i class="fa fa-check"></i><b>2.2.8</b> Counting by group</a></li>
+<li class="chapter" data-level="2.2.9" data-path="lab-getting-started.html"><a href="lab-getting-started.html#calculate-proportions"><i class="fa fa-check"></i><b>2.2.9</b> Calculate proportions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="lab-getting-started.html"><a href="lab-getting-started.html#ggplot"><i class="fa fa-check"></i><b>2.3</b> ggplot</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="lab-getting-started.html"><a href="lab-getting-started.html#main-features"><i class="fa fa-check"></i><b>2.3.1</b> Main features</a></li>
+<li class="chapter" data-level="2.3.2" data-path="lab-getting-started.html"><a href="lab-getting-started.html#facets"><i class="fa fa-check"></i><b>2.3.2</b> Facets</a></li>
+<li class="chapter" data-level="2.3.3" data-path="lab-getting-started.html"><a href="lab-getting-started.html#small-things"><i class="fa fa-check"></i><b>2.3.3</b> Small things</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="lab-getting-started.html"><a href="lab-getting-started.html#other"><i class="fa fa-check"></i><b>2.4</b> Other</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="lab-getting-started.html"><a href="lab-getting-started.html#case_when"><i class="fa fa-check"></i><b>2.4.1</b> case_when</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html"><i class="fa fa-check"></i><b>3</b> Case study - The 2019 Canadian Federal Election</a><ul>
+<li class="chapter" data-level="3.1" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#create-a-graph-based-on-the-2019-canadian-federal-election"><i class="fa fa-check"></i><b>3.2</b> Create a graph based on the 2019 Canadian Federal election</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#getting-started"><i class="fa fa-check"></i><b>3.2.1</b> Getting started</a></li>
+<li class="chapter" data-level="3.2.2" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#reading-in-the-data"><i class="fa fa-check"></i><b>3.2.2</b> Reading in the data</a></li>
+<li class="chapter" data-level="3.2.3" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#clean-the-data"><i class="fa fa-check"></i><b>3.2.3</b> Clean the data</a></li>
+<li class="chapter" data-level="3.2.4" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#make-a-graph"><i class="fa fa-check"></i><b>3.2.4</b> Make a graph</a></li>
+<li class="chapter" data-level="3.2.5" data-path="case-study-the-2019-canadian-federal-election.html"><a href="case-study-the-2019-canadian-federal-election.html#make-a-table"><i class="fa fa-check"></i><b>3.2.5</b> Make a table</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="communication.html"><a href="communication.html"><i class="fa fa-check"></i><b>4</b> Communication</a><ul>
+<li class="chapter" data-level="4.1" data-path="communication.html"><a href="communication.html#introduction-2"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="communication.html"><a href="communication.html#title-abstract-and-introduction"><i class="fa fa-check"></i><b>4.2</b> Title, abstract, and introduction</a></li>
+<li class="chapter" data-level="4.3" data-path="communication.html"><a href="communication.html#figures-tables-equations-and-technical-terms"><i class="fa fa-check"></i><b>4.3</b> Figures, tables, equations, and technical terms</a></li>
+<li class="chapter" data-level="4.4" data-path="communication.html"><a href="communication.html#on-brevity"><i class="fa fa-check"></i><b>4.4</b> On brevity</a></li>
+<li class="chapter" data-level="4.5" data-path="communication.html"><a href="communication.html#other-1"><i class="fa fa-check"></i><b>4.5</b> Other</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lab-using-r-in-practice.html"><a href="lab-using-r-in-practice.html"><i class="fa fa-check"></i><b>5</b> Lab - Using R in practice</a><ul>
+<li class="chapter" data-level="5.1" data-path="lab-using-r-in-practice.html"><a href="lab-using-r-in-practice.html#introduction-3"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="lab-using-r-in-practice.html"><a href="lab-using-r-in-practice.html#getting-help"><i class="fa fa-check"></i><b>5.2</b> Getting help</a></li>
+<li class="chapter" data-level="5.3" data-path="lab-using-r-in-practice.html"><a href="lab-using-r-in-practice.html#mentality"><i class="fa fa-check"></i><b>5.3</b> Mentality</a></li>
+<li class="chapter" data-level="5.4" data-path="lab-using-r-in-practice.html"><a href="lab-using-r-in-practice.html#style"><i class="fa fa-check"></i><b>5.4</b> Style</a></li>
+<li class="chapter" data-level="5.5" data-path="lab-using-r-in-practice.html"><a href="lab-using-r-in-practice.html#learning-more"><i class="fa fa-check"></i><b>5.5</b> Learning more</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="ethics.html"><a href="ethics.html"><i class="fa fa-check"></i><b>6</b> Ethics</a><ul>
+<li class="chapter" data-level="6.1" data-path="ethics.html"><a href="ethics.html#introduction-4"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="ethics.html"><a href="ethics.html#questiontask"><i class="fa fa-check"></i><b>6.2</b> Question/task</a></li>
+<li class="chapter" data-level="6.3" data-path="ethics.html"><a href="ethics.html#data"><i class="fa fa-check"></i><b>6.3</b> Data</a></li>
+<li class="chapter" data-level="6.4" data-path="ethics.html"><a href="ethics.html#model"><i class="fa fa-check"></i><b>6.4</b> Model</a></li>
+<li class="chapter" data-level="6.5" data-path="ethics.html"><a href="ethics.html#team"><i class="fa fa-check"></i><b>6.5</b> Team</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="case-study-all-state.html"><a href="case-study-all-state.html"><i class="fa fa-check"></i><b>7</b> Case-study: All state</a></li>
+<li class="chapter" data-level="8" data-path="case-study-gay-face.html"><a href="case-study-gay-face.html"><i class="fa fa-check"></i><b>8</b> Case-study: Gay face</a></li>
+<li class="chapter" data-level="9" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>9</b> Reproducibility</a><ul>
+<li class="chapter" data-level="9.1" data-path="reproducibility.html"><a href="reproducibility.html#introduction-5"><i class="fa fa-check"></i><b>9.1</b> Introduction</a></li>
+<li class="chapter" data-level="9.2" data-path="reproducibility.html"><a href="reproducibility.html#data-access"><i class="fa fa-check"></i><b>9.2</b> Data access</a></li>
+<li class="chapter" data-level="9.3" data-path="reproducibility.html"><a href="reproducibility.html#on-mistakes"><i class="fa fa-check"></i><b>9.3</b> On mistakes</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html"><i class="fa fa-check"></i><b>10</b> Lab - R Markdown and R Projects</a><ul>
+<li class="chapter" data-level="10.1" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#r-markdown"><i class="fa fa-check"></i><b>10.1</b> R Markdown</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#getting-started-1"><i class="fa fa-check"></i><b>10.1.1</b> Getting started</a></li>
+<li class="chapter" data-level="10.1.2" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#basic-commands"><i class="fa fa-check"></i><b>10.1.2</b> Basic commands</a></li>
+<li class="chapter" data-level="10.1.3" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#r-chunks"><i class="fa fa-check"></i><b>10.1.3</b> R chunks</a></li>
+<li class="chapter" data-level="10.1.4" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#abstracts-and-pdf-outputs"><i class="fa fa-check"></i><b>10.1.4</b> Abstracts and PDF outputs</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="lab-r-markdown-and-r-projects.html"><a href="lab-r-markdown-and-r-projects.html#r-projects"><i class="fa fa-check"></i><b>10.2</b> R projects</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="lab-git-and-github.html"><a href="lab-git-and-github.html"><i class="fa fa-check"></i><b>11</b> Lab - Git and GitHub</a><ul>
+<li class="chapter" data-level="11.1" data-path="lab-git-and-github.html"><a href="lab-git-and-github.html#introduction-6"><i class="fa fa-check"></i><b>11.1</b> Introduction</a></li>
+<li class="chapter" data-level="11.2" data-path="lab-git-and-github.html"><a href="lab-git-and-github.html#git"><i class="fa fa-check"></i><b>11.2</b> Git</a></li>
+<li class="chapter" data-level="11.3" data-path="lab-git-and-github.html"><a href="lab-git-and-github.html#github"><i class="fa fa-check"></i><b>11.3</b> GitHub</a></li>
+<li class="chapter" data-level="11.4" data-path="lab-git-and-github.html"><a href="lab-git-and-github.html#using-git-within-rstudio"><i class="fa fa-check"></i><b>11.4</b> Using Git within RStudio</a></li>
+<li class="chapter" data-level="11.5" data-path="lab-git-and-github.html"><a href="lab-git-and-github.html#next-steps"><i class="fa fa-check"></i><b>11.5</b> Next steps</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html"><i class="fa fa-check"></i><b>12</b> Case study - TTC Subway Delays</a><ul>
+<li class="chapter" data-level="12.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#introduction-7"><i class="fa fa-check"></i><b>12.1</b> Introduction</a><ul>
+<li class="chapter" data-level="12.1.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#prerequesites"><i class="fa fa-check"></i><b>12.1.1</b> Prerequesites</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#finding-and-downloading-data-using-opendatatoronto"><i class="fa fa-check"></i><b>12.2</b> Finding and downloading data using <code>opendatatoronto</code></a><ul>
+<li class="chapter" data-level="12.2.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#finding-the-data"><i class="fa fa-check"></i><b>12.2.1</b> Finding the data</a></li>
+<li class="chapter" data-level="12.2.2" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#retrieving-the-data"><i class="fa fa-check"></i><b>12.2.2</b> Retrieving the data</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#plotting"><i class="fa fa-check"></i><b>12.3</b> Plotting</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#example-1-delays-by-line"><i class="fa fa-check"></i><b>12.3.1</b> Example 1: Delays by line</a></li>
+<li class="chapter" data-level="12.3.2" data-path="case-study-ttc-subway-delays.html"><a href="case-study-ttc-subway-delays.html#example-2-delays-by-time-of-day"><i class="fa fa-check"></i><b>12.3.2</b> Example 2: Delays by time of day</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="developing-research-questions.html"><a href="developing-research-questions.html"><i class="fa fa-check"></i><b>13</b> Developing research questions</a><ul>
+<li class="chapter" data-level="13.1" data-path="developing-research-questions.html"><a href="developing-research-questions.html#developing-research-questions-1"><i class="fa fa-check"></i><b>13.1</b> Developing research questions</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="gathering-data.html"><a href="gathering-data.html"><i class="fa fa-check"></i><b>14</b> Gathering data</a><ul>
+<li class="chapter" data-level="14.1" data-path="gathering-data.html"><a href="gathering-data.html#gathering-data-1"><i class="fa fa-check"></i><b>14.1</b> Gathering data</a><ul>
+<li class="chapter" data-level="14.1.1" data-path="gathering-data.html"><a href="gathering-data.html#deliberately-available"><i class="fa fa-check"></i><b>14.1.1</b> Deliberately available</a></li>
+<li class="chapter" data-level="14.1.2" data-path="gathering-data.html"><a href="gathering-data.html#by-product"><i class="fa fa-check"></i><b>14.1.2</b> By product</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="lab-the-tidyverse.html"><a href="lab-the-tidyverse.html"><i class="fa fa-check"></i><b>15</b> Lab - The Tidyverse</a></li>
+<li class="chapter" data-level="16" data-path="case-study-canadian-prime-ministers.html"><a href="case-study-canadian-prime-ministers.html"><i class="fa fa-check"></i><b>16</b> Case study - Canadian Prime Ministers</a><ul>
+<li class="chapter" data-level="16.1" data-path="case-study-canadian-prime-ministers.html"><a href="case-study-canadian-prime-ministers.html#introduction-8"><i class="fa fa-check"></i><b>16.1</b> Introduction</a></li>
+<li class="chapter" data-level="16.2" data-path="case-study-canadian-prime-ministers.html"><a href="case-study-canadian-prime-ministers.html#get-data"><i class="fa fa-check"></i><b>16.2</b> Get data</a></li>
+<li class="chapter" data-level="16.3" data-path="case-study-canadian-prime-ministers.html"><a href="case-study-canadian-prime-ministers.html#parse-html"><i class="fa fa-check"></i><b>16.3</b> Parse html</a><ul>
+<li class="chapter" data-level="16.3.1" data-path="case-study-canadian-prime-ministers.html"><a href="case-study-canadian-prime-ministers.html#by-inspection"><i class="fa fa-check"></i><b>16.3.1</b> By inspection</a></li>
+<li class="chapter" data-level="16.3.2" data-path="case-study-canadian-prime-ministers.html"><a href="case-study-canadian-prime-ministers.html#selector-gadget"><i class="fa fa-check"></i><b>16.3.2</b> Selector gadget</a></li>
+</ul></li>
+<li class="chapter" data-level="16.4" data-path="case-study-canadian-prime-ministers.html"><a href="case-study-canadian-prime-ministers.html#clean-data"><i class="fa fa-check"></i><b>16.4</b> Clean data</a></li>
+<li class="chapter" data-level="16.5" data-path="case-study-canadian-prime-ministers.html"><a href="case-study-canadian-prime-ministers.html#make-graph"><i class="fa fa-check"></i><b>16.5</b> Make graph</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html"><i class="fa fa-check"></i><b>17</b> Case study - Rohan’s books</a><ul>
+<li class="chapter" data-level="17.1" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html#introduction-9"><i class="fa fa-check"></i><b>17.1</b> Introduction</a></li>
+<li class="chapter" data-level="17.2" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html#gather-data"><i class="fa fa-check"></i><b>17.2</b> Gather data</a></li>
+<li class="chapter" data-level="17.3" data-path="case-study-rohans-books.html"><a href="case-study-rohans-books.html#data-parsing-and-cleaning"><i class="fa fa-check"></i><b>17.3</b> Data parsing and cleaning</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html"><i class="fa fa-check"></i><b>18</b> Case study - Gathering and tidying data from Paspaley</a><ul>
+<li class="chapter" data-level="18.1" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html#introduction-10"><i class="fa fa-check"></i><b>18.1</b> Introduction</a></li>
+<li class="chapter" data-level="18.2" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html#data-acquisition"><i class="fa fa-check"></i><b>18.2</b> Data acquisition</a></li>
+<li class="chapter" data-level="18.3" data-path="case-study-gathering-and-tidying-data-from-paspaley.html"><a href="case-study-gathering-and-tidying-data-from-paspaley.html#data-cleaning"><i class="fa fa-check"></i><b>18.3</b> Data cleaning</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="lab-ggplot2.html"><a href="lab-ggplot2.html"><i class="fa fa-check"></i><b>19</b> Lab - ggplot2</a></li>
+<li class="chapter" data-level="20" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>20</b> Exploratory data analysis</a><ul>
+<li class="chapter" data-level="20.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#introduction-11"><i class="fa fa-check"></i><b>20.1</b> Introduction</a></li>
+<li class="chapter" data-level="20.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#a-note-on-packages"><i class="fa fa-check"></i><b>20.2</b> A note on packages</a></li>
+<li class="chapter" data-level="20.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#ttc-subway-delays"><i class="fa fa-check"></i><b>20.3</b> TTC subway delays</a></li>
+<li class="chapter" data-level="20.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#eda-and-data-viz"><i class="fa fa-check"></i><b>20.4</b> EDA and data viz</a></li>
+<li class="chapter" data-level="20.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#data-checks"><i class="fa fa-check"></i><b>20.5</b> Data checks</a><ul>
+<li class="chapter" data-level="20.5.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#sanity-checks"><i class="fa fa-check"></i><b>20.5.1</b> Sanity Checks</a></li>
+<li class="chapter" data-level="20.5.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#missing-values"><i class="fa fa-check"></i><b>20.5.2</b> Missing values</a></li>
+<li class="chapter" data-level="20.5.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#duplicates"><i class="fa fa-check"></i><b>20.5.3</b> Duplicates?</a></li>
+<li class="chapter" data-level="20.5.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-distributions"><i class="fa fa-check"></i><b>20.5.4</b> Visualizing distributions</a></li>
+<li class="chapter" data-level="20.5.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-time-series"><i class="fa fa-check"></i><b>20.5.5</b> Visualizing time series</a></li>
+<li class="chapter" data-level="20.5.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-relationships"><i class="fa fa-check"></i><b>20.5.6</b> Visualizing relationships</a></li>
+<li class="chapter" data-level="20.5.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#pca"><i class="fa fa-check"></i><b>20.5.7</b> PCA</a></li>
+</ul></li>
+<li class="chapter" data-level="20.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#exercises"><i class="fa fa-check"></i><b>20.6</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="case-study-historical-canadian-elections.html"><a href="case-study-historical-canadian-elections.html"><i class="fa fa-check"></i><b>21</b> Case study - Historical Canadian elections</a></li>
+<li class="chapter" data-level="22" data-path="linear-regression.html"><a href="linear-regression.html"><i class="fa fa-check"></i><b>22</b> Linear regression</a><ul>
+<li class="chapter" data-level="22.1" data-path="linear-regression.html"><a href="linear-regression.html#introduction-12"><i class="fa fa-check"></i><b>22.1</b> Introduction</a></li>
+<li class="chapter" data-level="22.2" data-path="linear-regression.html"><a href="linear-regression.html#competing-relationships"><i class="fa fa-check"></i><b>22.2</b> Competing relationships</a></li>
+<li class="chapter" data-level="22.3" data-path="linear-regression.html"><a href="linear-regression.html#implementing-this-in-r"><i class="fa fa-check"></i><b>22.3</b> Implementing this in R</a></li>
+<li class="chapter" data-level="22.4" data-path="linear-regression.html"><a href="linear-regression.html#tidy-up-with-broom"><i class="fa fa-check"></i><b>22.4</b> Tidy up with broom</a></li>
+<li class="chapter" data-level="22.5" data-path="linear-regression.html"><a href="linear-regression.html#testing-hypothesis"><i class="fa fa-check"></i><b>22.5</b> Testing hypothesis</a></li>
+<li class="chapter" data-level="22.6" data-path="linear-regression.html"><a href="linear-regression.html#adding-more-and-varied-explanatory-variables"><i class="fa fa-check"></i><b>22.6</b> Adding more and varied explanatory variables</a></li>
+<li class="chapter" data-level="22.7" data-path="linear-regression.html"><a href="linear-regression.html#threats-to-validity-and-aspects-to-think-about"><i class="fa fa-check"></i><b>22.7</b> Threats to validity and aspects to think about</a></li>
+<li class="chapter" data-level="22.8" data-path="linear-regression.html"><a href="linear-regression.html#more-credible-outputs"><i class="fa fa-check"></i><b>22.8</b> More credible outputs</a></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="lab-reporting-regression-results.html"><a href="lab-reporting-regression-results.html"><i class="fa fa-check"></i><b>23</b> Lab - Reporting regression results</a></li>
+<li class="chapter" data-level="24" data-path="count-data.html"><a href="count-data.html"><i class="fa fa-check"></i><b>24</b> Count data</a><ul>
+<li class="chapter" data-level="24.1" data-path="count-data.html"><a href="count-data.html#logistic-regression"><i class="fa fa-check"></i><b>24.1</b> Logistic regression</a></li>
+<li class="chapter" data-level="24.2" data-path="count-data.html"><a href="count-data.html#poisson-regression"><i class="fa fa-check"></i><b>24.2</b> Poisson regression</a></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="classification.html"><a href="classification.html"><i class="fa fa-check"></i><b>25</b> Classification</a></li>
+<li class="chapter" data-level="26" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html"><i class="fa fa-check"></i><b>26</b> Case study - Opinions about a casino in Toronto</a><ul>
+<li class="chapter" data-level="26.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#data-preparation"><i class="fa fa-check"></i><b>26.1</b> Data preparation</a><ul>
+<li class="chapter" data-level="26.1.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#getting-data-from-opendatatoronto"><i class="fa fa-check"></i><b>26.1.1</b> Getting data from <code>opendatatoronto</code></a></li>
+<li class="chapter" data-level="26.1.2" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#getting-the-right-kind-of-object"><i class="fa fa-check"></i><b>26.1.2</b> Getting the right kind of object</a></li>
+<li class="chapter" data-level="26.1.3" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#cleaning-up-the-dataframe"><i class="fa fa-check"></i><b>26.1.3</b> Cleaning up the dataframe</a></li>
+</ul></li>
+<li class="chapter" data-level="26.2" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#some-visual-exploration-and-more-cleanup-of-course"><i class="fa fa-check"></i><b>26.2</b> Some visual exploration (and more cleanup, of course)</a><ul>
+<li class="chapter" data-level="26.2.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#getting-the-data-into-a-more-model-suitable-format"><i class="fa fa-check"></i><b>26.2.1</b> Getting the data into a more model-suitable format</a></li>
+</ul></li>
+<li class="chapter" data-level="26.3" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#logistic-regression-1"><i class="fa fa-check"></i><b>26.3</b> Logistic Regression</a><ul>
+<li class="chapter" data-level="26.3.1" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#interpretation"><i class="fa fa-check"></i><b>26.3.1</b> Interpretation</a></li>
+<li class="chapter" data-level="26.3.2" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#baseline-category"><i class="fa fa-check"></i><b>26.3.2</b> Baseline category</a></li>
+<li class="chapter" data-level="26.3.3" data-path="case-study-opinions-about-a-casino-in-toronto.html"><a href="case-study-opinions-about-a-casino-in-toronto.html#making-estimates"><i class="fa fa-check"></i><b>26.3.3</b> Making estimates</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="27" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html"><i class="fa fa-check"></i><b>27</b> Case study - Airbnb listing in Toronto</a><ul>
+<li class="chapter" data-level="27.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#essentials"><i class="fa fa-check"></i><b>27.1</b> Essentials</a></li>
+<li class="chapter" data-level="27.2" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#set-up"><i class="fa fa-check"></i><b>27.2</b> Set up</a></li>
+<li class="chapter" data-level="27.3" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#get-data-1"><i class="fa fa-check"></i><b>27.3</b> Get data</a></li>
+<li class="chapter" data-level="27.4" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#clean-data-1"><i class="fa fa-check"></i><b>27.4</b> Clean data</a><ul>
+<li class="chapter" data-level="27.4.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#price"><i class="fa fa-check"></i><b>27.4.1</b> Price</a></li>
+<li class="chapter" data-level="27.4.2" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#superhosts"><i class="fa fa-check"></i><b>27.4.2</b> Superhosts</a></li>
+<li class="chapter" data-level="27.4.3" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#reviews"><i class="fa fa-check"></i><b>27.4.3</b> Reviews</a></li>
+<li class="chapter" data-level="27.4.4" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#response-time"><i class="fa fa-check"></i><b>27.4.4</b> Response time</a></li>
+<li class="chapter" data-level="27.4.5" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#host-number-of-listings"><i class="fa fa-check"></i><b>27.4.5</b> Host number of listings</a></li>
+<li class="chapter" data-level="27.4.6" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#decisions"><i class="fa fa-check"></i><b>27.4.6</b> Decisions</a></li>
+</ul></li>
+<li class="chapter" data-level="27.5" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#explore-data"><i class="fa fa-check"></i><b>27.5</b> Explore data</a><ul>
+<li class="chapter" data-level="27.5.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#price-and-reviews"><i class="fa fa-check"></i><b>27.5.1</b> Price and reviews</a></li>
+<li class="chapter" data-level="27.5.2" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#superhost-and-response-time"><i class="fa fa-check"></i><b>27.5.2</b> Superhost and response-time</a></li>
+<li class="chapter" data-level="27.5.3" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#neighbourhood"><i class="fa fa-check"></i><b>27.5.3</b> Neighbourhood</a></li>
+</ul></li>
+<li class="chapter" data-level="27.6" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#model-data"><i class="fa fa-check"></i><b>27.6</b> Model data</a><ul>
+<li class="chapter" data-level="27.6.1" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#logistic-regression-2"><i class="fa fa-check"></i><b>27.6.1</b> Logistic regression</a></li>
+</ul></li>
+<li class="chapter" data-level="27.7" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#next-steps-1"><i class="fa fa-check"></i><b>27.7</b> Next steps</a></li>
+<li class="chapter" data-level="27.8" data-path="case-study-airbnb-listing-in-toronto.html"><a href="case-study-airbnb-listing-in-toronto.html#references"><i class="fa fa-check"></i><b>27.8</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="28" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html"><i class="fa fa-check"></i><b>28</b> A/B testing and RCTs</a><ul>
+<li class="chapter" data-level="28.1" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#introduction-13"><i class="fa fa-check"></i><b>28.1</b> Introduction</a></li>
+<li class="chapter" data-level="28.2" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#motivation"><i class="fa fa-check"></i><b>28.2</b> Motivation</a></li>
+<li class="chapter" data-level="28.3" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#tea-party"><i class="fa fa-check"></i><b>28.3</b> Tea party</a></li>
+<li class="chapter" data-level="28.4" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#some-unexpected-properties-from-randomised-sampling"><i class="fa fa-check"></i><b>28.4</b> Some unexpected properties from randomised sampling</a></li>
+<li class="chapter" data-level="28.5" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#anova"><i class="fa fa-check"></i><b>28.5</b> ANOVA</a></li>
+<li class="chapter" data-level="28.6" data-path="ab-testing-and-rcts.html"><a href="ab-testing-and-rcts.html#treatment-and-control"><i class="fa fa-check"></i><b>28.6</b> Treatment and control</a></li>
+</ul></li>
+<li class="chapter" data-level="29" data-path="lab-mobile-games.html"><a href="lab-mobile-games.html"><i class="fa fa-check"></i><b>29</b> Lab: Mobile games</a><ul>
+<li class="chapter" data-level="29.1" data-path="lab-mobile-games.html"><a href="lab-mobile-games.html#introduction-14"><i class="fa fa-check"></i><b>29.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="30" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html"><i class="fa fa-check"></i><b>30</b> Matching &amp; difference-in-differences</a><ul>
+<li class="chapter" data-level="30.1" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html#introduction-15"><i class="fa fa-check"></i><b>30.1</b> Introduction</a></li>
+<li class="chapter" data-level="30.2" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html#motivation-1"><i class="fa fa-check"></i><b>30.2</b> Motivation</a></li>
+<li class="chapter" data-level="30.3" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html#simulated-example"><i class="fa fa-check"></i><b>30.3</b> Simulated example</a></li>
+<li class="chapter" data-level="30.4" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html#assumptions"><i class="fa fa-check"></i><b>30.4</b> Assumptions</a></li>
+<li class="chapter" data-level="30.5" data-path="matching-difference-in-differences.html"><a href="matching-difference-in-differences.html#matching"><i class="fa fa-check"></i><b>30.5</b> Matching</a></li>
+</ul></li>
+<li class="chapter" data-level="31" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><i class="fa fa-check"></i><b>31</b> Case study - Lower advertising revenue reduced French newspaper prices between 1960 and 1974</a><ul>
+<li class="chapter" data-level="31.1" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#introduction-16"><i class="fa fa-check"></i><b>31.1</b> Introduction</a></li>
+<li class="chapter" data-level="31.2" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#background"><i class="fa fa-check"></i><b>31.2</b> Background</a></li>
+<li class="chapter" data-level="31.3" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#data-1"><i class="fa fa-check"></i><b>31.3</b> Data</a></li>
+<li class="chapter" data-level="31.4" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#model-1"><i class="fa fa-check"></i><b>31.4</b> Model</a></li>
+<li class="chapter" data-level="31.5" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#results"><i class="fa fa-check"></i><b>31.5</b> Results</a></li>
+<li class="chapter" data-level="31.6" data-path="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html"><a href="case-study-lower-advertising-revenue-reduced-french-newspaper-prices-between-1960-and-1974.html#other-points"><i class="fa fa-check"></i><b>31.6</b> Other points</a></li>
+</ul></li>
+<li class="chapter" data-level="32" data-path="tutorial-propensity-score-matching-lalonde.html"><a href="tutorial-propensity-score-matching-lalonde.html"><i class="fa fa-check"></i><b>32</b> Tutorial - Propensity score matching - Lalonde</a></li>
+<li class="chapter" data-level="33" data-path="shiny-applications.html"><a href="shiny-applications.html"><i class="fa fa-check"></i><b>33</b> Shiny applications</a></li>
+<li class="chapter" data-level="34" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html"><i class="fa fa-check"></i><b>34</b> Regression discontinuity design</a><ul>
+<li class="chapter" data-level="34.1" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#introduction-17"><i class="fa fa-check"></i><b>34.1</b> Introduction</a></li>
+<li class="chapter" data-level="34.2" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#simulated-example-1"><i class="fa fa-check"></i><b>34.2</b> Simulated example</a><ul>
+<li class="chapter" data-level="34.2.1" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#different-slopes"><i class="fa fa-check"></i><b>34.2.1</b> Different slopes</a></li>
+</ul></li>
+<li class="chapter" data-level="34.3" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#overlap"><i class="fa fa-check"></i><b>34.3</b> Overlap</a></li>
+<li class="chapter" data-level="34.4" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#examples"><i class="fa fa-check"></i><b>34.4</b> Examples</a><ul>
+<li class="chapter" data-level="34.4.1" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#elections"><i class="fa fa-check"></i><b>34.4.1</b> Elections</a></li>
+<li class="chapter" data-level="34.4.2" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#economic-development"><i class="fa fa-check"></i><b>34.4.2</b> Economic development</a></li>
+</ul></li>
+<li class="chapter" data-level="34.5" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#implementation"><i class="fa fa-check"></i><b>34.5</b> Implementation</a></li>
+<li class="chapter" data-level="34.6" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#fuzzy-rdd"><i class="fa fa-check"></i><b>34.6</b> Fuzzy RDD</a></li>
+<li class="chapter" data-level="34.7" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#threats-to-validity"><i class="fa fa-check"></i><b>34.7</b> Threats to validity</a></li>
+<li class="chapter" data-level="34.8" data-path="regression-discontinuity-design.html"><a href="regression-discontinuity-design.html#weaknesses"><i class="fa fa-check"></i><b>34.8</b> Weaknesses</a></li>
+</ul></li>
+<li class="chapter" data-level="35" data-path="instrumental-variables.html"><a href="instrumental-variables.html"><i class="fa fa-check"></i><b>35</b> Instrumental variables</a></li>
+<li class="chapter" data-level="36" data-path="assessment.html"><a href="assessment.html"><i class="fa fa-check"></i><b>36</b> Assessment</a><ul>
+<li class="chapter" data-level="36.1" data-path="assessment.html"><a href="assessment.html#problem-set-1"><i class="fa fa-check"></i><b>36.1</b> Problem Set 1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Telling Stories with Data</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lab-mobile-games" class="section level1">
+<h1><span class="header-section-number">Chapter 29</span> Lab: Mobile games</h1>
+<p><strong>Required reading</strong></p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Recommended reading</strong></p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Key concepts/skills/etc</strong></p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Key libraries</strong></p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Key functions/etc</strong></p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Pre-quiz</strong></p>
+<div id="introduction-14" class="section level2">
+<h2><span class="header-section-number">29.1</span> Introduction</h2>
+<p>For PS4, my group (Colombia) wants to analyze a Kaggle dataset on mobile game activity using A/B testing (link: <a href="https://www.kaggle.com/yufengsui/mobile-games-ab-testing" class="uri">https://www.kaggle.com/yufengsui/mobile-games-ab-testing</a>). We will be asking questions regarding the change in retention of the app from changes within the game.</p>
+<p>Please let me know if you have any questions. Thank you!</p>
+<p>Best,</p>
+<p>Nikolai Meek</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="ab-testing-and-rcts.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="matching-difference-in-differences.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["test.pdf", "test.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
